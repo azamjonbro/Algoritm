@@ -1,0 +1,195 @@
+<template>
+	<div class="Home_Carousel">
+		<swiper
+			:modules="modules"
+			:pagination="{ clickable: true }"
+			:autoplay="{ delay: 3000, disableOnInteraction: false }"
+			:loop="true"
+			class="mySwiper"
+		>
+			<swiper-slide>
+				<div class="Home_Carousel">
+					<div class="Home_Carousel_text_wrapper">
+						<h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
+						<p>
+							Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express),
+							PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT,
+							access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.
+						</p>
+						<p>
+							Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga
+							harakat qilaman.
+						</p>
+					</div>
+					<div class="Home_Carousel_img_wrapper">
+						<img src="@/assets/Images/home_img/img1.svg" alt="" />
+						<img src="@/assets/Images/home_img/Group 2.svg" class="bg_img" alt="" />
+					</div>
+				</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="Home_Carousel">
+					<div class="Home_Carousel_text_wrapper">
+						<h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
+						<p>
+							Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express),
+							PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT,
+							access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.
+						</p>
+						<p>
+							Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga
+							harakat qilaman.
+						</p>
+					</div>
+					<div class="Home_Carousel_img_wrapper">
+						<img src="@/assets/Images/home_img/img1.svg" alt="" />
+						<img src="@/assets/Images/home_img/Group 2.svg" class="bg_img" alt="" />
+					</div>
+				</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="Home_Carousel">
+					<div class="Home_Carousel_text_wrapper">
+						<h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
+						<p>
+							Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express),
+							PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT,
+							access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.
+						</p>
+						<p>
+							Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga
+							harakat qilaman.
+						</p>
+					</div>
+					<div class="Home_Carousel_img_wrapper">
+						<img src="@/assets/Images/home_img/img1.svg" alt="" />
+						<img src="@/assets/Images/home_img/Group 2.svg" class="bg_img" alt="" />
+					</div>
+				</div>
+			</swiper-slide>
+		</swiper>
+	</div>
+</template>
+
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Pagination, Autoplay } from "swiper/modules";
+
+export default {
+	components: {
+		Swiper,
+		SwiperSlide,
+	},
+	setup() {
+		return {
+			modules: [Pagination, Autoplay], // Autoplay modulini qo‘shish
+		};
+	},
+};
+</script>
+
+<style>
+.Home_Carousel {
+	width: 100%;
+	height: 411px;
+	background-color: #0b0b0b;
+	border-radius: 10px;
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.mySwiper {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+.Home_Carousel_text_wrapper {
+	width: 53%;
+	height: auto;
+	/* background-color: #fff; */
+	padding: 20px 50px;
+	box-sizing: border-box;
+	align-self: flex-start;
+}
+.Home_Carousel_text_wrapper h1 {
+	color: white;
+	font-size: 56px;
+	line-height: 58px;
+}
+.Home_Carousel_text_wrapper p:nth-of-type(1) {
+	color: gray;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.Home_Carousel_text_wrapper p:nth-of-type(2) {
+	color: gray;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.Home_Carousel_img_wrapper {
+	display: flex;
+	align-items: end;
+	width: 42%;
+	height: 330px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.Home_Carousel_img_wrapper img:nth-child(1) {
+	position: absolute;
+	right: 0px;
+	bottom: 20px;
+	z-index: 2;
+}
+.Home_Carousel_img_wrapper .bg_img {
+	position: absolute;
+	right: 5px;
+	bottom: 20px;
+	z-index: 1;
+}
+.swiper-pagination-bullet {
+	background-color: rgb(45, 44, 44); /* Default color */
+	width: 62px;
+	height: 5px;
+	opacity: 1;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Active bullet with animation */
+.swiper-pagination-bullet-active {
+	background-color: rgb(45, 44, 44); /* Default color */
+	position: relative;
+}
+
+/* Inside element for animation */
+.swiper-pagination-bullet-active::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%;
+	height: 100%;
+	background-color: rgb(255, 255, 255); /* Active fill color */
+	border-radius: 5px;
+	animation: fillProgress 3s linear forwards; /* 3s animation */
+}
+
+/* Animation keyframes */
+@keyframes fillProgress {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+.swiper-pagination {
+	transform: translateX(-38%) translateY(-90%);
+}
+</style>
