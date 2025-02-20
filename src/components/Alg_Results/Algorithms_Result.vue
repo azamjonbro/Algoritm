@@ -253,11 +253,12 @@
 }
 .Algorithms_result_Latest_News button:nth-child(2) span {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), white, white, white);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	--webkit-background-clip: text;
+	--webkit-text-fill-color: transparent;
 	font-weight: bold;
 }
 .Algorithms_result_Latest_News button:nth-child(3) span {
+	--webkit-background-clip: text;
 	background: linear-gradient(
 		to right,
 		white,
@@ -266,7 +267,6 @@
 		rgba(231, 230, 230, 0.756),
 		rgba(255, 255, 255, 0.2)
 	);
-	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: bold;
 }
