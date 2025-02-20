@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './Utils/App.vue'
+import App from './Pages/App.vue'
 import Toast from 'vue-toastification';
 import "vue-toastification/dist/index.css";
 import  router  from './Router';
