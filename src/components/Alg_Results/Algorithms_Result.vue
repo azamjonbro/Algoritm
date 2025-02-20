@@ -254,15 +254,14 @@
 	align-items: center;
 	font-weight: 800;
 }
-<<<<<<< HEAD
 .Algorithms_result_Latest_News button:nth-child(2) span {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), white, white, white);
-	--webkit-background-clip: text;
-	--webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	font-weight: bold;
 }
 .Algorithms_result_Latest_News button:nth-child(3) span {
-	--webkit-background-clip: text;
+	-webkit-background-clip: text;
 	background: linear-gradient(
 		to right,
 		white,
@@ -273,21 +272,6 @@
 	);
 	-webkit-text-fill-color: transparent;
 	font-weight: bold;
-=======
-
-.marque_wrapper {
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	background-color: black;
-	padding: 10px 0;
-}
-
-.Algorithms_result_Latest_News_marque {
-	display: flex;
-	gap: 20px;
-	animation: marqueeScroll 10s linear infinite;
->>>>>>> 8d7742e8c2070115614f0bae58ddd813f86bc7ad
 }
 
 /* Fading effect on left and right sides */

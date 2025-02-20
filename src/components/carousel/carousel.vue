@@ -85,7 +85,7 @@ export default {
 	},
 	setup() {
 		return {
-			modules: [Pagination, Autoplay], // Autoplay modulini qo‘shish
+			modules: [Pagination, Autoplay], 
 		};
 	},
 };
