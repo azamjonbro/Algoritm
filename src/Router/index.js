@@ -42,8 +42,8 @@ const routes = [
 const router = createRouter({
 	history: createWebHistory(),
 	routes,
-	linkActiveClass: "active-link", // 🚀 Faol sahifa uchun class
-	linkExactActiveClass: "exact-active-link", // 🚀 Faqat bosh sahifa uchun class
+	linkActiveClass: "active-link",
+	linkExactActiveClass: "exact-active-link",
 });
 
 export default router;

@@ -46,10 +46,15 @@
 				<button>
 					<img src="@/assets/Images/home_img/Subtract.svg" alt="" />Per month Hackathon’s
 				</button>
-				<button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
-				<button>
-					<img src="@/assets/Images/home_img/Subtract (1).svg" alt="" /><span>Chegirmalar</span>
-				</button>
+				<div class="marque_wrapper">
+					<div class="Algorithms_result_Latest_News_marque">
+						<button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
+						<button>
+							<img src="@/assets/Images/home_img/Subtract (1).svg" alt="" />
+							<span>Chegirmalar</span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="Get_in_touch"></div>
@@ -72,7 +77,7 @@
 	margin-top: 20px;
 }
 .Algorithms_result {
-	width: 60%;
+	width: 63%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -160,14 +165,14 @@
 		transform: scale(1);
 	}
 	50% {
-		box-shadow: 0 0 12px #ffe738, 0 0 24px #ffe738;
-		opacity: 0.8;
-		transform: scale(1.2);
+		box-shadow: 0 0 5px #ffe738, 0 0 5px #ffe738;
+		opacity: 1;
+		transform: scale(1.1);
 	}
 	100% {
-		box-shadow: 0 0 5px #ffe738;
+		box-shadow: 0 0 5px #ffe100, 0 0 5px #ffe738;
 		opacity: 1;
-		transform: scale(1);
+		transform: scale(1.1);
 	}
 }
 .info {
@@ -215,6 +220,15 @@
 	font-family: "Noto Sans";
 	align-items: center;
 }
+
+@keyframes marqueeScroll {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
 .Algorithms_result_Latest_News button:nth-child(1) {
 	box-sizing: border-box;
 	font-size: 18px;
@@ -227,18 +241,7 @@
 
 	font-weight: 600;
 }
-.Algorithms_result_Latest_News button:nth-child(2) {
-	box-sizing: border-box;
-	font-size: 18px;
-	padding: 8px 28px;
-	border-radius: 10px;
-	background-color: #0d0d0d;
-	display: flex;
-	color: white;
-	gap: 10px;
-	align-items: center;
-}
-.Algorithms_result_Latest_News button:nth-child(3) {
+.Algorithms_result_Latest_News_marque button:nth-child(2) {
 	box-sizing: border-box;
 	font-size: 18px;
 	padding: 8px 28px;
@@ -251,25 +254,61 @@
 	align-items: center;
 	font-weight: 800;
 }
-.Algorithms_result_Latest_News button:nth-child(2) span {
-	background: linear-gradient(to right, rgba(255, 255, 255, 0.2), white, white, white);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: bold;
+
+.marque_wrapper {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: black;
+	padding: 10px 0;
 }
-.Algorithms_result_Latest_News button:nth-child(3) span {
-	background: linear-gradient(
-		to right,
-		white,
-		white,
-		white,
-		rgba(231, 230, 230, 0.756),
-		rgba(255, 255, 255, 0.2)
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: bold;
+
+.Algorithms_result_Latest_News_marque {
+	display: flex;
+	gap: 20px;
+	animation: marqueeScroll 10s linear infinite;
 }
+
+/* Fading effect on left and right sides */
+.marque_wrapper::before,
+.marque_wrapper::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 50px; /* Adjust width as needed */
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.marque_wrapper::before {
+	left: 0;
+	background: linear-gradient(to right, black, transparent);
+}
+
+.marque_wrapper::after {
+	right: 0;
+	background: linear-gradient(to left, black, transparent);
+}
+
+.Algorithms_result_Latest_News_marque button:nth-child(1) {
+	box-sizing: border-box;
+	font-size: 18px;
+	padding: 8px 28px;
+	border-radius: 10px;
+	background-color: #0d0d0d;
+	display: flex;
+	color: white;
+	gap: 10px;
+	align-items: center;
+}
+.Algorithms_result_Latest_News_marque {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+	gap: 20px;
+}
+
 @media (max-width: 1324px) {
 	.Algorithms_result {
 		width: 100%;
