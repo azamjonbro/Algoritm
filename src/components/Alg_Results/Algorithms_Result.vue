@@ -57,11 +57,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="Get_in_touch"></div>
+		<div class="Get_in_touch">
+			<!-- <CustomSelect /> -->
+			<ContactForm />
+		</div>
 	</div>
 </template>
 
-<script></script>
+<script>
+import CustomSelect from "../Template/customSelect.vue";
+import ContactForm from "../Free_consultation/Free_Consultation.vue";
+export default {
+	components: {
+		CustomSelect,
+		ContactForm,
+	},
+};
+</script>
 
 <style>
 * {
