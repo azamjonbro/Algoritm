@@ -1,11 +1,21 @@
 <template>
   <div class="testimonial-section">
-    <h2>O'quvchilarning fikrlari</h2>
+    <div class="testimonial-nav">
+      <span class="bar"> </span>
+      <h2>O'quvchilarning fikrlari</h2>
+    </div>
 
-    <!-- Carousel -->
-    <div class="testimonial-carousel">
-      <div
-        v-for="(testimonial, index) in visibleTestimonials"
+    <swiper
+      :modules="[Navigation, Autoplay]"
+      :slides-per-view="3.5"
+      :space-between="25"
+      :autoplay="true"
+      :loop="true"
+      navigation
+      class="testimonial-carousel"
+    >
+      <swiper-slide
+        v-for="(testimonial, index) in testimonials"
         :key="index"
         class="testimonial-card"
       >
@@ -21,123 +31,165 @@
             class="user-image-play"
           />
         </div>
-      </div>
-    </div>
+      </swiper-slide>
+    </swiper>
+    <swiper
+      :modules="[Navigation, Autoplay]"
+      :slides-per-view="2.2"
+      :space-between="25"
+      :loop="true"
+      :slides-per-group="1"
+      navigation
+      class="testimonial-carousel2"
+    >
+      <swiper-slide
+        v-for="(testimonial, index) in testimonials"
+        :key="index"
+        class="testimonial-card2"
+      >
+        <p>{{ testimonial.descrioption }}</p>
+        <p>{{ testimonial.descrioption2 }}</p>
 
-    <!-- Navigation buttons -->
-    <div class="btns">
-      <span @click="prevTestimonial">‹</span>
-      <span @click="nextTestimonial">›</span>
-    </div>
+        <div class="testimonial-footer2">
+          <img :src="testimonial.image" alt="User Image" class="user-image" />
+          <div class="testimonial-footer-text2">
+            <h3>{{ testimonial.name }}</h3>
+            <p>{{ testimonial.role }}</p>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+
 export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      Navigation,
+      Autoplay,
+    };
+  },
   data() {
     return {
-      currentIndex: 0, // Track the start index
-      itemsPerPage: 4, // Show 4 testimonials at a time
       testimonials: [
         {
           name: "Alixon",
           role: "Frontend o'quvchisi",
-          feedback:
-            "Men Algorithm o'quv markazida tahsil olayotganimdan juda mamnunman...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
         {
           name: "Zafar",
           role: "Full Stack Developer",
-          feedback:
-            "Bu markazda o'qish orqali men yangi bilimlarga ega bo'ldim...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
         {
           name: "Gulnoza",
           role: "UX/UI Dizayner",
-          feedback: "Darslar juda tushunarli va sifatli o'tiladi...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
         {
           name: "Bekzod",
           role: "Backend Engineer",
-          feedback:
-            "Dasturlash asoslarini mukammal o'rganishimga yordam berdi...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
         {
           name: "Aziza",
           role: "Data Scientist",
-          feedback: "Bu kurs men uchun katta o'zgarish yasadi...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
         {
           name: "Rustam",
           role: "QA Engineer",
-          feedback: "Testlash bo'yicha chuqur bilim oldim...",
           image: require("@/assets/Images/home_img/Mask group.svg"),
           image2: require("@/assets/Images/home_img/video-circle.png"),
+          descrioption:
+            "Men Algoritm o‘quv markazida ta’lim olayotganimdan juda mamnunman. Bu yerda darslar juda tushunarli va sifatli tarzda o‘tiladi. O‘qituvchilar tajribali va har bir o‘quvchiga alohida e’tibor berishadi. Shuningdek, amaliy mashg‘ulotlar va real loyihalar ustida ishlash imkoniyati borligi menga juda yoqadi.",
+          descrioption2:
+            "Markazdagi muhit do‘stona va motivatsion, bu esa o‘rganish jarayonini yanada qiziqarli qiladi. Agar IT va dasturlash bo‘yicha chuqur bilim olishni istasangiz, Algoritm o‘quv markazi eng yaxshi tanlovlardan biri deb o‘ylayman! 😊",
         },
       ],
     };
   },
-  computed: {
-    visibleTestimonials() {
-      return [
-        ...this.testimonials,
-        ...this.testimonials, // Duplicate for infinite looping
-      ].slice(this.currentIndex, this.currentIndex + this.itemsPerPage);
-    },
-  },
-  methods: {
-    nextTestimonial() {
-      if (this.currentIndex < this.testimonials.length - 1) {
-        this.currentIndex++;
-      } else {
-        this.currentIndex = 0; // Loop to the start
-      }
-    },
-    prevTestimonial() {
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
-      } else {
-        this.currentIndex = this.testimonials.length - 1; // Loop to the end
-      }
-    },
-  },
 };
 </script>
 
-<style scoped>
+<style>
+.testimonial-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.testimonial-nav .bar {
+  width: 4px;
+  height: 43px;
+  background: yellow;
+}
+.testimonial-nav h2 {
+  font-size: 32px;
+}
 .testimonial-section {
-  height: auto;
+  position: relative;
   text-align: start;
   background: #000;
   color: white;
-  height: 700px;
-  /* padding: 20px; */
   margin-top: 35px;
+  padding: 20px 0;
 }
 
 .testimonial-carousel {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  height: 670px;
+  margin-bottom: 30px;
+}
+
+.testimonial-carousel2 {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  height: 400px;
+  margin-bottom: 30px;
 }
 
 .testimonial-card {
+  min-width: 339px;
   height: 600px;
-  min-width: 340px;
-  /* width: 600px; */
   padding: 30px;
   border-radius: 20px;
   background: #111;
@@ -145,45 +197,118 @@ export default {
   align-items: end;
 }
 
+.testimonial-card2 {
+  max-width: 478px;
+  max-height: 330px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.testimonial-card2 > p {
+  font-size: 13px;
+  color: #f2f2f2;
+  line-height: 17px;
+  margin-top: 10px;
+}
+/* Footer */
 .testimonial-footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 10px; */
+}
+.testimonial-footer2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  margin-top: 20px;
 }
 
-.testimonial-footer-text {
-  margin-left: -15%;
-}
 .testimonial-footer-text h3 {
   font-size: 30px;
 }
-.testimonial-footer-text p {
+.testimonial-footer-text2 {
+  font-size: 30px;
+}
+
+.testimonial-footer-text,
+.testimonial-footer-text2 p {
   font-size: 10px;
+}
+.testimonial-footer-text {
+  margin-left: -10%;
 }
 
 .user-image {
-  width: 50px;
-  height: 50px;
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
 }
 
-.btns {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  margin-top: 20px;
-  gap: 10px;
+.testimonial-carousel::after,
+.testimonial-carousel2::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+  pointer-events: none;
 }
 
-.btns span {
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  color: black;
-  font-size: 20px;
+.swiper-button-prev {
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 2;
+  top: 97%;
+  left: 94%;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  text-align: center;
+  padding: 5px;
+  background-color: #1f1c1c;
+
+  color: #fff;
 }
+
+.swiper-button-next {
+  box-sizing: content-box;
+
+  position: absolute;
+  top: 97%;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+
+  color: #000;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px;
+  font-weight: 900;
+}
+.swiper-button-prev:hover,
+.swiper-button-prev:active {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.swiper-button-next:hover,
+.swiper-button-next:active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Tugmalar joylashuvini tuzatish */
 </style>

@@ -20,12 +20,14 @@
             <h3>{{ feature.title }}</h3>
             <p>{{ feature.description }}</p>
           </div>
-
-          <div class="icon">{{ feature.icon }}</div>
+          <div class="icon">
+            <img :src="feature.image" alt="featureimage" />
+          </div>
         </div>
       </div>
     </div>
     <StudentThought />
+    <EnrolInCourse />
   </div>
 </template>
 
@@ -34,12 +36,14 @@ import Carousel from "@/components/carousel/carousel.vue";
 import Algorithm_Result from "@/components/Alg_Results/Algorithms_Result.vue";
 import CourseHomePage from "@/components/CoursesHomePage/CoursesHomePage.vue";
 import StudentThought from "@/components/StudentsThought/StudentThought.vue";
+import EnrolInCourse from "@/components/EnrollnCourse/EnrolInCourse.vue";
 export default {
   components: {
     Carousel,
     Algorithm_Result,
     CourseHomePage,
     StudentThought,
+    EnrolInCourse,
   },
   data() {
     return {
@@ -49,25 +53,25 @@ export default {
           title: "Doimiy musobaqalar",
           description:
             "Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
-          icon: "⚡",
+          image: require("@/assets/Images/home_img/course1.svg"),
         },
         {
           title: "Ish taklif qilish kafolati",
           description:
             "Algoritm kurslarini muvaffaqiyatli bitirgan o‘quvchilarga ish taklif qilish kafolatini beradi.",
-          icon: "🌵",
+          image: require("@/assets/Images/home_img/course2.svg"),
         },
         {
           title: "Sifatli ta’lim",
           description:
             "Doimiy yangilanib boradigan kurslar va katta tajribaga ega ustozlar.",
-          icon: "⭐",
+          image: require("@/assets/Images/home_img/course3.svg"),
         },
         {
           title: "Sertifikat",
           description:
             "Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
-          icon: "🖥️",
+          image: require("@/assets/Images/home_img/course4.svg"),
         },
       ],
     };
@@ -125,11 +129,17 @@ export default {
 }
 
 .icon {
-  font-size: 24px;
+  width: 66px;
+  height: 66px;
+  /* font-size: 24px; */
   background: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 50%;
-  display: inline-block;
+  /* display: inline-block; */
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .features-texts h3 {

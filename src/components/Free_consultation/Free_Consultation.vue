@@ -117,19 +117,7 @@ export default {
   cursor: pointer;
 }
 
-/* .dropdown-menu {
-	background: #000;
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 100%;
-	border: 1px solid #ffcc00;
-	border-radius: 6px;
-	margin-top: 5px;
-	list-style: none;
-	padding: 0;
-	z-index: 10;
-} */
+
 
 .submit-btn {
   background: #000000;
