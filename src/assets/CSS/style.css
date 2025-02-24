@@ -1,69 +1,102 @@
-
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 200;
-  src: url('../Fonts/noto-sans-v38-latin-200.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-200.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 300;
-  src: url('../Fonts/noto-sans-v38-latin-300.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-300.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
-  src: url('../Fonts/noto-sans-v38-latin-regular.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-regular.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
-  src: url('../Fonts/noto-sans-v38-latin-500.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-500.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  src: url('../Fonts/noto-sans-v38-latin-600.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-600.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  src: url('../Fonts/noto-sans-v38-latin-700.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-700.woff2') format('woff2'); 
 }
 @font-face {
   font-display: swap; 
-  font-family: 'Noto Sans';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  src: url('../Fonts/noto-sans-v38-latin-800.woff2') format('woff2');
+  src: url('../Fonts/manrope-v15-latin-800.woff2') format('woff2'); 
 }
 
-@font-face {
-  font-display: swap; 
-  font-family: 'Noto Sans';
+
+
+@font-face{
+  font-family: "Nohemi";
   font-style: normal;
-  font-weight: 900;
-  src: url('../Fonts/noto-sans-v38-latin-900.woff2') format('woff2');
+  src: url("../Fonts/Nohemi-ExtraLight-BF6438cc58a2634.ttf");
+  font-weight: 200;
 }
+@font-face{
+  font-family: "Nohemi";
+  font-style: normal;
+  src: url("../Fonts/Nohemi-Light-BF6438cc5899919.ttf");
+  font-weight: 300;
+}
+@font-face{
+  font-family: "Nohemi";
+  font-style: normal;
+  src: url("../Fonts/Nohemi-Regular-BF6438cc4d0e493.ttf");
+  font-weight: 400;
+}
+@font-face{
+  font-family: "Nohemi";
+  font-style: normal;
+  src: url("../Fonts/Nohemi-Medium-BF6438cc5883899.ttf");
+  font-weight: 500;
+}
+@font-face{
+  font-family: "Nohemi";
+  font-style: normal;
+  src: url("../Fonts/Nohemi-Black-BF6438cc58744d4.ttf");
+  font-weight: 600;
+}
+@font-face{
+  font-family: "Nohemi";
+  font-style: normal;
+  src: url("../Fonts/Nohemi-ExtraBold-BF6438cc5881baf.ttf");
+  font-weight: 800;
+}
+
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Nohemi";
   user-select: none;
+  font-weight: 400;
 }
 html,body,#app{
   width: 100%;
