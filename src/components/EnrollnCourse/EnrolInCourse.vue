@@ -13,7 +13,6 @@
     </div>
 
     <div class="Enrol-In-Wrapper">
-      <!-- Course Selection -->
       <div class="Courses-time">
         <select v-model="selectedCourse">
           <option value="">Qanday kasb egallamoqchisiz?</option>
@@ -22,7 +21,6 @@
           </option>
         </select>
 
-        <!-- Display Dates if a Course is Selected -->
         <div v-if="selectedCourse" class="date-selection">
           <h3>Guruh boshlanadigan sana tanlash</h3>
           <div class="date-options">
@@ -37,7 +35,6 @@
           </div>
         </div>
 
-        <!-- Display Times if a Date is Selected -->
         <div v-if="selectedDate" class="time-selection">
           <h3>Guruh boshlanadigan vaqt tanlash</h3>
           <div class="time-options">
@@ -59,7 +56,6 @@
         </div>
       </div>
 
-      <!-- Selected Information Display -->
       <div class="Enrol-in-form"></div>
     </div>
   </div>
