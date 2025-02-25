@@ -1,92 +1,89 @@
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 200;
-  src: url('../Fonts/manrope-v15-latin-200.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-200.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 300;
-  src: url('../Fonts/manrope-v15-latin-300.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-300.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url('../Fonts/manrope-v15-latin-regular.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-regular.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
-  src: url('../Fonts/manrope-v15-latin-500.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-500.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 600;
-  src: url('../Fonts/manrope-v15-latin-600.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-600.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  src: url('../Fonts/manrope-v15-latin-700.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-700.woff2") format("woff2");
 }
 @font-face {
-  font-display: swap; 
-  font-family: 'Manrope';
+  font-display: swap;
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
-  src: url('../Fonts/manrope-v15-latin-800.woff2') format('woff2'); 
+  src: url("../Fonts/manrope-v15-latin-800.woff2") format("woff2");
 }
 
-
-
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-ExtraLight-BF6438cc58a2634.ttf");
   font-weight: 200;
 }
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-Light-BF6438cc5899919.ttf");
   font-weight: 300;
 }
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-Regular-BF6438cc4d0e493.ttf");
   font-weight: 400;
 }
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-Medium-BF6438cc5883899.ttf");
   font-weight: 500;
 }
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-Black-BF6438cc58744d4.ttf");
   font-weight: 600;
 }
-@font-face{
+@font-face {
   font-family: "Nohemi";
   font-style: normal;
   src: url("../Fonts/Nohemi-ExtraBold-BF6438cc5881baf.ttf");
   font-weight: 800;
 }
-
 
 *,
 *::after,
@@ -98,85 +95,88 @@
   user-select: none;
   font-weight: 400;
 }
-html,body,#app{
+html,
+body,
+#app {
   width: 100%;
-  height: 100%; 
-  background: var(--base-background) ;
+  height: 100%;
+  background: hsl(0, 0%, 0%);
 }
 
-input{
+input {
   padding: 6px;
 }
-input,button{
-  background:none;
+input,
+button {
+  background: none;
   outline: none;
-  border:none;
+  border: none;
 }
-a{
-  color:#000;
+a {
+  color: #000;
   text-decoration: none;
   outline: none;
 }
 
-.d-flex{
+.d-flex {
   display: flex;
 }
 
-.j-center{
+.j-center {
   justify-content: center;
 }
 
-.a-center{
+.a-center {
   align-items: center;
 }
-.text-14{
+.text-14 {
   font-size: 14px;
-  color:gray
+  color: gray;
 }
-.gap12{
+.gap12 {
   gap: 12px;
 }
-.gap24{
+.gap24 {
   gap: 24px;
 }
-.border-radius8{
+.border-radius8 {
   border-radius: 8px;
 }
-.border-radius12{
-  border-radius:16px;
+.border-radius12 {
+  border-radius: 16px;
 }
-.border-radius24{
-  border-radius:24px;
+.border-radius24 {
+  border-radius: 24px;
 }
-.j-between{
+.j-between {
   justify-content: space-between;
 }
-.j-around{
+.j-around {
   justify-content: space-around;
 }
-.column{
+.column {
   flex-direction: column;
 }
-.p-24{
+.p-24 {
   padding: 24px;
 }
-.p-12{
+.p-12 {
   padding: 12px;
 }
 
-.create-button{
+.create-button {
   width: 220px;
   height: 48px;
   background: rgb(31, 31, 250);
   color: white;
   font-weight: 500;
-  border-radius:4px;
+  border-radius: 4px;
   cursor: pointer;
 }
-.create-button:hover{
+.create-button:hover {
   background: rgb(32, 32, 201);
 }
-.create-button:active{
+.create-button:active {
   background: rgb(62, 62, 245);
 }
 input[type="number"]::-webkit-outer-spin-button,
@@ -184,7 +184,7 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-option{
+option {
   padding: 12px !important;
 }
 
@@ -206,13 +206,13 @@ option{
 .warehouse-bottom::-webkit-scrollbar-thumb:hover {
   background-color: #888;
 }
-.unique-label{
-  width:100%;
+.unique-label {
+  width: 100%;
 }
 
 .unique-date-picker {
   position: absolute;
-  top:55px;
+  top: 55px;
   padding: 12px;
   border-radius: 10px;
   background-color: #fff;
@@ -237,12 +237,14 @@ option{
   text-align: center;
 }
 
-.unique-weekdays, .unique-days {
+.unique-weekdays,
+.unique-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-.unique-weekday, .unique-day {
+.unique-weekday,
+.unique-day {
   padding: 10px;
   font-size: 10px;
 }
@@ -258,7 +260,7 @@ option{
 
 .unique-today {
   font-weight: bold;
-  border:1px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 .unique-selected {
@@ -270,22 +272,24 @@ option{
   color: var(--gray-color);
 }
 
-.unique-years, .unique-months {
+.unique-years,
+.unique-months {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.unique-year  {
+.unique-year {
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
 }
-.unique-month{
+.unique-month {
   padding: 10px 5px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.unique-year:hover, .unique-month:hover {
+.unique-year:hover,
+.unique-month:hover {
   background-color: var(--grey-dark);
 }

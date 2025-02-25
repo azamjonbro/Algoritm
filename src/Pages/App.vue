@@ -1,27 +1,39 @@
 <template>
-	<div class="container">
-		<Navbar />
-		<router-view></router-view>
-	</div>
+  <div class="container">
+    <div class="main">
+      <Navbar />
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar/Navbar.vue";
 export default {
-	components: {
-		Navbar,
-	},
+  components: {
+    Navbar,
+  },
 };
 </script>
 
 <style>
-* {
-	box-sizing: border-box;
-}
 .container {
-	width: 100%;
-	height: auto;
-	background-color: #000000;
-	padding: 33px 93px;
+  width: 100%;
+  height: auto;
+  /* align-items: center; */
+  /* padding: 33px 93px; */
+  /* margin: 0 auto; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* background-color: hsl(0, 0%, 0%); */
+}
+.main {
+  margin: 0 auto;
+  max-width: 1560px;
+  /* margin-right: auto; */
+  height: auto;
+
+  /* background-color: hsl(0, 0%, 0%); */
+  padding: 33px 93px;
 }
 </style>

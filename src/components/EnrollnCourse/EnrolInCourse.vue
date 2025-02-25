@@ -113,8 +113,7 @@ export default {
 .Courses-time {
   width: 50%;
   height: auto;
-  padding: 20px;
-  border: 1px solid whitesmoke;
+  /* border: 1px solid whitesmoke; */
 }
 .Enrol-in-form {
   width: 50%;
@@ -126,7 +125,7 @@ export default {
 .Courses-time select {
   width: 100%;
   padding: 10px;
-  background: #333;
+  background: #0d0d0d;
   color: white;
   border: none;
   margin-bottom: 20px;

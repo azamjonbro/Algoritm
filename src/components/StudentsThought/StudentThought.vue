@@ -213,6 +213,7 @@ export default {
   color: #f2f2f2;
   line-height: 17px;
   margin-top: 10px;
+  font-family: Manrope;
 }
 /* Footer */
 .testimonial-footer {

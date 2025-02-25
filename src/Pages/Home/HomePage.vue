@@ -81,7 +81,7 @@ export default {
 
 <style>
 .Home {
-  width: 100%;
+  max-width: 1440px;
   height: auto;
   background-color: #000000;
 }
@@ -145,13 +145,14 @@ export default {
 .features-texts h3 {
   /* margin-top: 10px; */
   font-size: 36px;
-  /* font-weight: 600; */
+  font-weight: 500;
 }
 
 .features-texts p {
   margin-top: 5px;
   max-width: 370px;
-
+  font-weight: 400;
+  font-family: Manrope;
   font-size: 16px;
   color: rgb(191, 191, 191);
 }

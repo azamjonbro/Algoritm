@@ -35,8 +35,8 @@
       <button class="submit-btn" :disabled="!isFormValid">Yuborish</button>
     </div>
 
-    <div class="consent">
-      <input type="checkbox" v-model="consent" id="consent" />
+    <div class="consent-wrapper">
+      <input type="checkbox" v-model="consent" />
       <label for="consent">
         Shaxsiy ma'lumotlarni <a href="#">qayta ishlanishiga</a> roziman
       </label>
@@ -63,7 +63,7 @@ export default {
   width: 100%;
   max-height: 381px;
   display: flex;
-  gap: 5px;
+  gap: 8px;
   flex-direction: column;
   /* max-width: 450px; */
   margin: auto;
@@ -75,20 +75,64 @@ export default {
 }
 .consultation-form .title {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #f8d800;
 }
 ::placeholder {
   color: rgb(191, 191, 191);
   font-size: 20px;
 }
-.subtitle {
+.consultation-form .subtitle {
   font-size: 13px;
   line-height: 16px;
   color: gray;
+  font-weight: 400;
+  font-family: Manrope;
+  margin-top: 5px;
+}
+.consent-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.consent-wrapper label {
+  color: rgb(198, 198, 198);
+  font-size: 12px;
+}
+.consent-wrapper input {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffd700; /* Yellow background */
+  appearance: none; /* Hides default checkbox */
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  position: relative;
 }
 
-.input {
+.consent-wrapper input:checked {
+  background-color: #ffd700; /* Keep yellow background when checked */
+}
+
+.consent-wrapper input:checked::after {
+  content: "✔"; /* Unicode checkmark */
+  font-size: 12px;
+  color: #000; /* Black checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.consent-wrapper a {
+  color: rgb(198, 198, 198);
+  text-decoration: underline;
+  font-size: 12px;
+}
+.consultation-form .input {
   width: 100%;
   padding: 16px 12px;
   margin: 8px 0;
@@ -97,6 +141,8 @@ export default {
   background: #000;
   color: #fff;
   font-size: 16px;
+  font-family: Manrope;
+
   padding-left: 21px;
 }
 .input:focus {
@@ -116,8 +162,6 @@ export default {
   border-radius: 10px;
   cursor: pointer;
 }
-
-
 
 .submit-btn {
   background: #000000;

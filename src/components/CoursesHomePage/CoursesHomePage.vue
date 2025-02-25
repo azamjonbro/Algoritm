@@ -76,28 +76,28 @@ export default {
   border-radius: 3px;
 }
 .courseNav button:nth-of-type(1) {
-  font-size: 22px;
+  font-size: 21px;
   background-color: #fff;
   border-radius: 10px;
-  font-weight: 600;
-  padding: 8px 21px;
+  font-weight: 500;
+  padding: 9px 21px;
   max-height: 47px;
 }
 .courseNav button:nth-of-type(2) {
-  font-size: 22px;
+  font-size: 21px;
   color: #fff;
   border-radius: 10px;
   background-color: #0d0d0d;
-  font-weight: 600;
-  padding: 8px 21px;
+  font-weight: 500;
+  padding: 9px 21px;
   max-height: 47px;
 }
 
 .courseNav select {
-  font-size: 22px;
+  font-size: 21px;
   background-color: #fff;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 8px 21px;
   max-height: 47px;
 }
@@ -122,7 +122,7 @@ export default {
 
 .course-card {
   width: auto;
-  max-width: 615px;
+  max-width: 625px;
   background: black;
   color: white;
   /* padding: 15px; */
@@ -150,14 +150,21 @@ export default {
   border-radius: 10px;
 }
 .course-info {
-  min-width: 310px;
+  min-width: 320px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
 }
 .course-info h3 {
   font-size: 32px;
   margin-top: 10px;
+  font-weight: 400;
 }
 .course-info p {
   font-size: 20px;
+  font-weight: 400;
+  margin-top: 8px;
 }
 
 .course-buttons {

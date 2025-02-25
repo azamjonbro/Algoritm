@@ -134,9 +134,13 @@ export default {
   color: white;
   font-size: 56px;
   line-height: 58px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 .Home_Carousel_text_wrapper p {
   max-width: 596px;
+  font-family: Manrope;
+  font-size: 20px;
 }
 .Home_Carousel_text_wrapper p:nth-of-type(1) {
   color: gray;
