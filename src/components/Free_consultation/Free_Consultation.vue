@@ -11,32 +11,38 @@
     <!-- Name Input -->
     <input
       type="text"
-      v-model="name"
+      v-model="form.name"
       placeholder="Ismingiz"
       class="input name-input"
     />
 
-    <select name="" id="" class="dropdown">
-      <option>Qanday kasb egallamoqchisiz?</option>
-      <option value="">samething</option>
-      <option value="">samething</option>
-      <option value="">samething</option>
+    <select v-model="form.profession" class="dropdown">
+      <option disabled value="">Qanday kasb egallamoqchisiz?</option>
+      <option>Web Dasturlash</option>
+      <option>Grafik Dizayn</option>
+      <option>Digital Marketing</option>
     </select>
 
     <div class="Phone_Number">
       <input
         type="tel"
-        v-model="phone"
+        v-model="form.phone"
         placeholder="+998 69 404 34 34"
         class="input phone-input"
       />
 
       <!-- Submit Button -->
-      <button class="submit-btn" :disabled="!isFormValid">Yuborish</button>
+      <button
+        class="submit-btn"
+        :disabled="!isFormValid"
+        @click="sendToTelegram"
+      >
+        Yuborish
+      </button>
     </div>
 
     <div class="consent-wrapper">
-      <input type="checkbox" v-model="consent" />
+      <input type="checkbox" v-model="form.consent" />
       <label for="consent">
         Shaxsiy ma'lumotlarni <a href="#">qayta ishlanishiga</a> roziman
       </label>
@@ -47,10 +53,65 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      form: {
+        name: "",
+        phone: "",
+        profession: "",
+        consent: false,
+      },
+    };
   },
-  computed: {},
-  methods: {},
+  computed: {
+    isFormValid() {
+      return (
+        this.form.name &&
+        this.form.phone &&
+        this.form.profession &&
+        this.form.consent
+      );
+    },
+  },
+  methods: {
+    async sendToTelegram() {
+      const botToken = "7927115509:AAHCT7c7elCP-CqBJGB8WnlYxcQf4fXoPhk";
+      const chatId = "1091223879";
+      const message = `📝 Yangi so'rov: 
+      
+      👤 Ism: ${this.form.name} 
+      📞 Telefon: ${this.form.phone}
+      🎯 Kasb: ${this.form.profession}`;
+
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+      const payload = {
+        chat_id: chatId,
+        text: message,
+        parse_mode: "Markdown",
+      };
+
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json();
+        if (data.ok) {
+          alert("Ma'lumot yuborildi!");
+          this.form.name = "";
+          this.form.phone = "";
+          this.form.profession = "";
+          this.form.consent = false;
+        } else {
+          alert(`Xatolik: ${data.description}`);
+        }
+      } catch (error) {
+        console.error("Xatolik:", error);
+        alert("Xatolik yuz berdi!");
+      }
+    },
+  },
 };
 </script>
 
@@ -104,7 +165,7 @@ export default {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: #ffd700; /* Yellow background */
+  background-color: rgba(13, 13, 13, 1); /* Yellow background */
   appearance: none; /* Hides default checkbox */
   display: inline-block;
   cursor: pointer;
@@ -151,13 +212,16 @@ export default {
 
 .dropdown {
   width: 100%;
-  padding: 12px 12px;
+  padding: 16px 16px;
   border: #000 solid 0.5px;
   background: #000;
   color: rgb(191, 191, 191);
+  appearance: none;
+  border-radius: 10px;
+  background-image: url("@/assets/Images/home_img/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 
-  padding-left: 21px;
-  padding-right: 21px;
   font-size: 20px;
   border-radius: 10px;
   cursor: pointer;

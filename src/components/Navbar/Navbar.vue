@@ -57,6 +57,7 @@ export default {
 /* Header */
 header {
   max-width: 1440px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;

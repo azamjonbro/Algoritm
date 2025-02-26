@@ -16,12 +16,12 @@
       <div class="Courses-time">
         <select v-model="selectedCourse">
           <option value="">Qanday kasb egallamoqchisiz?</option>
-          <option v-for="course in courses" :key="course" :value="course">
+          <option v-for="course in courses" :key="course">
             {{ course }}
           </option>
         </select>
 
-        <div v-if="selectedCourse" class="date-selection">
+        <div class="date-selection">
           <h3>Guruh boshlanadigan sana tanlash</h3>
           <div class="date-options">
             <button
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div v-if="selectedDate" class="time-selection">
+        <div class="time-selection">
           <h3>Guruh boshlanadigan vaqt tanlash</h3>
           <div class="time-options">
             <button
@@ -48,12 +48,12 @@
             </button>
           </div>
         </div>
-        <div class="Sellected-CourseTime">
+        <!-- <div class="Sellected-CourseTime">
           <h3>Tanlangan ma'lumotlar</h3>
           <p><strong>Kurs:</strong> {{ selectedCourse || "Tanlanmagan" }}</p>
           <p><strong>Sana:</strong> {{ selectedDate || "Tanlanmagan" }}</p>
           <p><strong>Vaqt:</strong> {{ selectedTime || "Tanlanmagan" }}</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="Enrol-in-form"></div>
@@ -67,7 +67,13 @@ export default {
     return {
       courses: ["Web dasturlash", "Kiber xavfsizlik", "Grafik dizayn"],
       selectedCourse: "",
-      dates: ["27.02.2025", "28.02.2025", "01.03.2025"],
+      dates: [
+        "29.02.2025",
+        "28.02.2025",
+        "01.03.2025",
+        "21.02.2025",
+        "27.02.2025",
+      ],
       selectedDate: "",
       times: ["09:00", "12:00", "15:00"],
       selectedTime: "",
@@ -113,7 +119,31 @@ export default {
 .Courses-time {
   width: 50%;
   height: auto;
+
   /* border: 1px solid whitesmoke; */
+}
+.Courses-time .date-selection,
+.time-selection {
+  width: 100%;
+  height: auto;
+  padding-top: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #0d0d0d;
+}
+.date-selection > h3 {
+  margin-left: 20px;
+  max-width: 172px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: white;
+}
+.time-selection > h3 {
+  margin-left: 20px;
+  font-size: 16px;
+  max-width: 172px;
+
+  color: white;
 }
 .Enrol-in-form {
   width: 50%;
@@ -124,27 +154,42 @@ export default {
 }
 .Courses-time select {
   width: 100%;
-  padding: 10px;
+  padding: 23px 30px;
   background: #0d0d0d;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   border: none;
-  margin-bottom: 20px;
+  font-family: Manrope;
+  appearance: none;
+  font-size: 20px;
+  border-radius: 10px;
+  background-image: url("@/assets/Images/home_img/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 33px center;
+  /* margin-bottom: 20px; */
 }
+
 .date-options,
 .time-options {
   display: flex;
   gap: 10px;
+  /* height: 7px; */
+  padding: 23px 20px;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .Courses-time button {
-  padding: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
   background: #222;
   color: white;
   border: none;
   cursor: pointer;
 }
 .Courses-time button.active {
-  background: #007bff;
+  background: #fff;
+  color: #000;
 }
 </style>
