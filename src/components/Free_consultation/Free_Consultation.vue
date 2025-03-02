@@ -14,6 +14,7 @@
       v-model="form.name"
       placeholder="Ismingiz"
       class="input name-input"
+      @input="filterName"
     />
 
     <select v-model="form.profession" class="dropdown">
@@ -28,6 +29,7 @@
         type="tel"
         v-model="form.phone"
         placeholder="+998 69 404 34 34"
+        v-mask="'+998 ## ### ## ##'"
         class="input phone-input"
       />
 
@@ -51,8 +53,10 @@
 </template>
 
 <script>
+import { mask } from "vue-the-mask";
 import { showSuccess } from "@/Utils/Toast";
 export default {
+  directives: { mask },
   data() {
     return {
       form: {
@@ -111,6 +115,9 @@ export default {
         console.error("Xatolik:", error);
         alert("Xatolik yuz berdi!");
       }
+    },
+    filterName(event) {
+      this.form.name = event.target.value.replace(/[^a-zA-Zа-яА-Яўғқҳʼ ]/g, "");
     },
   },
 };
