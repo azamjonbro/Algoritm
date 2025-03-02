@@ -56,7 +56,10 @@
         </div> -->
       </div>
 
-      <div class="Enrol-in-form"></div>
+      <div class="Enrol-in-form">
+        <h2>Ro‘yxatdan o‘tish uchun formani to‘ldiring</h2>
+        <input type="text" />
+      </div>
     </div>
   </div>
 </template>

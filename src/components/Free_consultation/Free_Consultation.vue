@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import { showSuccess } from "@/Utils/Toast";
 export default {
   data() {
     return {
@@ -98,7 +99,7 @@ export default {
 
         const data = await response.json();
         if (data.ok) {
-          alert("Ma'lumot yuborildi!");
+          showSuccess("Ma'lumot yuborildi!");
           this.form.name = "";
           this.form.phone = "";
           this.form.profession = "";
@@ -238,9 +239,18 @@ export default {
   width: 100%;
   cursor: pointer;
 }
+.submit-btn:active {
+  background-color: #fff;
+  color: #000;
+}
 
-/* .submit-btn:disabled {
-	background: #444;
-	cursor: not-allowed;
-} */
+.submit-btn:disabled {
+  /* background: #444; */
+  cursor: not-allowed;
+}
+.submit-btn:disabled:hover,
+.submit-btn:disabled:active {
+  background: #000; /* Disabled bo'lganda hover va active effekt yo‘q */
+  color: rgb(191, 191, 191);
+}
 </style>
