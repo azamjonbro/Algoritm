@@ -15,6 +15,7 @@
       placeholder="Ismingiz"
       class="input name-input"
       @input="filterName"
+      maxlength="10"
     />
 
     <select v-model="form.profession" class="dropdown">
@@ -134,7 +135,6 @@ export default {
   display: flex;
   gap: 8px;
   flex-direction: column;
-  /* max-width: 450px; */
   margin: auto;
 }
 .Phone_Number {
@@ -173,8 +173,8 @@ export default {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: rgba(13, 13, 13, 1); /* Yellow background */
-  appearance: none; /* Hides default checkbox */
+  background-color: rgba(13, 13, 13, 1);
+  appearance: none;
   display: inline-block;
   cursor: pointer;
   border: none;
@@ -182,13 +182,13 @@ export default {
 }
 
 .consent-wrapper input:checked {
-  background-color: #ffd700; /* Keep yellow background when checked */
+  background-color: #ffd700;
 }
 
 .consent-wrapper input:checked::after {
-  content: "✔"; /* Unicode checkmark */
+  content: "✔";
   font-size: 12px;
-  color: #000; /* Black checkmark */
+  color: #000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -252,12 +252,11 @@ export default {
 }
 
 .submit-btn:disabled {
-  /* background: #444; */
   cursor: not-allowed;
 }
 .submit-btn:disabled:hover,
 .submit-btn:disabled:active {
-  background: #000; /* Disabled bo'lganda hover va active effekt yo‘q */
+  background: #000;
   color: rgb(191, 191, 191);
 }
 </style>
