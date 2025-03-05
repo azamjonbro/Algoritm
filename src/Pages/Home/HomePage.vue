@@ -28,6 +28,33 @@
     </div>
     <StudentThought />
     <EnrolInCourse />
+    <div class="FAQ-wrapper">
+      <div class="FAQ-nav">
+        <span class="bar"> </span>
+        <h2>Ko‘p Beriladigan Savollar!</h2>
+      </div>
+      <div class="FAQ-accardion-wrapper">
+        <div class="accordion-container">
+          <div
+            v-for="(item, index) in faqs"
+            :key="index"
+            class="accordion-item"
+          >
+            <div @click="toggle(index)" class="accordion-header">
+              <span class="accordion-title">{{ item.question }}</span>
+              <span class="accordion-icon">{{
+                openIndex === index ? "▲" : "▼"
+              }}</span>
+            </div>
+            <div v-show="openIndex === index" class="accordion-content">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -47,6 +74,7 @@ export default {
   },
   data() {
     return {
+      openIndex: null,
       selectedFeature: null,
       features: [
         {
@@ -74,7 +102,34 @@ export default {
           image: require("@/assets/Images/home_img/course4.svg"),
         },
       ],
+      faqs: [
+        {
+          question: "Kurslar bepulmi?",
+          answer:
+            "Yo‘q, hozir barcha kurslar pullik. Narxlarni har bir kursning sahifasida ko‘rishingiz mumkin.",
+        },
+        {
+          question: "Darslarni istalgan vaqtda ko‘rish mumkinmi?",
+          answer:
+            "Ha, sotib olganingizdan so‘ng darslarni istalgan vaqtda ko‘rishingiz mumkin.",
+        },
+        {
+          question: "Kurslar bepulmi?",
+          answer:
+            "Yo‘q, hozir barcha kurslar pullik. Narxlarni har bir kursning sahifasida ko‘rishingiz mumkin.",
+        },
+        {
+          question: "Darslarni istalgan vaqtda ko‘rish mumkinmi?",
+          answer:
+            "Ha, sotib olganingizdan so‘ng darslarni istalgan vaqtda ko‘rishingiz mumkin.",
+        },
+      ],
     };
+  },
+  methods: {
+    toggle(index) {
+      this.openIndex = this.openIndex === index ? null : index;
+    },
   },
 };
 </script>
@@ -131,19 +186,16 @@ export default {
 .icon {
   width: 66px;
   height: 66px;
-  /* font-size: 24px; */
   background: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 50%;
-  /* display: inline-block; */
-  /* text-align: center; */
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .features-texts h3 {
-  /* margin-top: 10px; */
   font-size: 36px;
   font-weight: 500;
 }
@@ -155,5 +207,79 @@ export default {
   font-family: Manrope;
   font-size: 16px;
   color: rgb(191, 191, 191);
+}
+
+.FAQ-wrapper {
+  height: auto;
+  margin-top: 40px;
+}
+
+.FAQ-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.FAQ-nav .bar {
+  width: 4px;
+  height: 43px;
+  background: yellow;
+}
+.FAQ-nav h2 {
+  font-size: 32px;
+  color: white;
+}
+.accordion-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.accordion-item {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-width: 650px;
+  background: rgba(13, 13, 13, 1);
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  min-width: 650px;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: rgba(13, 13, 13, 1);
+  transition: background 0.3s ease;
+}
+
+/* .accordion-header:hover {
+  background: #292929;
+} */
+
+.accordion-content {
+  min-width: 650px;
+
+  height: 81px;
+  padding: 20px;
+  background: rgba(13, 13, 13, 1);
+  color: #cfcfcf;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.accordion-content p {
+  max-width: 550px;
+}
+.accordion-icon {
+  transition: transform 0.2s ease;
 }
 </style>

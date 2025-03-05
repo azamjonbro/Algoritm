@@ -170,8 +170,8 @@ export default {
   font-size: 12px;
 }
 .consent-wrapper input {
-  width: 18px;
-  height: 18px;
+  width: 18.5px;
+  height: 18.5px;
   border-radius: 50%;
   background-color: rgba(13, 13, 13, 1);
   appearance: none;

@@ -59,13 +59,50 @@
       <div class="Enrol-in-form">
         <h2>Ro‘yxatdan o‘tish uchun formani to‘ldiring</h2>
         <input type="text" />
+        <input
+          type="text"
+          v-model="form.name"
+          placeholder="Ismingiz"
+          class="input name-input"
+          @input="filterName"
+          maxlength="10"
+        />
+        <div class="Phone_Number">
+          <input
+            type="tel"
+            v-model="form.phone"
+            placeholder="+998 69 404 34 34"
+            v-mask="'+998 ## ### ## ##'"
+            class="input phone-input"
+          />
+
+          <!-- Submit Button -->
+          <button
+            class="submit-btn"
+            :disabled="!isFormValid"
+            @click="sendToTelegram"
+          >
+            Yuborish
+          </button>
+        </div>
+        <div class="consent-wrapper">
+          <input type="checkbox" v-model="form.consent" />
+          <label for="consent">
+            Shaxsiy ma'lumotlarni <a href="#">qayta ishlanishiga</a> roziman
+          </label>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mask } from "vue-the-mask";
+import { showSuccess } from "@/Utils/Toast";
+
 export default {
+  directives: { mask },
+
   data() {
     return {
       courses: ["Web dasturlash", "Kiber xavfsizlik", "Grafik dizayn"],
@@ -80,7 +117,70 @@ export default {
       selectedDate: "",
       times: ["09:00", "12:00", "15:00"],
       selectedTime: "",
+      form: {
+        name: "",
+        phone: "",
+        consent: false,
+      },
     };
+  },
+
+  computed: {
+    isFormValid() {
+      return this.form.name && this.form.phone && this.form.consent;
+    },
+  },
+
+  methods: {
+    async sendToTelegram() {
+      const botToken = "7927115509:AAHCT7c7elCP-CqBJGB8WnlYxcQf4fXoPhk";
+      const chatId = "1091223879";
+
+      const message = `📝 Yangi so'rov:
+
+    👤 Ism: ${this.form.name}
+    📞 Telefon: ${this.form.phone}
+    📚 Kurs: ${this.selectedCourse || "Tanlanmagan"}
+    📅 Sana: ${this.selectedDate || "Tanlanmagan"}
+    ⏰ Vaqt: ${this.selectedTime || "Tanlanmagan"}`;
+
+      try {
+        const response = await fetch(
+          `https://api.telegram.org/bot${botToken}/sendMessage`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message,
+              parse_mode: "Markdown",
+            }),
+          }
+        );
+
+        const data = await response.json();
+        if (data.ok) {
+          showSuccess("Ma'lumot yuborildi!");
+          this.resetForm();
+        } else {
+          alert(`Xatolik: ${data.description}`);
+        }
+      } catch (error) {
+        console.error("Xatolik:", error);
+        alert("Xatolik yuz berdi!");
+      }
+    },
+
+    filterName(event) {
+      this.form.name = event.target.value.replace(
+        /[^a-zA-Zа-яА-Яўқғҳʼ ]/gu,
+        ""
+      );
+    },
+
+    resetForm() {
+      this.form = { name: "", phone: "", consent: false };
+    },
   },
 };
 </script>
@@ -148,13 +248,7 @@ export default {
 
   color: white;
 }
-.Enrol-in-form {
-  width: 50%;
-  padding: 20px;
-  border: 1px solid whitesmoke;
-  max-height: 414px;
-  height: 414px;
-}
+
 .Courses-time select {
   width: 100%;
   padding: 23px 30px;
@@ -194,5 +288,93 @@ export default {
 .Courses-time button.active {
   background: #fff;
   color: #000;
+}
+
+/* Enrol-in-form */
+
+.Enrol-in-form {
+  width: 50%;
+  padding: 50px 40px;
+  background-color: #0d0d0d;
+  max-height: 414px;
+  height: 414px;
+  border-radius: 10px;
+}
+.Enrol-in-form h2 {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.Enrol-in-form .input {
+  width: 100%;
+  /* padding: 16px 12px; */
+  height: 74px;
+  max-height: 74px;
+  margin: 8px 0;
+  border: 0.5px solid #000;
+  border-radius: 10px;
+  background: #000;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  font-family: Manrope;
+
+  padding-left: 28px;
+}
+.consent-wrapper a {
+  color: rgb(198, 198, 198);
+  text-decoration: underline;
+  font-size: 12px;
+}
+.Enrol-in-form .submit-btn {
+  background: #000000;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 26.3px 54px;
+  border: none;
+  flex: 1;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+.input:focus {
+  border: 0.5px solid #ffcc00;
+}
+
+.submit-btn:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+}
+.submit-btn:disabled:hover,
+.submit-btn:disabled:active {
+  background: #000;
+  color: rgb(191, 191, 191);
+}
+.Enrol-in-form .consent-wrapper input {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(0, 0, 0);
+  appearance: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+.consent-wrapper input:checked {
+  background-color: #ffd700;
+}
+
+.consent-wrapper input:checked::after {
+  content: "✔";
+  font-size: 12px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
 }
 </style>
