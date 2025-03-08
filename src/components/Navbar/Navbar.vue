@@ -2,10 +2,7 @@
   <header>
     <nav>
       <router-link to="/">
-        <a class="logo">
-          <img src="@/assets/Images/Vector.svg" alt="" />
-          ALGORITM
-        </a>
+        <img src="@/assets/Images/home_img/Logonavbar.svg" alt="logo" />
       </router-link>
 
       <ul>

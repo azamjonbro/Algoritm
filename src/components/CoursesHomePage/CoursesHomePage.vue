@@ -115,14 +115,15 @@ export default {
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  gap: 30px;
+  /* gap: 25px; */
+  row-gap: 30px;
   justify-content: space-between;
   margin-top: 30px;
 }
 
 .course-card {
   width: auto;
-  max-width: 625px;
+  max-width: 615px;
   background: black;
   color: white;
   /* padding: 15px; */
@@ -130,7 +131,7 @@ export default {
   border: 2px solid transparent;
   cursor: pointer;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-around;
   transition: all 0.3s;
 }
