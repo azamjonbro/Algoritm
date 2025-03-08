@@ -17,6 +17,11 @@
           >
         </li>
         <li>
+          <router-link to="/events" active-class="active-link"
+            >Eventlar</router-link
+          >
+        </li>
+        <li>
           <router-link to="/about" active-class="active-link"
             >Biz haqimizda</router-link
           >
@@ -50,7 +55,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* Header */
 header {
   max-width: 1440px;
@@ -84,7 +89,7 @@ nav {
 ul {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  /* gap: 20px; */
   list-style: none;
   padding: 0;
   margin: 0;

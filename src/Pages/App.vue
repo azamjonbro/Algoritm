@@ -3,10 +3,9 @@
     <div class="main">
       <Navbar />
       <router-view></router-view>
-      
     </div>
   </div>
-  <Footer/>
+  <Footer />
 </template>
 
 <script>

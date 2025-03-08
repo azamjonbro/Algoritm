@@ -1,34 +1,169 @@
 <template>
   <footer>
-    <div class="footer-page-links">
+    <div class="footer-wrapper">
+      <!-- Left Section: Logo & Page Links -->
+      <div class="footer-page-links">
+        <img src="@/assets/Images/home_img/Logofooter.svg" alt="Logo" />
+        <div class="pages-links-wrapper">
+          <ul class="links-group">
+            <li>
+              <router-link to="/" active-class="active-link"
+                >Bosh sahifa</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/courses" active-class="active-link"
+                >Kurslar</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/events" active-class="active-link"
+                >Eventlar</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/contact" active-class="active-link"
+                >Aloqa markazi</router-link
+              >
+            </li>
+          </ul>
+          <ul class="links-group">
+            <li><router-link to="/about">Biz haqimizda</router-link></li>
+            <li><router-link to="/news">Yangiliklar</router-link></li>
+            <li><router-link to="/certificates">Sertifikatlar</router-link></li>
+            <li><router-link to="/faq">FAQ</router-link></li>
+          </ul>
+          <p>©Algoritm 2024 | Privacy Policy | Certified Policy | Legal</p>
+        </div>
+      </div>
 
-    </div>
-    <div class="footer-social-links">
-
+      <!-- Right Section: Social Media Links -->
+      <div class="footer-social-links">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
     </div>
   </footer>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "FooterComponent",
+};
+</script>
 
-<style>
+<style scoped>
 footer {
+  /* height: 296px; */
   width: 100%;
-  height: 296px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-wrapper {
+  max-width: 1440px;
+  width: 1440px;
   padding: 0 93px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: rgba(13, 13, 13, 1);
+  align-items: center;
+  /* background-color: #1da1f2; */
 }
-.footer-page-links{
-  width: 500px;
-  height: 200px;
-  background-color: #fff;
+
+/* Page Links */
+.footer-page-links {
+  width: 40%;
+  min-width: 300px;
 }
-.footer-social-links{
-  width: 500px;
+
+.links-group:nth-child(1) {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+.links-group:nth-child(2) {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+
+.links-group li a {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: Manrope;
+}
+
+.links-group li a:hover,
+.links-group li a.active-link {
+  color: white;
+}
+
+/* Social Media Icons */
+.footer-social-links {
+  width: 40%;
+  display: flex;
   height: 200px;
-  background-color: #fff;
+  justify-content: flex-end;
+  background-color: antiquewhite;
+  gap: 15px;
+}
+
+.footer-social-links a {
+  color: white;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+.footer-social-links a:hover {
+  color: #1da1f2;
+}
+.pages-links-wrapper {
+  margin-top: 57px;
+}
+.pages-links-wrapper p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  margin-top: 39px;
+  font-family: sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-page-links,
+  .footer-social-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-social-links {
+    margin-top: 20px;
+  }
 }
 </style>
