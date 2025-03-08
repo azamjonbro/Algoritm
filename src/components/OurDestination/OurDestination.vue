@@ -5,14 +5,7 @@
   </div>
   <div class="Our-Destination-wrapper">
     <div class="Our-map">
-      <iframe
-        src="https://yandex.uz/map-widget/v1/?ll=71.674485%2C41.003528&z=18.9&mode=search&text=Algoritm%20Edu"
-        width="100%"
-        height="100%"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Yandex Map - Algoritm Edu"
-      ></iframe>
+      <Leaflet/>
     </div>
     <div class="Our-destination-form">
       <Free_Consultation />
@@ -27,10 +20,11 @@
 
 <script>
 import Free_Consultation from "../Free_consultation/Free_Consultation.vue";
-
+import Leaflet from "@/components/Maps/MapComponent.vue"
 export default {
   components: {
     Free_Consultation,
+    Leaflet
   },
 };
 </script>
