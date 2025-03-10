@@ -31,7 +31,7 @@ export default {
     initMap() {
       try {
         const center = [this.initialCoords.lat, this.initialCoords.lon];
-        const zoom = 12;
+        const zoom = 15;
 
         this.map = L.map(this.$refs.map, {
           scrollWheelZoom: true,
