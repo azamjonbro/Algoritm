@@ -40,7 +40,6 @@ export default {
 .Our-map {
   width: 770px;
   max-height: 380px;
-  border: 2px white solid;
   color: white;
   border-radius: 15px; /* 🔥 Border radius qo'shildi */
   overflow: hidden; /* Ichki elementlar uchun border-radius ishlashi uchun */

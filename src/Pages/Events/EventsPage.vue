@@ -1,15 +1,29 @@
 <template>
-  <div class="Events"></div>
-  <h1>eventlar</h1>
+  <div class="events-section">
+    <EventCarousel />
+
+    <MainCarousel />
+  </div>
 </template>
 
-<script></script>
+<script>
+import MainCarousel from "./EventsCourses.vue";
+import EventCarousel from "./EventsSlider.vue";
 
-<style>
-.Events {
+export default {
+  components: {
+    MainCarousel,
+    EventCarousel,
+  },
+};
+</script>
+
+<style scoped>
+.events-section {
   width: 100%;
-  height: 100vh;
-  background-color: #000000;
-  color: white;
+  height: auto;
+  /* background-color: #0b0b0b; */
+  position: relative;
+  margin-bottom: 30px;
 }
 </style>

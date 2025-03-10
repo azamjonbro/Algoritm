@@ -7,78 +7,16 @@
       :loop="true"
       class="mySwiper"
     >
-      <swiper-slide>
+      <swiper-slide v-for="(slide, index) in slides" :key="index">
         <div class="Home_Carousel">
           <div class="Home_Carousel_text_wrapper">
-            <h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
-            <p>
-              Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda
-              Node.js (Express), PostgreSQL, va React PWA bilan ishlayman.
-              Asosan authentication va authorization (JWT, access token, refresh
-              token) kabi xavfsizlik tizimlari ustida ishlayman.
-            </p>
-            <p>
-              Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni
-              takomillashtirishga harakat qilaman.
-            </p>
+            <h1>{{ slide.title }}</h1>
+            <p>{{ slide.description1 }}</p>
+            <p>{{ slide.description2 }}</p>
           </div>
           <div class="Home_Carousel_img_wrapper">
-            <img src="@/assets/Images/home_img/img1.svg" alt="" />
-            <img
-              src="@/assets/Images/home_img/Group 2.svg"
-              class="bg_img"
-              alt=""
-            />
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="Home_Carousel">
-          <div class="Home_Carousel_text_wrapper">
-            <h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
-            <p>
-              Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda
-              Node.js (Express), PostgreSQL, va React PWA bilan ishlayman.
-              Asosan authentication va authorization (JWT, access token, refresh
-              token) kabi xavfsizlik tizimlari ustida ishlayman.
-            </p>
-            <p>
-              Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni
-              takomillashtirishga harakat qilaman.
-            </p>
-          </div>
-          <div class="Home_Carousel_img_wrapper">
-            <img src="@/assets/Images/home_img/img1.svg" alt="" />
-            <img
-              src="@/assets/Images/home_img/Group 2.svg"
-              class="bg_img"
-              alt=""
-            />
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="Home_Carousel">
-          <div class="Home_Carousel_text_wrapper">
-            <h1>USTOZIDAN O'ZIB KETGAN SHOGIRD</h1>
-            <p>
-              Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda
-              Node.js (Express), PostgreSQL, va React PWA bilan ishlayman.
-              Asosan authentication va authorization (JWT, access token, refresh
-              token) kabi xavfsizlik tizimlari ustida ishlayman.
-            </p>
-            <p>
-              Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni
-              takomillashtirishga harakat qilaman.
-            </p>
-          </div>
-          <div class="Home_Carousel_img_wrapper">
-            <img src="@/assets/Images/home_img/img1.svg" alt="" />
-            <img
-              src="@/assets/Images/home_img/Group 2.svg"
-              class="bg_img"
-              alt=""
-            />
+            <img :src="slide.img" alt="" />
+            <img :src="slide.bgImg" class="bg_img" alt="" />
           </div>
         </div>
       </swiper-slide>
@@ -99,8 +37,39 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const slides = [
+      {
+        title: "USTOZIDAN O'ZIB KETGAN SHOGIRD",
+        description1:
+          "Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express), PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT, access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.",
+        description2:
+          "Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga harakat qilaman.",
+        img: require("@/assets/Images/home_img/img1.svg"),
+        bgImg: require("@/assets/Images/home_img/Group 2.svg"),
+      },
+      {
+        title: "USTOZIDAN O'ZIB KETGAN SHOGIRD",
+        description1:
+          "Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express), PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT, access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.",
+        description2:
+          "Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga harakat qilaman.",
+        img: require("@/assets/Images/home_img/img1.svg"),
+        bgImg: require("@/assets/Images/home_img/Group 2.svg"),
+      },
+      {
+        title: "USTOZIDAN O'ZIB KETGAN SHOGIRD",
+        description1:
+          "Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express), PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT, access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman.",
+        description2:
+          "Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga harakat qilaman.",
+        img: require("@/assets/Images/home_img/img1.svg"),
+        bgImg: require("@/assets/Images/home_img/Group 2.svg"),
+      },
+    ];
+
     return {
       modules: [Pagination, Autoplay],
+      slides,
     };
   },
 };
@@ -125,7 +94,6 @@ export default {
 .Home_Carousel_text_wrapper {
   width: 53%;
   height: auto;
-  /* background-color: #fff; */
   padding: 20px 50px;
   box-sizing: border-box;
   align-self: flex-start;
@@ -183,13 +151,11 @@ export default {
   overflow: hidden;
 }
 
-/* Active bullet with animation */
 .swiper-pagination-bullet-active {
   background-color: rgb(45, 44, 44); /* Default color */
   position: relative;
 }
 
-/* Inside element for animation */
 .swiper-pagination-bullet-active::before {
   content: "";
   position: absolute;
@@ -212,6 +178,10 @@ export default {
   }
 }
 .swiper-pagination {
-  transform: translateX(-38%) translateY(-90%);
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  /* transform: translateX(10%) translateY(-70%); */
 }
 </style>

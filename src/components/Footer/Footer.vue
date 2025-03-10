@@ -125,7 +125,7 @@ footer {
   display: flex;
   height: 200px;
   justify-content: flex-end;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   gap: 15px;
 }
 

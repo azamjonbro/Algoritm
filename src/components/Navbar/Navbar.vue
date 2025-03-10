@@ -56,7 +56,6 @@ export default {
 </script>
 
 <style scoped>
-/* Header */
 header {
   max-width: 1440px;
 
@@ -66,7 +65,6 @@ header {
   padding: 15px 0;
 }
 
-/* Navbar */
 nav {
   width: 100%;
   display: flex;
@@ -74,7 +72,6 @@ nav {
   align-items: center;
 }
 
-/* Logo */
 .logo {
   font-weight: bold;
   text-decoration: none;
@@ -85,11 +82,10 @@ nav {
   gap: 10px;
 }
 
-/* Menu */
 ul {
   display: flex;
   justify-content: space-between;
-  /* gap: 20px; */
+  gap: 15px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -110,7 +106,6 @@ ul li a:hover {
   background-color: #0d0d0d !important;
 }
 
-/* **Active (faol) linklar** */
 ul li a.active-link,
 ul li a.router-link-exact-active {
   color: #fff !important;
