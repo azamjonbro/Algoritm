@@ -269,7 +269,7 @@ export default {
   position: absolute;
   z-index: 2;
   top: 97%;
-  left: 94%;
+  left: 94.5%;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -281,10 +281,10 @@ export default {
 
 .swiper-button-next {
   box-sizing: content-box;
-
+  /* z-index: 10; */
   position: absolute;
   top: 97%;
-  right: 10px;
+  right: 1px;
   height: 20px;
   width: 20px;
   border-radius: 50%;
