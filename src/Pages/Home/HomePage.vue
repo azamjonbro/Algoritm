@@ -137,7 +137,7 @@ export default {
 .icon {
   width: 66px;
   height: 66px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 246, 0, 0.1);
   padding: 10px;
   border-radius: 50%;
 

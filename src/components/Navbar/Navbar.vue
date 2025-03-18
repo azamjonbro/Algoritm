@@ -47,7 +47,7 @@
         </li>
       </ul>
       <span>
-        <img src="@/assets/Images/Language icon.svg" alt="" />
+        <img src="@/assets/Images/Language icon (1).svg" alt="" />
       </span>
     </nav>
   </header>
@@ -79,7 +79,14 @@ nav {
 .navbar-logo-img {
   display: flex;
 }
-
+nav span {
+  padding: 12px 23px;
+  background-color: rgb(25, 25, 25);
+  border-radius: 10px;
+}
+nav span img {
+  display: flex;
+}
 .logo {
   font-weight: bold;
   text-decoration: none;
@@ -93,7 +100,7 @@ nav {
 ul {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;

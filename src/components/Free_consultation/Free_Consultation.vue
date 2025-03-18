@@ -17,7 +17,6 @@
       @input="filterName"
       maxlength="10"
     />
-
     <select v-model="form.profession" class="dropdown">
       <option disabled value="">Qanday kasb egallamoqchisiz?</option>
       <option>Web Dasturlash</option>
@@ -29,7 +28,7 @@
       <input
         type="tel"
         v-model="form.phone"
-        placeholder="+998 69 404 34 34"
+        placeholder="+998"
         v-mask="'+998 ## ### ## ##'"
         class="input phone-input"
       />
@@ -140,11 +139,12 @@ export default {
 .Phone_Number {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 .consultation-form .title {
-  font-size: 2rem;
+  font-size: 2.28rem;
   font-weight: 500;
+  font-family: Nohemi;
   color: #f8d800;
 }
 ::placeholder {
@@ -154,7 +154,7 @@ export default {
 .consultation-form .subtitle {
   font-size: 13px;
   line-height: 16px;
-  color: gray;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-family: Manrope;
   margin-top: 5px;
@@ -163,11 +163,14 @@ export default {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .consent-wrapper label {
   color: rgb(198, 198, 198);
   font-size: 12px;
+  font-family: Manrope;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
 }
 .consent-wrapper input {
   width: 18.5px;
@@ -179,6 +182,7 @@ export default {
   cursor: pointer;
   border: none;
   position: relative;
+  /* font-family: Manrope; */
 }
 
 .consent-wrapper input:checked {
@@ -186,10 +190,11 @@ export default {
 }
 
 .consent-wrapper input:checked::after {
-  content: "✔";
+  content: "";
   font-size: 12px;
   color: #000;
   position: absolute;
+  background-image: url("@/assets/Images/Vector (3).svg");
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -220,16 +225,16 @@ export default {
 
 .dropdown {
   width: 100%;
-  padding: 16px 16px;
+  padding: 12.6px 16px;
   border: #000 solid 0.5px;
   background: #000;
-  color: rgb(191, 191, 191);
+  color: rgba(255, 255, 255, 0.7);
   appearance: none;
   border-radius: 10px;
   background-image: url("@/assets/Images/home_img/arrow-down.png");
   background-repeat: no-repeat;
   background-position: right 20px center;
-
+  font-family: Manrope;
   font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -237,12 +242,14 @@ export default {
 
 .submit-btn {
   background: #000000;
-  color: rgb(191, 191, 191);
-  padding: 16.2px 34px;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 13.4px 34px;
   border: none;
   flex: 1;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Manrope;
+  font-weight: 600;
   width: 100%;
   cursor: pointer;
 }

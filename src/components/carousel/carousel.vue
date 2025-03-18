@@ -17,6 +17,7 @@
           <div class="Home_Carousel_img_wrapper">
             <img :src="slide.img" alt="" />
             <img :src="slide.bgImg" class="bg_img" alt="" />
+            <span>Bekzod</span>
           </div>
         </div>
       </swiper-slide>
@@ -78,7 +79,7 @@ export default {
 <style>
 .Home_Carousel {
   width: 100%;
-  height: 26rem;
+  height: 411px;
   background-color: #0b0b0b;
   border-radius: 10px;
   display: flex;
@@ -92,9 +93,9 @@ export default {
   margin-top: 20px;
 }
 .Home_Carousel_text_wrapper {
-  width: 53%;
+  width: 55%;
   height: auto;
-  padding: 20px 50px;
+  padding: 35px 50px;
   box-sizing: border-box;
   align-self: flex-start;
 }
@@ -102,23 +103,30 @@ export default {
   color: white;
   font-size: 56px;
   line-height: 58px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: Nohemi;
   letter-spacing: 2px;
 }
-.Home_Carousel_text_wrapper p {
-  max-width: 596px;
-  font-family: Manrope;
-  font-size: 20px;
-}
+/* .Home_Carousel_text_wrapper > p {
+  font-size: 15px;
+} */
 .Home_Carousel_text_wrapper p:nth-of-type(1) {
-  color: gray;
-  font-size: 20px;
+  width: 586px;
+  line-height: 100%;
+  font-size: 17px;
+  font-family: Nohemi;
+  font-weight: 300;
   margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
 }
 .Home_Carousel_text_wrapper p:nth-of-type(2) {
-  color: gray;
-  font-size: 18px;
+  width: 586px;
+  line-height: 100%;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: Nohemi;
   margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
 }
 .Home_Carousel_img_wrapper {
   display: flex;
@@ -128,6 +136,22 @@ export default {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.Home_Carousel_img_wrapper span {
+  width: 138px;
+  height: 41px;
+  color: white;
+  /* font-family: SF Mono; */
+  backdrop-filter: blur(10px);
+  bottom: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  left: 215px;
+  font-size: 25px;
+  position: absolute;
+  z-index: 4;
 }
 .Home_Carousel_img_wrapper img:nth-child(1) {
   position: absolute;
@@ -143,10 +167,10 @@ export default {
 }
 .swiper-pagination-bullet {
   background-color: rgb(45, 44, 44); /* Default color */
-  width: 62px;
-  height: 5px;
+  width: 45px;
+  height: 4px;
   opacity: 1;
-  border-radius: 5px;
+  border-radius: 3px;
   position: relative;
   overflow: hidden;
 }
@@ -181,7 +205,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   padding-left: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   /* transform: translateX(10%) translateY(-70%); */
 }
 </style>

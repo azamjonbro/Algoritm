@@ -57,13 +57,15 @@
           <img src="@/assets/Images/home_img/Subtract.svg" alt="" />Per month
           Hackathon’s
         </button>
-        <div class="marque_wrapper">
-          <div class="Algorithms_result_Latest_News_marque">
-            <button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
-            <button>
-              <img src="@/assets/Images/home_img/Subtract (1).svg" alt="" />
-              <span>Chegirmalar</span>
-            </button>
+        <div class="marquee-main-wrapper">
+          <div class="marque_wrapper">
+            <div class="Algorithms_result_Latest_News_marque">
+              <button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
+              <button>
+                <img src="@/assets/Images/home_img/Subtract (1).svg" alt="" />
+                <span>Chegirmalar</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -253,19 +255,19 @@ export default {
 .Algorithms_result_Latest_News button:nth-child(1) {
   box-sizing: border-box;
   font-size: 17px;
-  padding: 8px 16px;
+  padding: 14.5px 16px;
   background-color: #f8d800;
   border-radius: 10px;
   display: flex;
   gap: 5px;
   align-items: center;
 
-  font-weight: 500;
+  font-weight: bold;
 }
 .Algorithms_result_Latest_News_marque button:nth-child(2) {
   box-sizing: border-box;
   font-size: 18px;
-  padding: 8px 28px;
+  padding: 14.5px 16px;
   border-radius: 10px;
   background-color: #0d0d0d;
 
@@ -277,9 +279,9 @@ export default {
 }
 
 .Algorithms_result_Latest_News_marque button:nth-child(1) {
-  box-sizing: border-box;
+  box-sizing: content-box;
   font-size: 18px;
-  padding: 8px 28px;
+  padding: 14.5px 16px;
   border-radius: 10px;
   background-color: #0d0d0d;
   display: flex;
@@ -287,51 +289,62 @@ export default {
   gap: 10px;
   align-items: center;
 }
-
-.marque_wrapper {
+.marquee-main-wrapper {
   width: 65%;
-  position: relative;
   overflow: hidden;
-  white-space: nowrap;
-  background-color: black;
-  padding: 10px 0;
+  position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.marque_wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  background-color: rgb(0, 0, 0);
 }
 
 .Algorithms_result_Latest_News_marque {
   display: flex;
   gap: 20px;
-  animation: marqueeScroll 10s linear infinite;
+  animation: marqueeScroll 5s linear infinite;
 }
 
 /* Fading effect on left and right sides */
-.marque_wrapper::before,
-.marque_wrapper::after {
+.marquee-main-wrapper::before,
+.marquee-main-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 50px; /* Adjust width as needed */
+  right: 0;
+  width: 100px; /* Adjust width as needed */
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 
-.marque_wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, black, transparent);
+.marquee-main-wrapper::before {
+  left: -40px;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    transparent
+  );
 }
 
-.marque_wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, black, transparent);
+.marquee-main-wrapper::after {
+  right: -30px;
+  background: linear-gradient(to left, black, black, transparent);
 }
 
 /* Marquee Animation */
 @keyframes marqueeScroll {
   from {
-    transform: translateX(100%);
+    transform: translateX(90%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-90%);
   }
 }
 

@@ -135,10 +135,10 @@ export default {
   justify-content: space-around;
   transition: all 0.3s;
 }
-
+/* 
 .course-card.selected {
-  border-color: blue;
-}
+  border-color: rgb(255, 255, 255);
+} */
 
 .course-image {
   min-width: 285px;

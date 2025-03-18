@@ -368,13 +368,15 @@ export default {
 }
 
 .consent-wrapper input:checked::after {
-  content: "✔";
-  font-size: 12px;
-  color: #000;
+  content: "";
+  width: 10px;
+  height: 9px;
+  background-image: url("@/assets/Images/Vector (3).svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: bold;
 }
 </style>

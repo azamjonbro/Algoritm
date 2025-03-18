@@ -21,7 +21,6 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -100,12 +99,12 @@ export default {
 }
 
 .accordion-item {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   max-width: 614px;
   background: rgba(13, 13, 13, 1);
   margin-top: 10px;
   overflow: hidden;
+  align-self: baseline;
 }
 
 .accordion-header {
