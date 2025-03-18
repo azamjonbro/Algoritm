@@ -2,7 +2,11 @@
   <header>
     <nav>
       <router-link to="/">
-        <img src="@/assets/Images/home_img/Logonavbar.svg" alt="logo" />
+        <img
+          class="navbar-logo-img"
+          src="@/assets/Images/home_img/Logonavbar.svg"
+          alt="logo"
+        />
       </router-link>
 
       <ul>
@@ -70,6 +74,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar-logo-img {
+  display: flex;
 }
 
 .logo {
