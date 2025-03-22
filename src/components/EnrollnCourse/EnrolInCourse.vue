@@ -71,7 +71,7 @@
           <input
             type="tel"
             v-model="form.phone"
-            placeholder="+998 69 404 34 34"
+            placeholder="+998"
             v-mask="'+998 ## ### ## ##'"
             class="input phone-input"
           />
