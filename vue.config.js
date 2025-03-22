@@ -11,7 +11,10 @@ module.exports = defineConfig({
         __VUE_OPTIONS_API__: true,
         __VUE_PROD_DEVTOOLS__: false
       })
-    ]
+    ],
+    resolve: {
+      preferRelative: true,
+    },
   },
 
   devServer: {
