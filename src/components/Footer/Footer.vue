@@ -84,26 +84,25 @@ footer {
 }
 
 /* Page Links */
-.footer-page-links {
-  width: 40%;
-  min-width: 300px;
-}
+
 
 .links-group:nth-child(1) {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
   margin-top: 9px;
+  margin-left: -20px;
 }
 .links-group:nth-child(2) {
   display: flex;
-  gap: 20px;
+  /* gap: 10px; */
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
   margin-top: 9px;
+  margin-left: -20px;
 }
 
 .links-group li a {

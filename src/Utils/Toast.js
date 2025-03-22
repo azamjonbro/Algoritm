@@ -10,6 +10,10 @@ export const showError = (message = "Xatolik yuz berdi!") => {
   toast.error(message, { timeout: 5000 });
 };
 
+export const showErrorSend = (message = "Xatolik yuz berdi!") => {
+  toast.error(message, { timeout: 3000 });
+};
+
 export const showInfo = (message = "Ma'lumot!") => {
   toast.info(message, { timeout: 4000 });
 };

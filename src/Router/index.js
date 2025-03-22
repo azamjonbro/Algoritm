@@ -6,7 +6,7 @@ import NewsPage from "@/Pages/News/NewsPage.vue";
 import CertificatePage from "@/Pages/Certificates/CertificatePage.vue";
 import ContactPage from "@/Pages/Contact/ContactPage.vue";
 import EventsPage from "@/Pages/Events/EventsPage.vue";
-
+import EventsHackothon from "@/Pages/Events/EventsHackathon.vue";
 const routes = [
   {
     path: "/",
@@ -27,7 +27,14 @@ const routes = [
     path: "/events",
     name: "Events",
     component: EventsPage,
+ 
   },
+  {
+    path: "/hackathon",
+    name: "hackathon",
+    component: EventsHackothon,
+  },
+  
   {
     path: "/news",
     name: "News",
@@ -43,6 +50,7 @@ const routes = [
     name: "Contact",
     component: ContactPage,
   },
+  
 ];
 
 const router = createRouter({

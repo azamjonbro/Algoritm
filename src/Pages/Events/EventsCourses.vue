@@ -24,7 +24,10 @@
               <span class="event-info-btn" @click="openModal(event)">
                 <img src="@/assets/Images/info-circle.svg" alt="info" />
               </span>
-              <button class="register-btn">Qatnashish</button>
+              <router-link to="/hackathon">
+                <button class="register-btn">Qatnashish</button>
+
+              </router-link>
             </div>
           </div>
         </div>
@@ -37,7 +40,11 @@
         <button class="close-btn" @click="closeModal"><</button>
         <div class="modal-title-wrapper">
           <h2>{{ selectedEvent.title }}</h2>
-          <button>Qatnashish</button>
+          <router-link to="/hackathon">
+            <button>Qatnashish</button>
+
+          </router-link>
+          
         </div>
 
         <div v-if="selectedEvent.details">
@@ -601,5 +608,8 @@ div.swiper-wrapper {
 .modals-text li {
   font-size: 22px;
   line-height: 40px;
+}
+.modals-text ul{
+  list-style: square;
 }
 </style>

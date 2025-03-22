@@ -59,7 +59,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 header {
   max-width: 1440px;
 
@@ -97,7 +97,7 @@ nav span img {
   gap: 10px;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: space-between;
   gap: 10px;
