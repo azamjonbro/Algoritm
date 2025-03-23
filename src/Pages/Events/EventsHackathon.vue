@@ -104,13 +104,12 @@
             </div>
             <div class="container-submits">
             <div class="checkbox-group">
-            <!-- First Checkbox -->
+            
             <label class="checkbox-label">
                 <input type="checkbox" v-model="termsAccepted" class="checkbox" />
                 Men yuqoridagi shartlarni o‘qidim va ularga <br> to‘liq rozilik bildiraman.
             </label>
 
-            <!-- Second Checkbox -->
             <label class="checkbox-label">
                 <input type="checkbox" v-model="infoConfirmed" class="checkbox" />
                 Ro‘yxatdan o‘tishda taqdim etgan barcha ma’lumotlarim aniq va to‘g‘ri <br> ekanligini tasdiqlayman.

@@ -5,7 +5,7 @@
       <router-view></router-view>
     </div>
   </div>
-  <Footer />
+  <Footer/>
 </template>
 
 <script>

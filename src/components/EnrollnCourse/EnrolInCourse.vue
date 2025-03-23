@@ -328,7 +328,7 @@ export default {
 .Enrol-in-form .submit-btn {
   background: #000000;
   color: rgba(255, 255, 255, 0.3);
-  padding: 26.3px 54px;
+  padding: 23px 54px;
   border: none;
   flex: 1;
   border-radius: 10px;
