@@ -215,6 +215,9 @@ export default {
   margin-top: 10px;
   font-family: Manrope;
 }
+.user-image-play{
+  cursor: pointer;
+}
 /* Footer */
 .testimonial-footer {
   width: 100%;

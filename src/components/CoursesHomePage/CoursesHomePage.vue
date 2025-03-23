@@ -149,6 +149,7 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 .course-info {
   min-width: 320px;

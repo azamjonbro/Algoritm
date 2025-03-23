@@ -165,6 +165,7 @@ export default {
   bottom: 20px;
   z-index: 1;
 }
+
 .swiper-pagination-bullet {
   background-color: rgb(45, 44, 44); /* Default color */
   width: 45px;

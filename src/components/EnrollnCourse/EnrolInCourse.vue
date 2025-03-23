@@ -71,7 +71,7 @@
           <input
             type="tel"
             v-model="form.phone"
-            placeholder="+998 69 404 34 34"
+            placeholder="+998"
             v-mask="'+998 ## ### ## ##'"
             class="input phone-input"
           />
@@ -241,11 +241,11 @@ export default {
   margin-bottom: 15px;
   color: white;
 }
+
 .time-selection > h3 {
   margin-left: 20px;
   font-size: 16px;
   max-width: 172px;
-
   color: white;
 }
 
@@ -263,13 +263,13 @@ export default {
   background-repeat: no-repeat;
   background-position: right 33px center;
   /* margin-bottom: 20px; */
+
 }
 
 .date-options,
 .time-options {
   display: flex;
   gap: 10px;
-  /* height: 7px; */
   padding: 23px 20px;
   flex-wrap: wrap;
   align-items: center;
