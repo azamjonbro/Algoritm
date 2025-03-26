@@ -456,7 +456,7 @@ export default {
   height: auto;
   display: flex;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   margin-top: 30px;
 }
 
@@ -538,15 +538,22 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  background-attachment: auto;
   backdrop-filter: blur(25px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 12;
+  overflow: auto;
+  padding: 100px;
+  padding-top:200px;
+  z-index: 3;
+  
+}.modal-overlay::-webkit-scrollbar {
+  display: none; /* Chrome, Safari va Edge uchun */
 }
 
 .modal-content {
-  padding: 30px 100px;
+  padding: 40px 130px;
   border-radius: 10px;
   /* text-align: center; */
   width: 100%;
@@ -565,8 +572,7 @@ div.swiper-wrapper {
   /* margin-top: 10px; */
   border-radius: 5px;
   position: absolute;
-  top: 35px;
-  left: 50px;
+  left: 11%;
 }
 
 .close-btn:hover {

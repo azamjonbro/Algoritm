@@ -30,28 +30,32 @@
 						class="chack-btn"
 						:class="{'error-btn': certificateChecked && !certificateFound}"
 					>
-						Tekshirish <img src="@/assets/Images/receipt-search.svg" alt="">
+						Tekshirish 
+						<Icons name="mashetgaiconqoying"/>
 					</button>
 				</div>
 
 				<button v-if="certificateFound && certificateChecked" class="sertificate-download">
 					Sertifikatni yuklab olish
 					<img src="@/assets/Images/receive-square.svg" alt="">
+
 				</button>
 			</div>
 		</div>
 
-		<div v-if="certificateFound" class="sertificate-container">
+		<!-- <div v-if="certificateFound" class="sertificate-container">
 			<img src="@/assets/Images/Group 92.png" alt="">
 		</div>
 
 		<div v-else-if="certificateChecked" class="not-found">
 			<img src="@/assets/Images/folder-cross.png" alt="">
-		</div>
+		</div> -->
 	</div>
 </template>
 <script>
+import Icons from '@/components/Template/Icons.vue'
 export default {
+	components: { Icons },
 	data() {
 		return {
 			certificateId: "",  
@@ -184,6 +188,7 @@ export default {
 	background-color: #252525 !important; ;
 	color: rgba(255, 255, 255, 0.2) !important ;
 }
+
 
 
 

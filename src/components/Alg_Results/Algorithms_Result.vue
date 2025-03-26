@@ -7,8 +7,7 @@
           <div class="Statistic_In_Number_item">
             <img
               src="@/assets/Images/home_img/Bookmark.svg"
-              width="65"
-              height="85"
+             
               alt=""
             />
             <div class="Statistic_In_Number_itemText">
@@ -53,11 +52,11 @@
       </div>
 
       <div class="Algorithms_result_Latest_News">
-        <button>
+        <button class="per-month">
           <img src="@/assets/Images/home_img/Subtract.svg" alt="" />Per month
           Hackathon’s
         </button>
-        <div class="marquee-main-wrapper">
+        <div class="marquee_main_wrapper">
           <div class="marque_wrapper">
             <div class="Algorithms_result_Latest_News_marque">
               <button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
@@ -88,7 +87,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 * {
   box-sizing: border-box;
 }
@@ -150,8 +149,8 @@ export default {
 }
 
 .Statistic_In_Number_itemText p {
-  color: gray;
-  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
   margin-top: 5px;
 }
 
@@ -251,45 +250,7 @@ export default {
   font-family: "Noto Sans";
   align-items: center;
 }
-
-.Algorithms_result_Latest_News button:nth-child(1) {
-  box-sizing: border-box;
-  font-size: 17px;
-  padding: 14.5px 16px;
-  background-color: #f8d800;
-  border-radius: 10px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-
-  font-weight: bold;
-}
-.Algorithms_result_Latest_News_marque button:nth-child(2) {
-  box-sizing: border-box;
-  font-size: 18px;
-  padding: 14.5px 16px;
-  border-radius: 10px;
-  background-color: #0d0d0d;
-
-  display: flex;
-  color: white;
-  gap: 10px;
-  align-items: center;
-  font-weight: 800;
-}
-
-.Algorithms_result_Latest_News_marque button:nth-child(1) {
-  box-sizing: content-box;
-  font-size: 18px;
-  padding: 14.5px 16px;
-  border-radius: 10px;
-  background-color: #0d0d0d;
-  display: flex;
-  color: white;
-  gap: 10px;
-  align-items: center;
-}
-.marquee-main-wrapper {
+.marquee_main_wrapper {
   width: 65%;
   overflow: hidden;
   position: relative;
@@ -302,6 +263,43 @@ export default {
 
   background-color: rgb(0, 0, 0);
 }
+.Algorithms_result_Latest_News .per-month{
+  font-size: 18px;
+  padding: 14.5px 16px;
+  background-color: #f8d800;
+  border-radius: 10px;
+  font-family: Nohemi;
+  font-weight: 500 ;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.Algorithms_result_Latest_News_marque button:nth-child(2) {
+  font-size: 18px;
+  padding: 14.5px 16px;
+  border-radius: 10px;
+  background-color: #0d0d0d;
+  font-weight: 500;
+  display: flex;
+  color: white;
+  gap: 10px;
+  align-items: center;
+  font-family: "Nohemi";
+}
+
+.Algorithms_result_Latest_News_marque button:nth-child(1) {
+  font-size: 18px;
+  padding: 14.5px 16px;
+  font-family: Nohemi;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #0d0d0d;
+  display: flex;
+  color: white;
+  gap: 10px;
+  align-items: center;
+}
+
 
 .Algorithms_result_Latest_News_marque {
   display: flex;
@@ -316,7 +314,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100px; /* Adjust width as needed */
+  width: 100px;
   height: 100%;
   z-index: 3;
   pointer-events: none;
@@ -338,7 +336,6 @@ export default {
   background: linear-gradient(to left, black, black, transparent);
 }
 
-/* Marquee Animation */
 @keyframes marqueeScroll {
   from {
     transform: translateX(90%);
@@ -351,7 +348,6 @@ export default {
 .Algorithms_result_Latest_News_marque {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: 20px;
 }
 

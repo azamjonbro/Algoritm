@@ -108,6 +108,7 @@ export default {
 .features-Nav h2 {
   font-size: 32px;
   color: white;
+  font-weight: 500;
 }
 .feature-grid {
   display: grid;
@@ -119,7 +120,7 @@ export default {
 .feature-card {
   max-width: 630px;
   max-height: 170px;
-  background: #0d0d0d;
+  background: rgba(13, 13, 13, 1);
   padding: 32px 35px;
   border-radius: 20px;
   border: 2px solid transparent;
