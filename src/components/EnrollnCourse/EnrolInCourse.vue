@@ -198,6 +198,7 @@ export default {
   font-size: 32px;
   color: white;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .Enrol-nav p {
   font-size: 13px;
@@ -238,14 +239,16 @@ export default {
   margin-left: 20px;
   max-width: 172px;
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 15px;
   color: white;
 }
 
-.time-selection > h3 {
+.time-selection  h3 {
   margin-left: 20px;
   font-size: 16px;
   max-width: 172px;
+  font-weight: 400;
   color: white;
 }
 

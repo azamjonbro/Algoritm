@@ -163,6 +163,7 @@ export default {
 }
 .testimonial-nav h2 {
   font-size: 32px;
+  font-weight: 500;
 }
 .testimonial-section {
   position: relative;

@@ -28,7 +28,7 @@
                     v-model="form.phone"
                     type="tel"
                     placeholder="Telefon raqami"
-                    class="input-field"
+                    class="input-field "
                 />
                 </div>
                <div class="forms-wrapper">

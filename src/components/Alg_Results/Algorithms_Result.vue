@@ -6,9 +6,8 @@
         <div class="Statistic_In_Number_items_wrapper">
           <div class="Statistic_In_Number_item">
             <img
-              src="@/assets/Images/home_img/Bookmark.svg"
-             
-              alt=""
+              src="@/assets/Images/home_img/Bookmark.png"
+              alt="bookmark"
             />
             <div class="Statistic_In_Number_itemText">
               <h2>1300+</h2>
@@ -45,8 +44,8 @@
           </p>
         </div>
         <div class="salary-details">
-          <span class="category">Dasturlash <strong>$321</strong></span>
-          <span class="category">Dizayn <strong>$400</strong></span>
+          <p class="category">Dasturlash <span>$321</span></p>
+          <p class="category">Dizayn <span>$400</span></p>
         </div>
         <span class="dot"></span>
       </div>
@@ -126,7 +125,7 @@ export default {
   display: flex;
   /* align-items: center; */
   gap: 50px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .Statistic_In_Number_item {
@@ -134,6 +133,9 @@ export default {
   align-items: center;
   gap: 20px;
   margin-bottom: 10px;
+}
+.Statistic_In_Number_item img{
+ 
 }
 .Statistic_In_Number_item1 {
   display: flex;
@@ -234,7 +236,7 @@ export default {
   color: #aaa;
 }
 
-.salary-details .category strong {
+.salary-details .category span {
   color: white;
   font-size: 20px;
   margin-left: 10px;
@@ -308,8 +310,8 @@ export default {
 }
 
 /* Fading effect on left and right sides */
-.marquee-main-wrapper::before,
-.marquee-main-wrapper::after {
+.marquee_main_wrapper::before,
+.marquee_main_wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -320,7 +322,7 @@ export default {
   pointer-events: none;
 }
 
-.marquee-main-wrapper::before {
+.marquee_main_wrapper::before {
   left: -40px;
   background: linear-gradient(
     to right,
@@ -331,14 +333,14 @@ export default {
   );
 }
 
-.marquee-main-wrapper::after {
+.marquee_main_wrapper::after {
   right: -30px;
   background: linear-gradient(to left, black, black, transparent);
 }
 
 @keyframes marqueeScroll {
   from {
-    transform: translateX(90%);
+    transform: translateX(10%);
   }
   to {
     transform: translateX(-90%);
