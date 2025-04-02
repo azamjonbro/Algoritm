@@ -51,7 +51,7 @@
           }
           lines.push(`[  ${timestamp}] ${command}`);
           this.generatedCode = lines.join('\n');
-        }, 200);
+        }, 5);
       },
       stopGenerating() {
         clearInterval(this.intervalId);
@@ -78,7 +78,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   .code-container {
     background-color: black;
-    color: limegreen;
+    color: rgb(255, 255, 255);
     font-family: "Anonymous Pro", monospace !important;
     padding: 10px;
     border-radius: 5px;
