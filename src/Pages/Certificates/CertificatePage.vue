@@ -43,13 +43,13 @@
 			</div>
 		</div>
 
-		<!-- <div v-if="certificateFound" class="sertificate-container">
+		<div v-if="certificateFound" class="sertificate-container">
 			<img src="@/assets/Images/Group 92.png" alt="">
 		</div>
 
 		<div v-else-if="certificateChecked" class="not-found">
 			<img src="@/assets/Images/folder-cross.png" alt="">
-		</div> -->
+		</div>
 	</div>
 </template>
 <script>
@@ -183,12 +183,15 @@ export default {
 	border-color: red !important;
 	color: red !important;
 }
-
+.chack-btn svg>path{
+	/* fill: #000000; */
+	color: #000000;
+	/* stroke: #000000; */
+}
 .error-btn {
 	background-color: #252525 !important; ;
-	color: rgba(255, 255, 255, 0.2) !important ;
+	/* color: rgba(255, 255, 255, 0.2) !important ; */
 }
-
 
 
 
