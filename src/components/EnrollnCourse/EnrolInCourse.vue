@@ -198,6 +198,7 @@ export default {
   font-size: 32px;
   color: white;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .Enrol-nav p {
   font-size: 13px;
@@ -238,14 +239,16 @@ export default {
   margin-left: 20px;
   max-width: 172px;
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 15px;
   color: white;
 }
-.time-selection > h3 {
+
+.time-selection  h3 {
   margin-left: 20px;
   font-size: 16px;
   max-width: 172px;
-
+  font-weight: 400;
   color: white;
 }
 
@@ -263,13 +266,13 @@ export default {
   background-repeat: no-repeat;
   background-position: right 33px center;
   /* margin-bottom: 20px; */
+
 }
 
 .date-options,
 .time-options {
   display: flex;
   gap: 10px;
-  /* height: 7px; */
   padding: 23px 20px;
   flex-wrap: wrap;
   align-items: center;
@@ -328,7 +331,7 @@ export default {
 .Enrol-in-form .submit-btn {
   background: #000000;
   color: rgba(255, 255, 255, 0.3);
-  padding: 26.3px 54px;
+  padding: 23px 54px;
   border: none;
   flex: 1;
   border-radius: 10px;

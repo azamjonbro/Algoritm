@@ -7,8 +7,7 @@
         birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
       </p>
     </div>
-
-    <!-- Name Input -->
+    
     <input
       type="text"
       v-model="form.name"
@@ -33,7 +32,6 @@
         class="input phone-input"
       />
 
-      <!-- Submit Button -->
       <button
         class="submit-btn"
         :disabled="!isFormValid"
@@ -55,6 +53,7 @@
 <script>
 import { mask } from "vue-the-mask";
 import { showSuccess } from "@/Utils/Toast";
+import { showError } from "@/Utils/Toast";
 export default {
   directives: { mask },
   data() {
@@ -109,11 +108,11 @@ export default {
           this.form.profession = "";
           this.form.consent = false;
         } else {
-          alert(`Xatolik: ${data.description}`);
+          showError(`Xatolik: ${data.description}`);
         }
       } catch (error) {
         console.error("Xatolik:", error);
-        alert("Xatolik yuz berdi!");
+        showError("Xatolik yuz berdi");
       }
     },
     filterName(event) {
@@ -121,9 +120,11 @@ export default {
     },
   },
 };
+
 </script>
 
 <style>
+
 .consultation-form {
   background: #111;
   color: #fff;
@@ -132,25 +133,28 @@ export default {
   width: 100%;
   max-height: 381px;
   display: flex;
-  gap: 8px;
+  gap: 5px;
   flex-direction: column;
-  margin: auto;
 }
+
 .Phone_Number {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .consultation-form .title {
   font-size: 2.28rem;
   font-weight: 500;
   font-family: Nohemi;
   color: #f8d800;
 }
+
 ::placeholder {
   color: rgb(191, 191, 191);
   font-size: 20px;
 }
+
 .consultation-form .subtitle {
   font-size: 13px;
   line-height: 16px;
@@ -159,12 +163,14 @@ export default {
   font-family: Manrope;
   margin-top: 5px;
 }
+
 .consent-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
+
 .consent-wrapper label {
   color: rgb(198, 198, 198);
   font-size: 12px;
@@ -172,6 +178,7 @@ export default {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
 }
+
 .consent-wrapper input {
   width: 18.5px;
   height: 18.5px;
@@ -206,6 +213,7 @@ export default {
   text-decoration: underline;
   font-size: 12px;
 }
+
 .consultation-form .input {
   width: 100%;
   padding: 16px 12px;
@@ -213,7 +221,7 @@ export default {
   border: 0.5px solid #000;
   border-radius: 10px;
   background: #000;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   font-family: Manrope;
 
@@ -253,6 +261,7 @@ export default {
   width: 100%;
   cursor: pointer;
 }
+
 .submit-btn:active {
   background-color: #fff;
   color: #000;
@@ -261,6 +270,7 @@ export default {
 .submit-btn:disabled {
   cursor: not-allowed;
 }
+
 .submit-btn:disabled:hover,
 .submit-btn:disabled:active {
   background: #000;

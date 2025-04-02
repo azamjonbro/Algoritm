@@ -34,8 +34,9 @@ export default {
   width: 100%;
   height: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 59px;
+  margin-top: 22px;
 }
 .Our-map {
   width: 770px;
@@ -47,6 +48,7 @@ export default {
 .Our-destination-form {
   max-width: 458px;
   max-height: 380px;
+  margin-top: 10px;
 }
 .Our-destination-footer {
   width: 100%;
@@ -61,6 +63,8 @@ export default {
 }
 .Our-destination-footer h2 {
   font-size: 24px;
+  font-weight: 500;
+
   color: rgba(255, 255, 255, 1);
 }
 .Our-destination-footer span {

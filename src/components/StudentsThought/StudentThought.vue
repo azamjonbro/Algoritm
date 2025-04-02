@@ -18,7 +18,8 @@
         v-for="(testimonial, index) in testimonials"
         :key="index"
         class="testimonial-card"
-      >
+      > 
+        <playvideo name="videoplayer" class="iconplayer"/>
         <div class="testimonial-footer">
           <img :src="testimonial.image" alt="User Image" class="user-image" />
           <div class="testimonial-footer-text">
@@ -67,11 +68,12 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
-
+import playvideo from '@/components/Template/Icons.vue'
 export default {
   components: {
     Swiper,
     SwiperSlide,
+    playvideo
   },
   setup() {
     return {
@@ -161,6 +163,7 @@ export default {
 }
 .testimonial-nav h2 {
   font-size: 32px;
+  font-weight: 500;
 }
 .testimonial-section {
   position: relative;
@@ -192,9 +195,14 @@ export default {
   height: 600px;
   padding: 30px;
   border-radius: 20px;
-  background: #111;
+  background: rgba(13, 13, 13, 1);
   display: flex;
   align-items: end;
+}
+.testimonial-card .iconplayer{
+  position: absolute;
+  top: 45%;
+  left: 45%;
 }
 
 .testimonial-card2 {
@@ -202,18 +210,19 @@ export default {
   max-height: 330px;
   padding: 30px;
   border-radius: 20px;
-  background: #111;
+  background: rgba(13, 13, 13, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 .testimonial-card2 > p {
-  font-size: 13px;
-  color: #f2f2f2;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
   line-height: 17px;
   margin-top: 10px;
   font-family: Manrope;
+  font-weight: 300;
 }
 .user-image-play{
   cursor: pointer;
@@ -235,14 +244,20 @@ export default {
 
 .testimonial-footer-text h3 {
   font-size: 30px;
+  font-family: Nohemi;
+  font-weight: 500;
 }
-.testimonial-footer-text2 {
+.testimonial-footer-text2 h3 {
   font-size: 30px;
+  font-family: Nohemi;
+  font-weight: 500;
 }
 
 .testimonial-footer-text,
 .testimonial-footer-text2 p {
   font-size: 10px;
+  font-family: Manrope;
+  font-weight: 400;
 }
 .testimonial-footer-text {
   margin-left: -10%;

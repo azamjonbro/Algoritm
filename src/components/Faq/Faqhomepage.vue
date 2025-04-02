@@ -87,6 +87,8 @@ export default {
 .FAQ-nav h2 {
   font-size: 32px;
   color: white;
+  font-weight: 500;
+
 }
 .accordion-container {
   width: 100%;
@@ -131,13 +133,14 @@ export default {
 }
 .accordion-header h2 {
   font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+
 }
-.accordion-header p {
+/* .accordion-header p {
   max-width: 500px;
-  font-size: 16px;
-  font-family: Manrope;
   line-height: 18px;
-}
+} */
 .rotated {
   transform: rotate(180deg);
 }
@@ -158,6 +161,9 @@ export default {
 }
 .accordion-content p {
   max-width: 550px;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
 }
 .accordion-icon {
   transition: transform 0.5s ease;

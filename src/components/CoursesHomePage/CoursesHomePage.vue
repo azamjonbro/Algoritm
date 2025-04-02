@@ -22,7 +22,7 @@
       >
         <div class="course-image">
           <img v-if="course.image" :src="course.image" alt="Course Image" />
-          <span v-else class="placeholder">📷</span>
+          <course_img name="coursedefimg"/>
         </div>
         <div class="course-info">
           <h3>{{ course.title }}</h3>
@@ -38,7 +38,12 @@
 </template>
 
 <script>
+import course_img from '@/components/Template/Icons.vue'
+
 export default {
+  components: {
+    course_img
+  },
   data() {
     return {
       selectedCourse: null,
@@ -144,7 +149,7 @@ export default {
   min-width: 285px;
   max-height: 160px;
   min-height: 160px;
-  background: #222;
+  background: rgba(13, 13, 13, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +166,7 @@ export default {
 .course-info h3 {
   font-size: 32px;
   margin-top: 10px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .course-info p {
   font-size: 20px;

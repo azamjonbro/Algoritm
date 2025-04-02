@@ -6,7 +6,7 @@
 
 	  </div>
 	</div>
-	<Footer />
+	<Footer/>
   </template>
   
   <script>
@@ -29,7 +29,6 @@
 	margin: 0 auto;
 	max-width: 1440px;
 	height: auto;
-  
 	padding: 33px 93px;
   }
   </style>

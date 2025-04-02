@@ -117,10 +117,9 @@ export default {
 }
 
 #map {
-  height: 500px;
+  min-height: 381px;
   width: 100%;
   margin: 0px auto 24px;
-  margin-bottom: 24px;
   border-radius: 12px;
   outline: none;
 }
