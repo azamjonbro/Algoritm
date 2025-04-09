@@ -48,11 +48,6 @@
       </ul>
       <span class="language">
         <img src="@/assets/Images/Language icon (1).svg" alt="" />
-        <div class="flagbox">
-          <Icons name="uzbFlag"/>
-          <img src="@/assets/Images/flag2.svg" alt="" />
-          <img src="@/assets/Images/flag3.svg" alt="" />
-        </div>
       </span>
 
     </nav>
