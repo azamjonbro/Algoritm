@@ -46,9 +46,15 @@
           >
         </li>
       </ul>
-      <span>
+      <span class="language">
         <img src="@/assets/Images/Language icon (1).svg" alt="" />
+        <div class="flagbox">
+          <Icons name="uzbFlag"/>
+          <img src="@/assets/Images/flag2.svg" alt="" />
+          <img src="@/assets/Images/flag3.svg" alt="" />
+        </div>
       </span>
+
     </nav>
   </header>
 </template>
@@ -57,6 +63,9 @@
 import {t} from '@/Utils/i18n.js'
 export default {
   name: "Header",
+  components: {
+    Icons: () => import('@/components/Template/Icons.vue')
+  },
   data() {
     return {
       t
