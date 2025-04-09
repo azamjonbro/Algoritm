@@ -12,37 +12,37 @@
       <ul>
         <li>
           <router-link to="/" exact-active-class="active-link"
-            >Bosh sahifa</router-link
+            >{{t("nav__home")}}</router-link
           >
         </li>
         <li>
           <router-link to="/courses" active-class="active-link"
-            >Kurslar</router-link
+            >{{t("nav__courses")}}</router-link
           >
         </li>
         <li>
           <router-link to="/events" active-class="active-link"
-            >Eventlar</router-link
+            >{{t("nav__events")}}</router-link
           >
         </li>
         <li>
           <router-link to="/about" active-class="active-link"
-            >Biz haqimizda</router-link
+            >{{t("nav__about")}}</router-link
           >
         </li>
         <li>
           <router-link to="/news" active-class="active-link"
-            >Yangiliklar</router-link
+            >{{t("nav__news")}}</router-link
           >
         </li>
         <li>
           <router-link to="/certificate" active-class="active-link"
-            >Sertifikatlar</router-link
+            >{{t("nav__certificates")}}</router-link
           >
         </li>
         <li>
           <router-link to="/contact" active-class="active-link"
-            >Aloqa markazi</router-link
+            >{{t("nav__contact")}}</router-link
           >
         </li>
       </ul>
@@ -54,8 +54,14 @@
 </template>
 
 <script>
+import {t} from '@/Utils/i18n.js'
 export default {
   name: "Header",
+  data() {
+    return {
+      t
+    }
+  }
 };
 </script>
 

@@ -1,7 +1,7 @@
-import langData from "@/lang.json";
+import langData from "@/lang/lang.json";
 
 // Joriy til (localStorage yoki default: 'uz')
-let currentLang = localStorage.getItem("lang") || "uz";
+let currentLang = localStorage.getItem("lang") || "en";
 
 // Tilni o'zgartirish funksiyasi
 export function setLang(lang) {
