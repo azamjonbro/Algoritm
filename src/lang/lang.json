@@ -1,49 +1,84 @@
 {
+
     "hero__title": {
-      "uz": "Salom dunyo",
-      "ru": "Привет, мир",
-      "en": "Hello world"
-    },
-    "hero__description": {
-      "uz": "Bu sizning dasturiy ta'minot loyihangiz uchun asosiy sahifangiz.",
-      "ru": "Это ваша главная страница программного обеспечения.",
-      "en": "This is your software project's main page."
-    },
-    "hero__button": {
-      "uz": "Bosh sahifaga qaytish",
-      "ru": "Вернуться на главную страницу",
-      "en": "Return to main page"
-    },
-    "hero__footer": {
-      "uz": "Bu sahifa sizning dasturiy ta'minot loyihangiz uchun asosiy sahifangiz.",
-      "ru": "Эта страница является главной страницей вашего программного обеспечения.",
-      "en": "This page is the main page of your software project."
-    },
-    "hero__footer_button": {
-      "uz": "Bosh sahifaga qaytish",
-      "ru": "Вернуться на главную страницу",
-      "en": "Return to main page"
-    },
-    "sechond__title": {
-      "uz": "Ikkinchi sahifa",
-      "ru": "Вторая страница",
-      "en": "Second page"
-    },
-    "sechond__description": {
-      "uz": "Bu sizning dasturiy ta'minot loyihangiz uchun ikkinchi sahifangiz.",
-      "ru": "Это ваша вторая страница программного обеспечения.",
-      "en": "This is your software project's second page."
-    },
-    "sechond__button": {
-      "uz": "Ikkinchi sahifaga qaytish",
-      "ru": "Вернуться на вторую страницу",
-      "en": "Return to second page"
-    },
-    "sechond__footer": {
-      "uz": "Bu sahifa sizning dasturiy ta'minot loyihangiz uchun ikkinchi sahifangiz.",
-      "ru": "Эта страница является второй страницей вашего программного обеспечения.",
-      "en": "This page is the second page of your software project."
-    }
-  
+    "uz": "Ustozidan o'zib ketgan shogird",
+    "ru": "Ученик, превзошедший учителя",
+    "en": "A student who surpassed the teacher"
+  },
+  "hero__description": {
+    "uz": "Men Bekzod, 13 yoshdaman. Dasturlashga qiziqaman va hozirda Node.js (Express), PostgreSQL, va React PWA bilan ishlayman. Asosan authentication va authorization (JWT, access token, refresh token) kabi xavfsizlik tizimlari ustida ishlayman. Doim yangi texnologiyalarni o‘rganishga intilaman va loyihalarimni takomillashtirishga harakat qilaman.",
+    "ru": "Меня зовут Бекзод, мне 13 лет. Я увлекаюсь программированием и сейчас работаю с Node.js (Express), PostgreSQL и React PWA. В основном занимаюсь системами аутентификации и авторизации (JWT, access token, refresh token). Стремлюсь изучать новые технологии и совершенствовать свои проекты.",
+    "en": "My name is Bekzod, I am 13 years old. I’m passionate about programming and currently work with Node.js (Express), PostgreSQL, and React PWA. I mainly focus on security systems such as authentication and authorization (JWT, access token, refresh token). I always strive to learn new technologies and improve my projects."
+  },
+  "hero__name": {
+    "uz": "Bekzod",
+    "ru": "Бекзод",
+    "en": "Bekzod"
+  },
+  "results__title": {
+    "uz": "Algoritm natijasi raqamlarda",
+    "ru": "Результаты Алгоритма в цифрах",
+    "en": "Algorithm results in numbers"
+  },
+  "results__graduates": {
+    "uz": "Shu kungacha bitirgan o‘quvchilar",
+    "ru": "Выпускники на сегодняшний день",
+    "en": "Students graduated so far"
+  },
+  "results__hired": {
+    "uz": "Shu kungacha o‘quvchilarning ishga joylashuvi",
+    "ru": "Трудоустроенные выпускники",
+    "en": "Students hired so far"
+  },
+  "consultation__title": {
+    "uz": "Bepul konsultatsiya",
+    "ru": "Бесплатная консультация",
+    "en": "Free consultation"
+  },
+  "form__name": {
+    "uz": "Ismingiz",
+    "ru": "Ваше имя",
+    "en": "Your name"
+  },
+  "form__goal": {
+    "uz": "Qanday kasb egallamoqchisiz?",
+    "ru": "Какую профессию вы хотите освоить?",
+    "en": "Which profession are you aiming for?"
+  },
+  "nav__home": {
+    "uz": "Bosh sahifa",
+    "ru": "Главная",
+    "en": "Home"
+  },
+  "nav__courses": {
+    "uz": "Kurslar",
+    "ru": "Курсы",
+    "en": "Courses"
+  },
+  "nav__events": {
+    "uz": "Eventlar",
+    "ru": "События",
+    "en": "Events"
+  },
+  "nav__about": {
+    "uz": "Biz haqimizda",
+    "ru": "О нас",
+    "en": "About us"
+  },
+  "nav__news": {
+    "uz": "Yangiliklar",
+    "ru": "Новости",
+    "en": "News"
+  },
+  "nav__certificates": {
+    "uz": "Sertifikatlar",
+    "ru": "Сертификаты",
+    "en": "Certificates"
+  },
+  "nav__contact": {
+    "uz": "Aloqa markazi",
+    "ru": "Контакты",
+    "en": "Contact"
+  }
+
 }
-  
