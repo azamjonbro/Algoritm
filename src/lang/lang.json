@@ -1,0 +1,49 @@
+{
+    "hero__title": {
+      "uz": "Salom dunyo",
+      "ru": "Привет, мир",
+      "en": "Hello world"
+    },
+    "hero__description": {
+      "uz": "Bu sizning dasturiy ta'minot loyihangiz uchun asosiy sahifangiz.",
+      "ru": "Это ваша главная страница программного обеспечения.",
+      "en": "This is your software project's main page."
+    },
+    "hero__button": {
+      "uz": "Bosh sahifaga qaytish",
+      "ru": "Вернуться на главную страницу",
+      "en": "Return to main page"
+    },
+    "hero__footer": {
+      "uz": "Bu sahifa sizning dasturiy ta'minot loyihangiz uchun asosiy sahifangiz.",
+      "ru": "Эта страница является главной страницей вашего программного обеспечения.",
+      "en": "This page is the main page of your software project."
+    },
+    "hero__footer_button": {
+      "uz": "Bosh sahifaga qaytish",
+      "ru": "Вернуться на главную страницу",
+      "en": "Return to main page"
+    },
+    "sechond__title": {
+      "uz": "Ikkinchi sahifa",
+      "ru": "Вторая страница",
+      "en": "Second page"
+    },
+    "sechond__description": {
+      "uz": "Bu sizning dasturiy ta'minot loyihangiz uchun ikkinchi sahifangiz.",
+      "ru": "Это ваша вторая страница программного обеспечения.",
+      "en": "This is your software project's second page."
+    },
+    "sechond__button": {
+      "uz": "Ikkinchi sahifaga qaytish",
+      "ru": "Вернуться на вторую страницу",
+      "en": "Return to second page"
+    },
+    "sechond__footer": {
+      "uz": "Bu sahifa sizning dasturiy ta'minot loyihangiz uchun ikkinchi sahifangiz.",
+      "ru": "Эта страница является второй страницей вашего программного обеспечения.",
+      "en": "This page is the second page of your software project."
+    }
+  
+}
+  

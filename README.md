@@ -1,25 +1,7 @@
-# bakery-front
+# Ushbu sayt "Algoritm Ta'lim" MCHJ uchun ishlab chiqarildi
 
-## Project setup
-```
-npm install
-```
+## Web sahifa domaini aloritmedu.uz
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![AlgoritmEdu](./src/assets/Images/githubimg/image.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# Algoritm
+# CopyRigth by @Azamjonbro 
