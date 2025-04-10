@@ -1,15 +1,19 @@
 <template>
 	<div class="container">
 	  <div class="main">
-		  <Navbar />
-		<router-view></router-view>
+		<Navbar />
+		<div class="main-wrapper">
+			<router-view></router-view>
+			
+		</div>
 
 	  </div>
 	</div>
-	<Footer/>
+	<Footer v-if="!isAboutPage && !isContactPage"/>
   </template>
   
   <script>
+  import { useRoute } from 'vue-router';
   import Navbar from "@/components/Navbar/Navbar.vue";
   import Footer from "@/components/Footer/Footer.vue";
   export default {
@@ -17,6 +21,15 @@
 	  Navbar,
 	  Footer,
 	},
+	computed:{
+		isAboutPage() {
+      return this.$route.name === "About";
+    },
+    isContactPage() {
+      return this.$route.name === "Contact";
+    }
+    }
+	
   };
   </script>
   
@@ -24,6 +37,9 @@
   .container {
 	width: 100%;
 	height: auto;
+  }
+  .main-wrapper{
+	margin-top: 20px;
   }
   .main {
 	margin: 0 auto;
