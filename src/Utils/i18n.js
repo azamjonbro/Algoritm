@@ -1,9 +1,7 @@
 import langData from "@/lang/lang.json";
 
-// Joriy til (localStorage yoki default: 'uz')
-let currentLang = localStorage.getItem("lang") || "en";
+let currentLang = localStorage.getItem("lang") || "uz";
 
-// Tilni o'zgartirish funksiyasi
 export function setLang(lang) {
   if (langData["hero__title"][lang]) {
     currentLang = lang;
@@ -13,7 +11,6 @@ export function setLang(lang) {
   }
 }
 
-// Tarjima olish funksiyasi
 export function t(key) {
   const item = langData[key];
   if (!item) {
