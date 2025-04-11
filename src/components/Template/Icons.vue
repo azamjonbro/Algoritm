@@ -31,7 +31,21 @@
             <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M2.67 18.95L7.6 15.64C8.39 15.11 9.53 15.17 10.24 15.78L10.57 16.07C11.35 16.74 12.61 16.74 13.39 16.07L17.55 12.5C18.33 11.83 19.59 11.83 20.37 12.5L22 13.9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>`
+            </svg>`,
+            contactText:`<svg width="1218" height="712" viewBox="0 0 1218 712" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M155.64 6.99995L92.2 342.92V345L155.64 735H108.84L50.6 378.28H48.52V735H0.680001V6.99995H48.52V323.16H50.6L107.8 6.99995H155.64ZM325.128 78.76V663.24C325.128 711.08 296.008 741.24 250.248 741.24C205.528 741.24 175.368 711.08 175.368 663.24V78.76C175.368 30.92 204.488 0.759969 250.248 0.759969C296.008 0.759969 325.128 30.92 325.128 78.76ZM277.288 83.96C277.288 56.92 266.888 45.48 250.248 45.48C233.608 45.48 223.208 56.92 223.208 83.96V657C223.208 685.08 233.608 696.52 250.248 696.52C266.888 696.52 277.288 685.08 277.288 657V83.96ZM545.307 6.99995V735H476.667L400.747 96.44H398.667L404.907 313.8L406.987 735H361.227V6.99995H429.867L505.787 646.6H507.867L501.627 435.48L499.547 6.99995H545.307ZM717.882 6.99995V51.72H669.002V735H621.162V51.72H571.242V6.99995H717.882ZM830.681 6.99995L882.681 735H832.761L821.321 537.4H775.561L764.121 735H719.401L765.161 6.99995H830.681ZM777.641 492.68H819.241L806.761 268.04L799.481 75.64H797.401L790.121 268.04L777.641 492.68ZM1058.53 6.99995L995.091 342.92V345L1058.53 735H1011.73L953.491 378.28H951.411V735H903.571V6.99995H951.411V323.16H953.491L1010.69 6.99995H1058.53ZM1217.57 6.99995V51.72H1168.69V735H1120.85V51.72H1070.93V6.99995H1217.57Z" fill="white"/>
+            </svg>`,
+            contactBaunce:`<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="68" height="68" transform="translate(68 68) rotate(-180)" fill="black"/>
+            <path d="M34 15.6719L34 52.3281" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M49.9375 36.6564L34 52.5939L18.0625 36.6564" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            `,
+            popup_icon:`<svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M41.5468 75.3862L84.4536 50.6139" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M55.339 42.5498L84.7647 50.4344L76.8801 79.8601" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            `
           },
       };
     },

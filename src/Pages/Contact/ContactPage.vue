@@ -4,6 +4,7 @@
 			<h2>Har doim siz bilan aloqadamiz <span>*</span></h2>
 			<p>Biz bilan bog‘laning, kurslarimiz haqida batafsil ma’lumot olish yoki o‘quv jarayoni bo‘yicha savollaringizga javob topish uchun.
 			Har doim sizga yordam berishga va to‘g‘ri yo‘nalish tanlashda ko‘maklashishga tayyormiz!</p>
+			<Icons name="contactBaunce" class="baunceicon"  @click="scrollToForm"/>
 		</div>
 		
 		<div class="contact_form_wrapper">
@@ -15,9 +16,18 @@
 		<div class="contact_map">
 			<Maps/>
 		</div>
+		<div class="contact_footer_text">
+			<div class="shadow-overlay"></div>
+			<Icons name="contactText"/>
+			<div class="popup_icon">
+			<Icons name="popup_icon"/>
+		</div>
+		</div>
+		
 	</div>
 </template>
 <script>
+	import Icons from '@/components/Template/Icons.vue'
     import Maps from "@/components/Maps/MapComponent.vue"
 	import { showSuccess } from "@/Utils/Toast";
 	import { showError } from "@/Utils/Toast"
@@ -27,6 +37,7 @@
 		
 		components:{
 			Maps,
+			Icons
 		},
 		directives: { mask },
 		data() {
@@ -88,17 +99,27 @@
 			filterName(event) {
 				this.form.name = event.target.value.replace(/[^a-zA-Zа-яА-Яўғқҳʼ ]/g, "");
 			},
+			scrollToForm() {
+				const mapSection = document.querySelector(".contact_footer_text");
+				const popup = document.querySelector(".popup_icon");
+				if (mapSection) {
+					mapSection.scrollIntoView({ behavior: "smooth" });
+				}
+				
+			},
+			
+							
 		}
 	}
 </script>
 
-<style scoped>
+<style >
 
 .ContactPage {
 	width: 100%;
 	height: auto;
 	background-color: #000000;
-	padding: 110px 0 0 0;
+	padding: 70px 0 0 0;
 }
 .Contact_top h2{
 	font-size: 69px;
@@ -112,6 +133,9 @@
 	color: rgba(255, 255, 255, 1);
 	padding-right: 30px;
 	margin-top: 10px;
+}
+.Contact_top {
+	position: relative;
 }
 .Contact_top span{
 	font-size: 69px;
@@ -177,6 +201,8 @@
 	width: 100%;
 	height: 381px;
 	margin-top: 40px;
+	position: relative;
+	z-index: 1;
 	/* display: flex; */
 	/* align-items: center; */
 }
@@ -189,4 +215,77 @@
   background: #000;
   color: rgb(191, 191, 191);
 }
+
+.contact_footer_text {
+	width: 100%;
+margin-top: 100px;
+  position: relative;
+
+}
+
+
+.shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* drop-shadow filterini qo'llaymiz */
+ background: linear-gradient(0.1deg, #000000 8.5%, #000000 38.5%, rgba(0, 0, 0, 0) 68.57%, rgba(32, 30, 30, 0) 100%);
+	opacity: 0.9;
+
+  pointer-events: none; /* Bu qatlam interaktivlikka aralashmasligi uchun */
+  z-index: 2;
+}
+.shadow-overlay::after{
+	content: "";
+	width: 100%;
+	height: 100px;
+	background-color: #000000;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	opacity: 1;
+	
+}
+.baunceicon{
+	position: absolute;
+	top: -50px;
+	right: 0;
+	animation: Bounce 1s infinite alternate;
+}
+.popup_icon {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  bottom:0;  /* Boshlanishdagi holat */
+  left: 40%;
+  opacity: 0;  /* Boshlanishda ko'rinmas bo'ladi */
+  transition: all 0.6s ease; /* Animatsiya uchun */
+  
+}
+
+.contact_footer_text:hover .popup_icon {
+  opacity: 1; /* Ko'rinadi */
+  bottom: 200px;  /* Pastga tushadi */
+  z-index: 2;
+}
+
+
+
+@keyframes Bounce{
+	from{
+		transform: translateY(0px);
+	}
+	to{
+		transform: translateY(20px);
+	}
+}
+
+
 </style>
