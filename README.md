@@ -5,3 +5,5 @@
 ![AlgoritmEdu](./src/assets/Images/githubimg/image.png)
 
 # CopyRigth by @Azamjonbro 
+
+❤️ open source lover
