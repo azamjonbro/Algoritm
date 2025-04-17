@@ -78,5 +78,46 @@
     "uz": "Qanday kasb egallamoqchisiz?",
     "ru": "Какую профессию вы хотите освоить?",
     "en": "Which profession are you aiming for?"
+  },
+  "home__statistics-title": {
+    "uz": "Nima uchun aynan Algoritmda o'qish kerak ?",
+    "ru": "Почему нужно учиться именно в Алгоритме?",
+    "en": "Why should you study at Algorithm?"
+  },
+  "doimiy_musobaqalar": {
+    "uz": "Doimiy musobaqalar",
+    "ru": "Постоянные соревнования",
+    "en": "Regular competitions"
+  },
+  "doimiy_musobaqalar_desc":{
+    "uz":"Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
+    "ru": "Еженедельные конкурсы с призами по программированию и дизайну.",
+    "en": "Weekly prize competitions in programming and design."
+  },
+  "ish_kafolati":{
+    "uz":"Ish taklif qilish kafolati",
+    "ru": "Гарантия предложения работы",
+    "en": "Job offer guarantee"
+  },
+  "ish_kafolati_desc":{
+    "uz":"Algoritm kurslarini muvaffaqiyatli bitirgan o‘quvchilarga ish taklif qilish kafolatini beradi.",
+    "ru": "Гарантирует предложение работы для успешно окончивших курсы Алгоритм.",
+    "en": "Guarantees a job offer for students who successfully complete Algorithm courses."
+  },
+  "sifatli_talim":{
+    "uz":"Sifatli ta'lim",
+    "ru": "Качественное образование",
+    "en": "Quality education"
+  },
+  "sifatli_talim_desc":{
+    "uz":"Doimiy yangilanib boradigan kurslar va katta tajribaga ega ustozlar.",
+    "ru": "Постоянно обновляемые курсы и преподаватели с большим опытом.",
+    "en": "Continuously updated courses and highly experienced instructors."
+  },
+  "home_sertificat":{
+    "uz":"Sertifikatlar",
+    "ru": "Сертификаты",
+    "en": "Certificates"
   }
+
 }

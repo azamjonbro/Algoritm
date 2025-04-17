@@ -6,7 +6,7 @@
     <div class="features">
       <div class="features-Nav">
         <span class="bar"></span>
-        <h2>Nima uchun Algoritmda o‘qish kerak?</h2>
+        <h2>{{ t("home__statistics-title") }}</h2>
       </div>
       <div class="feature-grid">
         <div
@@ -17,8 +17,8 @@
           @click="selectedFeature = index"
         >
           <div class="features-texts">
-            <h3>{{ feature.title }}</h3>
-            <p>{{ feature.description }}</p>
+            <h3>{{ t(`${feature.title}`) }}</h3>
+            <p>{{ t(`${feature.description }`)}}</p>
           </div>
           <div class="icon">
             <img :src="feature.image" alt="featureimage" />
@@ -41,6 +41,8 @@ import StudentThought from "@/components/StudentsThought/StudentThought.vue";
 import EnrolInCourse from "@/components/EnrollnCourse/EnrolInCourse.vue";
 import Faqhomepage from "@/components/Faq/Faqhomepage.vue";
 import OurDestination from "@/components/OurDestination/OurDestination.vue";
+import {t} from '@/Utils/i18n.js'
+
 export default {
   components: {
     Carousel,
@@ -53,23 +55,21 @@ export default {
   },
   data() {
     return {
+      t,
       features: [
         {
-          title: "Doimiy musobaqalar",
-          description:
-            "Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
+          title: "doimiy_musobaqalar",
+          description:"doimiy_musobaqalar_desc",
           image: require("@/assets/Images/home_img/course1.svg"),
         },
         {
-          title: "Ish taklif qilish kafolati",
-          description:
-            "Algoritm kurslarini muvaffaqiyatli bitirgan o‘quvchilarga ish taklif qilish kafolatini beradi.",
+          title: "ish_kafolati",
+          description:"ish_kafolati_desc",
           image: require("@/assets/Images/home_img/course2.svg"),
         },
         {
-          title: "Sifatli ta’lim",
-          description:
-            "Doimiy yangilanib boradigan kurslar va katta tajribaga ega ustozlar.",
+          title: "sifatli_talim",
+          description:"sifatli_talim_desc",
           image: require("@/assets/Images/home_img/course3.svg"),
         },
         {
