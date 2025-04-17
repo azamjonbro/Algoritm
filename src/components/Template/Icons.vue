@@ -45,7 +45,13 @@
             <path d="M41.5468 75.3862L84.4536 50.6139" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M55.339 42.5498L84.7647 50.4344L76.8801 79.8601" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            `
+            `,
+            bottomIcon:`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`,
+topIcon:`<svg xmlns="http://www.w3.org/2000/svg" style="transform:rotate(180deg)" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`,
           },
       };
     },

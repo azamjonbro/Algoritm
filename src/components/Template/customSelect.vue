@@ -2,7 +2,7 @@
     <div v-if="!loading" class="custom-select" ref="customSelect">
       <div class="select-selected d-flex j-between a-center" @click="toggleDropdown">
         {{ selectedOption ? selectedOption.text : placeholder }}
-        <Icons :name="isOpen ? 'topArrow' : 'bottomArrow'" />
+        <Icons :name="isOpen ? 'topIcon' : 'bottomIcon'" />
       </div>
       <div v-if="isOpen" class="select-items scroll">
         <input
@@ -133,7 +133,7 @@
     cursor: pointer;
     border: 1px solid #d2d9df;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 21px;
   }
   
   .select-items {
