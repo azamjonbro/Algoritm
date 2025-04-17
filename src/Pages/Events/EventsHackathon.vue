@@ -57,7 +57,7 @@
                             {{ member }}
                         </span>
                     </div>
-                    <img src="@/assets/Images/user-add.svg" alt="">
+                    <Icons name="user_add"/>
                 </div>
             </div>
         </div>
@@ -132,8 +132,12 @@
 
 <script>
 import { showErrorSend,showSuccess } from '@/Utils/Toast';
+import Icons from '@/components/Template/Icons.vue'
 
 export default {
+  components:{
+    Icons 
+  },
   data() {
     return {
       form: {

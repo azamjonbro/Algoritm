@@ -14,8 +14,8 @@
             <div class="event-info">
               <h3>{{ event.title1 }}</h3>
               <span class="event-info-icons">
-                <img src="@/assets/Images/send-2.svg" alt="send" />
-                <img src="@/assets/Images/Subtract (2).svg" alt="send" />
+              <Icons name="send2"/>
+              <Icons name="subtrackt"/>
               </span>
             </div>
             <p>{{ event.type }}</p>
