@@ -11,8 +11,8 @@
     >
       <swiper-slide v-for="(Swiperdata, index) in Swiperdatas">
         <div class="Events-carusel-card">
-          <h1 class="uppercase-text">{{ Swiperdata.title }}</h1>
-          <p>{{ Swiperdata.des }}</p>
+          <h1 class="uppercase-text">{{ t("event__title") }}</h1>
+          <p>{{ t("event__des") }}</p>
           <button>{{ Swiperdata.btn }}</button>
         </div>
       </swiper-slide>
@@ -26,7 +26,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
-
+import { t } from "@/Utils/i18n";
 export default {
   components: {
     Swiper,
@@ -37,6 +37,7 @@ export default {
   },
   data() {
     return {
+      t,
       Swiperdatas: [
         {
           title: "Kod yozib charchadingizmi? Biz ham! 😆",

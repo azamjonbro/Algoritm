@@ -14,8 +14,8 @@
             <div class="event-info">
               <h3>{{ event.title1 }}</h3>
               <span class="event-info-icons">
-              <Icons name="send2"/>
-              <Icons name="subtrackt"/>
+                <Icons name="send2" />
+                <Icons name="subtrackt" />
               </span>
             </div>
             <p>{{ event.type }}</p>
@@ -25,8 +25,7 @@
                 <img src="@/assets/Images/info-circle.svg" alt="info" />
               </span>
               <router-link to="/hackathon">
-                <button class="register-btn">Qatnashish</button>
-
+                <button class="register-btn">{{t("event__attend-btn")}}</button>
               </router-link>
             </div>
           </div>
@@ -42,9 +41,7 @@
           <h2>{{ selectedEvent.title }}</h2>
           <router-link to="/hackathon">
             <button>Qatnashish</button>
-
           </router-link>
-          
         </div>
 
         <div v-if="selectedEvent.details">
@@ -73,6 +70,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
+import { t } from "@/Utils/i18n";
 
 export default {
   components: {
@@ -86,6 +84,7 @@ export default {
 
   data() {
     return {
+      t,
       events: [
         {
           title1: "React JS ",
@@ -545,10 +544,10 @@ export default {
   justify-content: center;
   overflow: auto;
   padding: 100px;
-  padding-top:200px;
+  padding-top: 200px;
   z-index: 3;
-  
-}.modal-overlay::-webkit-scrollbar {
+}
+.modal-overlay::-webkit-scrollbar {
   display: none; /* Chrome, Safari va Edge uchun */
 }
 
@@ -615,7 +614,7 @@ div.swiper-wrapper {
   font-size: 22px;
   line-height: 40px;
 }
-.modals-text ul{
+.modals-text ul {
   list-style: square;
 }
 </style>
