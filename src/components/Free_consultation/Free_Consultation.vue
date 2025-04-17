@@ -7,7 +7,7 @@
         birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
       </p>
     </div>
-    
+
     <input
       type="text"
       v-model="form.name"
@@ -44,7 +44,7 @@
     <div class="consent-wrapper">
       <input type="checkbox" v-model="form.consent" />
       <label for="consent">
-        Shaxsiy ma'lumotlarni <a href="#">qayta ishlanishiga</a> roziman
+        {{ t("personal__info") }} <a href="#">qayta ishlanishiga</a> roziman
       </label>
     </div>
   </div>
@@ -54,10 +54,12 @@
 import { mask } from "vue-the-mask";
 import { showSuccess } from "@/Utils/Toast";
 import { showError } from "@/Utils/Toast";
+import { t } from "@/Utils/i18n";
 export default {
   directives: { mask },
   data() {
     return {
+      t,
       form: {
         name: "",
         phone: "",
@@ -120,11 +122,9 @@ export default {
     },
   },
 };
-
 </script>
 
 <style>
-
 .consultation-form {
   background: #111;
   color: #fff;

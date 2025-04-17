@@ -79,6 +79,55 @@
     "ru": "Какую профессию вы хотите освоить?",
     "en": "Which profession are you aiming for?"
   },
+
+
+  "send__message": {
+    "uz": "Yuborish",
+    "ru": "Отправить",
+    "en": "Send"
+  },
+
+  "personal__info": {
+    "uz": "Shaxsiy ma'lumotlar",
+    "ru": "Личная информация",
+    "en": "Personal information"
+  },
+
+  "personal__info__link": {
+    "uz": "qayta ishlanishiga roziman",
+    "ru": "согласен на обработку",
+    "en": "agree to the processing"
+  },
+
+  "personal__info__confirm": {
+    "uz": "Roziman",
+    "ru": "Согласен",
+    "en": "Agree"
+  },
+
+  "event__title": {
+    "uz": "Kod yozib charchadingizmi? Biz ham!😆",
+    "ru": "Устали писать код? Мы тоже! 😆",
+    "en": "Tired of writing code? So are we! 😆"
+  },
+
+  "event__des": {
+    "uz": "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
+    "ru": "Поэтому следующие советы именно для вас! :)",
+    "en": "So the following tips are just for you! :)"
+  },
+
+  "event__read-btn": {
+    "uz": "O'qish",
+    "ru": "Читать",
+    "en": "Read"
+  },
+  "event__attend-btn": {
+    "uz": "Qatnashish",
+    "ru": "Участвовать",
+    "en": "Attend"
+  }
+},
   "home__statistics-title": {
     "uz": "Nima uchun aynan Algoritmda o'qish kerak ?",
     "ru": "Почему нужно учиться именно в Алгоритме?",
