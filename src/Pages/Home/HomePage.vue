@@ -73,9 +73,8 @@ export default {
           image: require("@/assets/Images/home_img/course3.svg"),
         },
         {
-          title: "Sertifikat",
-          description:
-            "Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
+          title: "home_sertificat",
+          description:"home_sertificat_desc",
           image: require("@/assets/Images/home_img/course4.svg"),
         },
       ],

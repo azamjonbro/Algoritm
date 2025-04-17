@@ -118,6 +118,11 @@
     "uz":"Sertifikatlar",
     "ru": "Сертификаты",
     "en": "Certificates"
+  },
+  "home_sertificat_desc":{
+    "uz":"Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
+    "ru": "Учащиеся, успешно завершившие курс, получают сертификат Алгоритма.",
+    "en": "Students who successfully complete the course receive an Algorithm certificate."
   }
 
 }
