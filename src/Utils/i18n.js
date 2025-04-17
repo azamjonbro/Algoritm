@@ -1,6 +1,6 @@
 import langData from "@/lang/lang.json";
 
-let currentLang = localStorage.getItem("lang") || "en";
+let currentLang = localStorage.getItem("lang") || "ru";
 
 export function setLang(lang) {
   if (langData["hero__title"][lang]) {
