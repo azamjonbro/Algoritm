@@ -72,11 +72,29 @@ export default {
 <style >
 header {
   max-width: 1440px;
-
+  width: 1270px;
+  position: sticky;
+  top: -1px;
+  margin-left: -10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 10px 5px;
+  z-index: 4;
+  background-attachment: auto;
+  backdrop-filter: blur(25px);
+  background-color:black;
+}
+header::after{
+  content: "";
+  width:1270px;
+  height:40px;
+  position: absolute;
+  top: 55px;
+  /* background-color:gray; */
+  z-index: 1;
+  background: linear-gradient( rgb(0, 0, 0), rgb(0, 0, 0),transparent );
+  /* background-image: linear-gradient(rgba(0, 0, 0, 1) , rgb(19, 16, 16)); */
 }
 
 nav {

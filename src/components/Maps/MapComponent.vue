@@ -122,6 +122,8 @@ export default {
   margin: 0px auto 24px;
   border-radius: 12px;
   outline: none;
+  position: relative;
+  z-index: 2;
 }
 .leaflet-marker-icon {
   background: none !important;
