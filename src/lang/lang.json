@@ -80,7 +80,6 @@
     "en": "Which profession are you aiming for?"
   },
 
-
   "send__message": {
     "uz": "Yuborish",
     "ru": "Отправить",
@@ -126,8 +125,104 @@
     "uz": "Qatnashish",
     "ru": "Участвовать",
     "en": "Attend"
-  }
-},
+  },
+
+  "about__title": {
+    "uz": "Biz 2017-yildan beri ishlaymiz",
+    "ru": "Мы работаем с 2017 года",
+    "en": "We have been working since 2017"
+  },
+
+  "about__description": {
+    "uz": "Algoritm o‘quv markazi – bu zamonaviy IT bilimlarini o‘rgatishga ixtisoslashgan markaz bo‘lib,o‘quvchilarni dasturlash, web development va IT Kids yo‘nalishlarida tayyorlaydi. Biz boshlang‘ichdan professionallikka yetaklaydigan dasturlar asosida ta’lim beramiz.",
+    "ru": "Учебный центр Алгоритм - это центр, специализирующийся на обучении современным IT-знаниям, готовящий студентов в области программирования, веб-разработки и IT Kids. Мы обучаем по программам, которые ведут от начального уровня к профессиональному.",
+    "en": "Algorithm training center is a center specializing in teaching modern IT knowledge, preparing students in programming, web development and IT Kids. We teach according to programs that lead from the initial level to the professional."
+  },
+
+  "about__description2": {
+    "uz": "Bizning maqsadimiz – yoshlarni IT sohasiga qiziqtirish, ularga amaliy bilim berish va ularni kelajakda muvaffaqiyatli dasturchi yoki IT mutaxassisiga aylantirish. Biz har bir o‘quvchiga individual yondashib, ularning bilimini mustahkamlashga e’tibor qaratamiz.",
+    "ru": "Наша цель - заинтересовать молодежь в IT-сфере, дать им практические знания и превратить их в успешных программистов или IT-специалистов в будущем. Мы уделяем внимание каждому ученику индивидуально, чтобы укрепить их знания.",
+    "en": "Our goal is to interest young people in the IT field, give them practical knowledge and turn them into successful programmers or IT specialists in the future. We pay attention to each student individually to strengthen their knowledge."
+  },
+
+  "about__question": {
+    "uz": "Nima uchun biz?",
+    "ru": "Почему мы?",
+    "en": "Why us?"
+  },
+
+  "about__practice": {
+    "uz": "Amaliyotga yo‘naltirilgan darslar",
+    "ru": "Практические занятия",
+    "en": "Practical classes"
+  },
+
+  "about__support": {
+    "uz": "To‘liq qo‘llab-quvvatlash va maslahatlar",
+    "ru": "Полная поддержка и консультации",
+    "en": "Full support and advice"
+  },
+
+  "about__teachers": {
+    "uz": "Tajribali va amaliy bilimga ega ustozlar",
+    "ru": "Опытные преподаватели с практическими знаниями",
+    "en": "Experienced teachers with practical knowledge"
+  },
+
+  "about__student__job": {
+    "uz": "Tajribali va amaliy bilimga ega ustozlar",
+    "ru": "Опытные преподаватели с практическими знаниями",
+    "en": "Experienced teachers with practical knowledge"
+  },
+
+  "certificates": {
+    "uz": "Algoritm Ta’limdan olgan Sertifikatingizni tez va oson tekshiring!",
+    "ru": "Проверьте свой сертификат Алгоритм Образования быстро и легко!",
+    "en": "Quickly and easily check your Algorithm Education certificate!"
+  },
+
+  "certificates__notFound": {
+    "uz": "Afsuski bizda bunday sertifikat topilmadi",
+    "ru": "К сожалению, мы не нашли такой сертификат",
+    "en": "Unfortunately, we did not find such a certificate"
+  },
+
+  "certificate__number": {
+    "uz": "Sertifikat raqamingizni kiriting va natijani bir necha soniya ichida oling.",
+    "ru": "Введите номер сертификата и получите результат за несколько секунд.",
+    "en": "Enter your certificate number and get the result in a few seconds."
+  },
+
+  "certificate__error": {
+    "uz": "Siz kiritgan sertifikat raqami to'g'ri emas yoki sertifikat hali ma'lumotlar bazasiga kiritilmagan bo'lishi mumkin. Iltimos, raqamni yana bir bor tekshirib ko'ring yoki biz bilan bog'laning.",
+    "ru": "Введенный вами номер сертификата неверен или сертификат еще не был внесен в базу данных. Пожалуйста, проверьте номер еще раз или свяжитесь с нами.",
+    "en": "The certificate number you entered is incorrect or the certificate may not have been entered into the database yet. Please check the number again or contact us."
+  },
+
+  "certificate__check": {
+    "uz": "Tekshirish",
+    "ru": "Проверить",
+    "en": "Check"
+  },
+
+  "certificate__download": {
+    "uz": "Sertifikatni yuklab olish",
+    "ru": "Скачать сертификат",
+    "en": "Download certificate"
+  },
+
+  "contact__title": {
+    "uz": "Har doim siz bilan aloqadamiz",
+    "ru": "Мы всегда на связи с вами",
+    "en": "We are always in touch with you"
+  },
+
+  "contact__description": {
+    "uz": "Biz bilan bog‘laning, kurslarimiz haqida batafsil ma’lumot olish yoki o‘quv jarayoni bo‘yicha savollaringizga javob topish uchun. Har doim sizga yordam berishga va to‘g‘ri yo‘nalish tanlashda ko‘maklashishga tayyormiz!",
+    "ru": "Свяжитесь с нами, чтобы получить подробную информацию о наших курсах или ответить на ваши вопросы по учебному процессу. Мы всегда готовы помочь вам и помочь вам выбрать правильное направление!",
+    "en": "Contact us to get detailed information about our courses or to find answers to your questions about the learning process. We are always ready to help you and assist you in choosing the right direction!"
+  },
+
   "home__statistics-title": {
     "uz": "Nima uchun aynan Algoritmda o'qish kerak ?",
     "ru": "Почему нужно учиться именно в Алгоритме?",
@@ -138,40 +233,40 @@
     "ru": "Постоянные соревнования",
     "en": "Regular competitions"
   },
-  "doimiy_musobaqalar_desc":{
-    "uz":"Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
+
+  "doimiy_musobaqalar_desc": {
+    "uz": "Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
     "ru": "Еженедельные конкурсы с призами по программированию и дизайну.",
     "en": "Weekly prize competitions in programming and design."
   },
-  "ish_kafolati":{
-    "uz":"Ish taklif qilish kafolati",
+  "ish_kafolati": {
+    "uz": "Ish taklif qilish kafolati",
     "ru": "Гарантия предложения работы",
     "en": "Job offer guarantee"
   },
-  "ish_kafolati_desc":{
-    "uz":"Algoritm kurslarini muvaffaqiyatli bitirgan o‘quvchilarga ish taklif qilish kafolatini beradi.",
+  "ish_kafolati_desc": {
+    "uz": "Algoritm kurslarini muvaffaqiyatli bitirgan o‘quvchilarga ish taklif qilish kafolatini beradi.",
     "ru": "Гарантирует предложение работы для успешно окончивших курсы Алгоритм.",
     "en": "Guarantees a job offer for students who successfully complete Algorithm courses."
   },
-  "sifatli_talim":{
-    "uz":"Sifatli ta'lim",
+  "sifatli_talim": {
+    "uz": "Sifatli ta'lim",
     "ru": "Качественное образование",
     "en": "Quality education"
   },
-  "sifatli_talim_desc":{
-    "uz":"Doimiy yangilanib boradigan kurslar va katta tajribaga ega ustozlar.",
+  "sifatli_talim_desc": {
+    "uz": "Doimiy yangilanib boradigan kurslar va katta tajribaga ega ustozlar.",
     "ru": "Постоянно обновляемые курсы и преподаватели с большим опытом.",
     "en": "Continuously updated courses and highly experienced instructors."
   },
-  "home_sertificat":{
-    "uz":"Sertifikatlar",
+  "home_sertificat": {
+    "uz": "Sertifikatlar",
     "ru": "Сертификаты",
     "en": "Certificates"
   },
-  "home_sertificat_desc":{
-    "uz":"Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
+  "home_sertificat_desc": {
+    "uz": "Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
     "ru": "Учащиеся, успешно завершившие курс, получают сертификат Алгоритма.",
     "en": "Students who successfully complete the course receive an Algorithm certificate."
   }
-
 }
