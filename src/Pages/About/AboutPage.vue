@@ -1,94 +1,95 @@
 <template>
-	<div class="About">
-		<h2>Biz 2017-yildan beri ishlaymiz <span>*</span></h2>
-		<p>Algoritm o‘quv markazi – bu zamonaviy IT bilimlarini o‘rgatishga ixtisoslashgan markaz bo‘lib,
-		o‘quvchilarni dasturlash, web development va IT Kids yo‘nalishlarida tayyorlaydi. Biz boshlang‘ichdan
-		professionallikka yetaklaydigan dasturlar asosida ta’lim beramiz.  </p>
-		<p>Bizning maqsadimiz – yoshlarni IT sohasiga qiziqtirish, ularga amaliy bilim berish va ularni kelajakda
-		muvaffaqiyatli dasturchi yoki IT mutaxassisiga aylantirish. Biz har bir o‘quvchiga individual yondashib,
-		ularning bilimini mustahkamlashga e’tibor qaratamiz.  </p>
-		<div class="features">
-			<div class="features-nav">
-				<span class="bar"></span>
-				<h2>Nima uchun biz?</h2>
-			</div>
-			<div class="feature-grid">
-				<div
-				v-for="(feature, index) in features"
-				:key="index"
-				class="about_card"
-				:class="{ selected: selectedFeature === index }"
-				@click="selectedFeature = index"
-				>
-				<div class="features-texts">
-					<h3>{{ feature.title }}</h3>
-					<p>{{ feature.description }}</p>
-				</div>
-				<div class="about_icon">
-					<img :src="feature.image" alt="featureimage" />
-				</div>
-				</div>
-			</div>
-    	</div>
-		<div class="About_gradient">
-			<div class="inner_gradient">
-
-			</div>
-		</div>
+  <div class="About">
+    <h2>{{ t("about__title") }}<span>*</span></h2>
+    <p>
+      {{ t("about__description") }}
+    </p>
+    <p>
+      {{ t("about__description2") }}
+    </p>
+    <div class="features">
+      <div class="features-nav">
+        <span class="bar"></span>
+        <h2>{{ t("about__question") }}</h2>
+      </div>
+      <div class="feature-grid">
+        <div
+          v-for="(feature, index) in features"
+          :key="index"
+          class="about_card"
+          :class="{ selected: selectedFeature === index }"
+          @click="selectedFeature = index"
+        >
+          <div class="features-texts">
+            <h3>{{ t(feature.description) }}</h3>
+          </div>
+          <div class="about_icon">
+            <img :src="feature.image" alt="featureimage" />
+          </div>
+        </div>
+      </div>
     </div>
-	
+    <div class="About_gradient">
+      <div class="inner_gradient"></div>
+    </div>
+  </div>
 </template>
+
 <script>
-export default{
-	data() {
+import { t } from "@/Utils/i18n";
+import langData from "@/lang/lang.json";
+
+export default {
+  data() {
     return {
+      t,
       features: [
         {
           title: "Amaliyotga yo‘naltirilgan darslar",
-       	 image: require("@/assets/Images/home_img/course1.svg"),
+          description: "about__practice",
+          image: require("@/assets/Images/home_img/course1.svg"),
         },
         {
           title: "Tajribali va amaliy bilimga ega ustozlar ",
-         	image: require("@/assets/Images/home_img/course2.svg"),
+          description: "about__teachers",
+          image: require("@/assets/Images/home_img/course2.svg"),
         },
         {
           title: "To‘liq qo‘llab-quvvatlash va maslahatlar ",
-          
+          description: "about__support",
           image: require("@/assets/Images/home_img/course3.svg"),
         },
         {
           title: "O‘quvchilarni ish topishga tayyorlash ",
-         
+          description: "about__student__job",
           image: require("@/assets/Images/home_img/course4.svg"),
         },
       ],
     };
   },
-}
+};
 </script>
 
-<style >
-
+<style>
 .About {
-	width: 100%;
-	height: auto;
-	background-color: #000000;
-	
+  width: 100%;
+  height: auto;
+  background-color: #000000;
 }
-.About >h2{
-	font-size: 69px;
-	color: white;
-	font-weight: 500;
-	line-height: 70px;
-	font-family: Nohemi;
-	margin-top: 69px;
+.About > h2 {
+  font-size: 69px;
+  color: white;
+  font-weight: 500;
+  line-height: 70px;
+  font-family: Nohemi;
+  margin-top: 69px;
 }
-.About >h2>span{
-	color: rgba(248, 218, 11, 1);
-	font-size: 69px;
-	font-weight: 500;
-	margin-left: -15px;
-	line-height: 70px;
+.About > h2 > span {
+  color: rgba(248, 218, 11, 1);
+  font-size: 69px;
+  font-weight: 500;
+  margin-left: -15px;
+  line-height: 70px;
 }
 
 .features-nav {
@@ -112,16 +113,16 @@ export default{
   font-weight: 600;
 }
 
-.About > p{
-	background-color: rgba(13, 13, 13, 1);
-	padding: 27px 40px;
-	color: rgba(255, 255, 255, 1);
-	font-family: Manrope;
-	font-weight: 400;
-	font-size: 25px;
-	line-height: 100%;
-	margin-top: 20px;
-	border-radius: 10px;
+.About > p {
+  background-color: rgba(13, 13, 13, 1);
+  padding: 27px 40px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 .about_icon {
@@ -149,26 +150,25 @@ export default{
   cursor: pointer;
 }
 
-
- .About_gradient{
-	width:100%;
-	height: 675px;
-	display: flex; 
-	 align-items: center; 
-	 justify-content: center;
-	 overflow: hidden;
-	 position: relative;
-	 bottom: -40px;
- }
- .inner_gradient {
+.About_gradient {
+  width: 100%;
+  height: 675px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  bottom: -40px;
+}
+.inner_gradient {
   width: 600px;
   height: 600px;
   transform: rotate(45deg);
   position: absolute;
   border-radius: 100px;
   filter: blur(25px);
-  background-color: yellow; 
-  box-shadow: 0px 0px 100px 150px rgba(255, 215, 0, 0.6); 
+  background-color: yellow;
+  box-shadow: 0px 0px 100px 150px rgba(255, 215, 0, 0.6);
   top: 70%;
   z-index: 1;
   outline: none;
@@ -179,18 +179,17 @@ export default{
   0% {
     transform: rotate(45deg);
     background-color: rgba(194, 167, 9, 0.6);
-    box-shadow: 0px 0px 100px 150px rgba(154, 132, 6, 0.6); 
+    box-shadow: 0px 0px 100px 150px rgba(154, 132, 6, 0.6);
   }
   50% {
     transform: rotate(45deg);
-	background-color: rgba(183, 156, 7, 0.6);
-    box-shadow: 0px 0px 100px 220px rgba(154, 132, 6, 0.6); 
+    background-color: rgba(183, 156, 7, 0.6);
+    box-shadow: 0px 0px 100px 220px rgba(154, 132, 6, 0.6);
   }
   100% {
     transform: rotate(45deg);
-    background-color: rgba(184, 157, 8, 0.6); 
+    background-color: rgba(184, 157, 8, 0.6);
     box-shadow: 0px 0px 100px 150px rgba(154, 132, 6, 0.6);
   }
 }
-
 </style>

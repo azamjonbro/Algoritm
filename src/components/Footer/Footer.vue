@@ -10,7 +10,7 @@
               <router-link to="/" active-class="active-link"
                 >Bosh sahifa</router-link
               >
-            </li>
+            </li> 
             <li>
               <router-link to="/courses" active-class="active-link"
                 >Kurslar</router-link
