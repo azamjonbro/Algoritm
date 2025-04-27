@@ -268,5 +268,50 @@
     "uz": "Kursni muvaffaqiyatli tamomlagan o‘quvchilar Algoritmning sertifikatiga ega bo‘ladi.",
     "ru": "Учащиеся, успешно завершившие курс, получают сертификат Алгоритма.",
     "en": "Students who successfully complete the course receive an Algorithm certificate."
+  },
+  "bepul_consultatsiya":{
+    "uz":"Bepul konsultatsiya",
+    "ru": "Бесплатная консультация",
+    "en": "Free consultation"
+  },
+  "subtitle_consul":{
+    "uz":"Telefon raqamingizni yozib qoldiring, biz sizga qo‘ng‘iroq qilamiz vabirorta ham savolingiz javobsiz qolmasligiga harakat qilamiz",
+    "ru": "Оставьте свой номер телефона, мы вам перезвоним и постараемся ответить на все ваши вопросы",
+    "en": "Leave your phone number, we will call you back and try to answer all your questions"
+  },
+  "name_placeholder":{
+    "uz":"Ismingiz",
+    "ru": "Ваше имя",
+    "en": "Your name"
+  },
+  "select_question":{
+    "uz":"Qanday kasb egallamoqchisiz?",
+    "ru": "Какую профессию хотите освоить?",
+    "en": "Which profession are you aiming for?"
+  },
+  "web_dasturlash":{
+    "uz":"Web Dasturlash",
+    "ru": "Веб-разработка",
+    "en": "Web Development"
+  },
+  "dizayn":{
+    "uz":"Grafik dizayn",
+    "ru": "Графический дизайн",
+    "en": "Graphic Design"
+  },
+  "digital_marketing":{
+    "uz":"Digital Marketing",
+    "ru": "Цифровой маркетинг",
+    "en": "Digital Marketing"
+  },
+  "qayta":{
+    "uz":"qayta ishlanishiga",
+    "ru": "обработке",
+    "en": "processing"
+  },
+  "rozi":{
+    "uz":"roziman",
+    "ru": "согласен",
+    "en": "agree"
   }
 }

@@ -3,24 +3,23 @@
     <div>
       <h2 class="title">{{ $t("bepul_consultatsiya") }}</h2>
       <p class="subtitle">
-        Telefon raqamingizni yozib qoldiring, biz sizga qo‘ng‘iroq qilamiz va
-        birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
+        {{ $t("subtitle_consul") }}
       </p>
     </div>
 
     <input
       type="text"
       v-model="form.name"
-      placeholder="Ismingiz"
+      :placeholder="$t('name_placeholder')"
       class="input name-input"
       @input="filterName"
       maxlength="10"
     />
     <select v-model="form.profession" class="dropdown">
-      <option disabled value="">Qanday kasb egallamoqchisiz?</option>
-      <option>Web Dasturlash</option>
-      <option>Grafik Dizayn</option>
-      <option>Digital Marketing</option>
+      <option disabled value="">{{ $t('select_question') }}</option>
+      <option>{{ $t('web_dasturlash') }}</option>
+      <option>{{ $t('dizayn') }}</option>
+      <option>{{ $t("digital_marketing") }}</option>
     </select>
 
     <div class="Phone_Number">
@@ -37,14 +36,14 @@
         :disabled="!isFormValid"
         @click="sendToTelegram"
       >
-        Yuborish
+        {{ $t("send__message") }}
       </button>
     </div>
 
     <div class="consent-wrapper">
       <input type="checkbox" v-model="form.consent" />
       <label for="consent">
-        {{ $t("personal__info") }} <a href="#">qayta ishlanishiga</a> roziman
+        {{ $t("personal__info") }} <a href="#">{{ $t('qayta') }}</a> {{ $t('rozi') }}
       </label>
     </div>
   </div>
