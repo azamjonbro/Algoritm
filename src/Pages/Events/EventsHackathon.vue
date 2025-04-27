@@ -1,133 +1,74 @@
 <template>
-    <div class="Hackathon">
-        <div class="Hackathon-title-wrapper">
-            <div class="Hackathon-titles">
-                <router-link to="/events">
-                    <span>
-                    <img src="@/assets/Images/arrow-left.svg" alt="">
-                </span>
-                </router-link>
-               
-            <h2>Hackathonda qatnashish uchun quyidagi ma’lumotlarni taqdim eting:</h2>
-            </div>
-            
-            <p>Ro‘yxatdan o‘tish muddati va qabul qilinadigan ishtirokchilar soni  cheklangan.
-                Arizani imkon qadar tezroq topshiring!</p>
-        </div>
-        <div class="Hackathon-forms">
-            <div class="form-grid">
-                <div class="forms-wrapper">
-                    <input
-                    v-model="form.fullName"
-                    type="text"
-                    placeholder="To‘liq ism"
-                    class="input-field yellow-focus"
-                />
-
-                <input
-                    v-model="form.phone"
-                    type="tel"
-                    placeholder="Telefon raqami"
-                    class="input-field "
-                />
-                </div>
-               <div class="forms-wrapper">
-                <input
-                    v-model="form.email"
-                    type="email"
-                    placeholder="Email manzil"
-                    class="input-field blue-focus"
-                />
-
-                <input
-                    v-model="form.teamName"
-                    type="text"
-                    placeholder="Jamoa nomi"
-                    class="input-field"
-                />
-               </div>
-
-                
-
-                <div class="team-section">
-                    <h3 >Jamoa a'zolari</h3>
-                    <p>har bir a’zoning ismi va roli</p>
-                    <div class="team-members">
-                        <span v-for="(member, index) in teamMembers" :key="index" class="badge">
-                            {{ member }}
-                        </span>
-                    </div>
-                    <Icons name="user_add"/>
-                </div>
-            </div>
-        </div>
-        <div class="hackathon-texts-wrapper">
-            <div class="hackathon-rules-title">
-                <h2>Hackathon qoidalari
-                    va shartlari</h2>
-                <p>Ishtirokchilar quyidagi qoidalarga rioya qilishlari shart:</p>
-            </div>
-            <div class="hackathon-rules-wrapper">
-                <div class="rules-card">
-                    <h2>Umumiy Qoidalar</h2>
-                    <p>Hackathon individual yoki jamoaviy shaklda o‘tkaziladi.
-                    Har bir jamoa faqat bitta loyiha taqdim etishi mumkin.
-                    Ro‘yxatdan o‘tgan ishtirokchilar faqat o‘z jamoalarida qatnashishi kerak.</p>
-                </div>
-                <div class="rules-card">
-                    <h2>Loyiha Talablari</h2>
-                    <p>Loyiha hackathon davomida ishlab chiqilishi kerak.
-                    Oldindan tayyorlangan kodning cheklangan qismi ishlatilishi mumkin, lekin loyiha asosan hackathon davomida yaratilgan bo‘lishi lozim.
-                    Loyihalar ochiq manba yoki huquqiy cheklovlarsiz bo‘lishi kerak.</p>
-                </div>
-                <div class="rules-card">
-                    <h2>Baholash va Mukofotlar</h2>
-                    <p>G‘oliblar hakamlar hay’ati tomonidan baholash mezonlariga asoslanib aniqlanadi.
-                    Baholash kriteriyalari quyidagilar bo‘lishi mumkin: innovatsion yondashuv, texnik sifati, dizayni va taqdimot sifati.
-                    Taqdimot jarayonida loyiha to‘liq ishlashi talab etiladi.</p>
-                </div>
-                <div class="rules-card">
-                    <h2>Etika va Odob Qoidalari</h2>
-                    <p>Ishtirokchilar o‘zaro hurmat bilan muomala qilishlari kerak.
-                    Plagiat yoki boshqa ishtirokchilarning ishlarini nusxalash qat’iyan man etiladi.
-                    Kiberxavfsizlik qoidalariga rioya qilinishi shart.</p>
-                </div>
-                <div class="rules-card">
-                    <h2>Shartlarga Rozilik</h2>
-                    <p>Ro‘yxatdan o‘tish orqali ishtirokchilar barcha qoidalarni qabul qilgan hisoblanadi.
-                        Hackathon tashkilotchilari istalgan vaqtda qoidalarni o‘zgartirish huquqiga ega.</p>
-                </div>
-                <div class="rules-card">
-                    <h2>Eslatma ‼️</h2>
-                    <p>Har qanday qoida buzilishi ishtirokchining diskvalifikatsiya qilinishiga sabab bo‘lishi mumkin.</p>
-                </div>
-            </div>
-            <div class="container-submits">
-            <div class="checkbox-group">
-            
-            <label class="checkbox-label">
-                <input type="checkbox" v-model="termsAccepted" class="checkbox" />
-                Men yuqoridagi shartlarni o‘qidim va ularga <br> to‘liq rozilik bildiraman.
-            </label>
-
-            <label class="checkbox-label">
-                <input type="checkbox" v-model="infoConfirmed" class="checkbox" />
-                Ro‘yxatdan o‘tishda taqdim etgan barcha ma’lumotlarim aniq va to‘g‘ri <br> ekanligini tasdiqlayman.
-            </label>
-            </div>
-            <div class="send-btns">
-                <button class="submit-btn" @click="handleSubmit" :disabled="isLoading">
-            Yuborish
-            
-            </button>
-            <span v-if="isLoading" class="spinner"></span>
-            </div>
-            
-        </div>
-        </div>
-        
+  <div class="Hackathon">
+    <div class="Hackathon-title-wrapper">
+      <div class="Hackathon-titles">
+        <router-link to="/events">
+          <span>
+            <img src="@/assets/Images/arrow-left.svg" alt="" />
+          </span>
+        </router-link>
+        <h2>{{ $t("hackathon.title") }}</h2>
+      </div>
+      <p>{{ $t("hackathon.subtitle") }}</p>
     </div>
-    
+
+    <div class="Hackathon-forms">
+      <div class="form-grid">
+        <div class="forms-wrapper">
+          <input v-model="form.fullName" type="text" :placeholder="$t('hackathon.fullname')" class="input-field yellow-focus" />
+          <input v-model="form.phone" type="tel" :placeholder="$t('hackathon.phone')" class="input-field" />
+        </div>
+        <div class="forms-wrapper">
+          <input v-model="form.email" type="email" :placeholder="$t('hackathon.email')" class="input-field blue-focus" />
+          <input v-model="form.teamName" type="text" :placeholder="$t('hackathon.teamname')" class="input-field" />
+        </div>
+
+        <div class="team-section">
+          <h3>{{ $t("hackathon.teammembers.title") }}</h3>
+          <p>{{ $t("hackathon.teammembers.subtitle") }}</p>
+          <div class="team-members">
+            <span v-for="(member, index) in teamMembers" :key="index" class="badge">{{ member }}</span>
+          </div>
+          <Icons name="user_add" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hackathon-texts-wrapper">
+      <div class="hackathon-rules-title">
+        <h2>{{ $t("hackathon.rules.title") }}</h2>
+        <p>{{ $t("hackathon.rules.subtitle") }}</p>
+      </div>
+
+      <div class="hackathon-rules-wrapper">
+        <div class="rules-card" v-for="(rule, index) in rules" :key="index">
+          <h2>{{ $t(rule.title) }}</h2>
+          <p>{{ $t(rule.text) }}</p>
+        </div>
+      </div>
+
+      <div class="container-submits">
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" v-model="termsAccepted" class="checkbox" />
+            {{ $t("hackathon.confirm.terms") }}
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" v-model="infoConfirmed" class="checkbox" />
+            {{ $t("hackathon.confirm.info") }}
+          </label>
+        </div>
+
+        <div class="send-btns">
+          <button class="submit-btn" @click="handleSubmit" :disabled="isLoading">
+            {{ $t("hackathon.submit") }}
+          </button>
+          <span v-if="isLoading" class="spinner"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

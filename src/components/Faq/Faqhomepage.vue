@@ -8,7 +8,7 @@
       <div class="accordion-container">
         <div v-for="(item, index) in faqs" :key="index" class="accordion-item">
           <div @click="toggle(index)" class="accordion-header">
-            <h2 class="accordion-title">{{ item.question }}</h2>
+            <h2 class="accordion-title">{{ $t(item?.question) }}</h2>
             <img
               src="@/assets/Images/home_img/arrow-down.png"
               alt="Toggle Icon"
@@ -16,7 +16,7 @@
             />
           </div>
           <div v-show="openIndex.includes(index)" class="accordion-content">
-            <p>{{ item.answer }}</p>
+            <p>{{ $t(item?.answer) }}</p>
           </div>
         </div>
       </div>
@@ -33,24 +33,20 @@ export default {
       selectedFeature: null,
       faqs: [
         {
-          question: "Kurslar bepulmi?",
-          answer:
-            "Yo‘q, hozir barcha kurslar pullik. Narxlarni har bir kursning sahifasida ko‘rishingiz mumkin.",
+          question: "kurslar__bepulmi",
+          answer:"kurslarbepul_answer",
         },
         {
-          question: "Darslarni istalgan vaqtda ko‘rish mumkinmi?",
-          answer:
-            "Ha, sotib olganingizdan so‘ng darslarni istalgan vaqtda ko‘rishingiz mumkin.",
+          question: "darslar__istagi",
+          answer:"dars__description",
         },
         {
-          question: "Kurslar qancha davom etadi?",
-          answer:
-            "Har bir kursning davomiyligi farq qiladi. Tafsilotlarni kurs sahifasida topishingiz mumkin.",
+          question:"kurslar__question",
+          answer:"kurslar__answer",
         },
         {
-          question: "Kurs materiallari yangilanib turadimi?",
-          answer:
-            "Ha, kurslar muntazam ravishda yangilanadi va qo‘shimcha materiallar qo‘shiladi.",
+          question: "material__question",
+          answer:"material__answer",
         },
       ],
     };

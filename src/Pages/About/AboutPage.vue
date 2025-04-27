@@ -1,16 +1,16 @@
 <template>
   <div class="About">
-    <h2>{{ t("about__title") }}<span>*</span></h2>
+    <h2>{{ $t("about__title") }}<span>*</span></h2>
     <p>
-      {{ t("about__description") }}
+      {{ $t("about__description") }}
     </p>
     <p>
-      {{ t("about__description2") }}
+      {{ $t("about__description2") }}
     </p>
     <div class="features">
       <div class="features-nav">
         <span class="bar"></span>
-        <h2>{{ t("about__question") }}</h2>
+        <h2>{{ $t("about__question") }}</h2>
       </div>
       <div class="feature-grid">
         <div
@@ -21,7 +21,7 @@
           @click="selectedFeature = index"
         >
           <div class="features-texts">
-            <h3>{{ t(feature.description) }}</h3>
+            <h3>{{ $t(feature.description) }}</h3>
           </div>
           <div class="about_icon">
             <img :src="feature.image" alt="featureimage" />

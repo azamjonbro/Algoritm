@@ -3,37 +3,42 @@
     "uz": "Bosh sahifa",
     "ru": "Главная",
     "en": "Home"
-    },
-    "nav__courses": {
-      "uz": "Kurslar",
-      "ru": "Курсы",
-      "en": "Courses"
-    },
-    "nav__events": {
-      "uz": "Eventlar",
-      "ru": "События",
-      "en": "Events"
-    },
-    "nav__about": {
-      "uz": "Biz haqimizda",
-      "ru": "О нас",
-      "en": "About us"
-    },
-    "nav__news": {
-      "uz": "Yangiliklar",
-      "ru": "Новости",
-      "en": "News"
-    },
-    "nav__certificates": {
-      "uz": "Sertifikatlar",
-      "ru": "Сертификаты",
-      "en": "Certificates"
-    },
-    "nav__contact": {
-      "uz": "Aloqa markazi",
-      "ru": "Контакты",
-      "en": "Contact"
-    },
+  },
+  "nav__courses": {
+    "uz": "Kurslar",
+    "ru": "Курсы",
+    "en": "Courses"
+  },
+  "nav__events": {
+    "uz": "Eventlar",
+    "ru": "События",
+    "en": "Events"
+  },
+  "nav__about": {
+    "uz": "Biz haqimizda",
+    "ru": "О нас",
+    "en": "About us"
+  },
+  "nav__news": {
+    "uz": "Yangiliklar",
+    "ru": "Новости",
+    "en": "News"
+  },
+  "nav__faqs": {
+    "uz": "FAQ",
+    "ru": "FAQ",
+    "en": "FAQ"
+  },
+  "nav__certificates": {
+    "uz": "Sertifikatlar",
+    "ru": "Сертификаты",
+    "en": "Certificates"
+  },
+  "nav__contact": {
+    "uz": "Aloqa markazi",
+    "ru": "Контакты",
+    "en": "Contact"
+  },
   "hero__title": {
     "uz": "Ustozidan o'zib ketgan shogird",
     "ru": "Ученик, превзошедший учителя",
@@ -79,43 +84,36 @@
     "ru": "Какую профессию вы хотите освоить?",
     "en": "Which profession are you aiming for?"
   },
-
   "send__message": {
     "uz": "Yuborish",
     "ru": "Отправить",
     "en": "Send"
   },
-
   "personal__info": {
     "uz": "Shaxsiy ma'lumotlar",
     "ru": "Личная информация",
     "en": "Personal information"
   },
-
   "personal__info__link": {
     "uz": "qayta ishlanishiga roziman",
     "ru": "согласен на обработку",
     "en": "agree to the processing"
   },
-
   "personal__info__confirm": {
     "uz": "Roziman",
     "ru": "Согласен",
     "en": "Agree"
   },
-
   "event__title": {
     "uz": "Kod yozib charchadingizmi? Biz ham!😆",
     "ru": "Устали писать код? Мы тоже! 😆",
     "en": "Tired of writing code? So are we! 😆"
   },
-
   "event__des": {
     "uz": "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
     "ru": "Поэтому следующие советы именно для вас! :)",
     "en": "So the following tips are just for you! :)"
   },
-
   "event__read-btn": {
     "uz": "O'qish",
     "ru": "Читать",
@@ -126,103 +124,86 @@
     "ru": "Участвовать",
     "en": "Attend"
   },
-
   "about__title": {
     "uz": "Biz 2017-yildan beri ishlaymiz",
     "ru": "Мы работаем с 2017 года",
     "en": "We have been working since 2017"
   },
-
   "about__description": {
     "uz": "Algoritm o‘quv markazi – bu zamonaviy IT bilimlarini o‘rgatishga ixtisoslashgan markaz bo‘lib,o‘quvchilarni dasturlash, web development va IT Kids yo‘nalishlarida tayyorlaydi. Biz boshlang‘ichdan professionallikka yetaklaydigan dasturlar asosida ta’lim beramiz.",
     "ru": "Учебный центр Алгоритм - это центр, специализирующийся на обучении современным IT-знаниям, готовящий студентов в области программирования, веб-разработки и IT Kids. Мы обучаем по программам, которые ведут от начального уровня к профессиональному.",
     "en": "Algorithm training center is a center specializing in teaching modern IT knowledge, preparing students in programming, web development and IT Kids. We teach according to programs that lead from the initial level to the professional."
   },
-
   "about__description2": {
     "uz": "Bizning maqsadimiz – yoshlarni IT sohasiga qiziqtirish, ularga amaliy bilim berish va ularni kelajakda muvaffaqiyatli dasturchi yoki IT mutaxassisiga aylantirish. Biz har bir o‘quvchiga individual yondashib, ularning bilimini mustahkamlashga e’tibor qaratamiz.",
     "ru": "Наша цель - заинтересовать молодежь в IT-сфере, дать им практические знания и превратить их в успешных программистов или IT-специалистов в будущем. Мы уделяем внимание каждому ученику индивидуально, чтобы укрепить их знания.",
     "en": "Our goal is to interest young people in the IT field, give them practical knowledge and turn them into successful programmers or IT specialists in the future. We pay attention to each student individually to strengthen their knowledge."
   },
-
   "about__question": {
     "uz": "Nima uchun biz?",
     "ru": "Почему мы?",
     "en": "Why us?"
   },
-
   "about__practice": {
     "uz": "Amaliyotga yo‘naltirilgan darslar",
     "ru": "Практические занятия",
     "en": "Practical classes"
   },
-
   "about__support": {
     "uz": "To‘liq qo‘llab-quvvatlash va maslahatlar",
     "ru": "Полная поддержка и консультации",
     "en": "Full support and advice"
   },
-
   "about__teachers": {
     "uz": "Tajribali va amaliy bilimga ega ustozlar",
     "ru": "Опытные преподаватели с практическими знаниями",
     "en": "Experienced teachers with practical knowledge"
   },
-
   "about__student__job": {
     "uz": "Tajribali va amaliy bilimga ega ustozlar",
     "ru": "Опытные преподаватели с практическими знаниями",
     "en": "Experienced teachers with practical knowledge"
   },
-
   "certificates": {
     "uz": "Algoritm Ta’limdan olgan Sertifikatingizni tez va oson tekshiring!",
     "ru": "Проверьте свой сертификат Алгоритм Образования быстро и легко!",
     "en": "Quickly and easily check your Algorithm Education certificate!"
   },
-
   "certificates__notFound": {
     "uz": "Afsuski bizda bunday sertifikat topilmadi",
     "ru": "К сожалению, мы не нашли такой сертификат",
     "en": "Unfortunately, we did not find such a certificate"
   },
-
   "certificate__number": {
     "uz": "Sertifikat raqamingizni kiriting va natijani bir necha soniya ichida oling.",
     "ru": "Введите номер сертификата и получите результат за несколько секунд.",
     "en": "Enter your certificate number and get the result in a few seconds."
   },
-
   "certificate__error": {
     "uz": "Siz kiritgan sertifikat raqami to'g'ri emas yoki sertifikat hali ma'lumotlar bazasiga kiritilmagan bo'lishi mumkin. Iltimos, raqamni yana bir bor tekshirib ko'ring yoki biz bilan bog'laning.",
     "ru": "Введенный вами номер сертификата неверен или сертификат еще не был внесен в базу данных. Пожалуйста, проверьте номер еще раз или свяжитесь с нами.",
     "en": "The certificate number you entered is incorrect or the certificate may not have been entered into the database yet. Please check the number again or contact us."
   },
-
   "certificate__check": {
     "uz": "Tekshirish",
     "ru": "Проверить",
     "en": "Check"
   },
-
   "certificate__download": {
     "uz": "Sertifikatni yuklab olish",
     "ru": "Скачать сертификат",
     "en": "Download certificate"
   },
-
   "contact__title": {
     "uz": "Har doim siz bilan aloqadamiz",
     "ru": "Мы всегда на связи с вами",
     "en": "We are always in touch with you"
   },
-
   "contact__description": {
     "uz": "Biz bilan bog‘laning, kurslarimiz haqida batafsil ma’lumot olish yoki o‘quv jarayoni bo‘yicha savollaringizga javob topish uchun. Har doim sizga yordam berishga va to‘g‘ri yo‘nalish tanlashda ko‘maklashishga tayyormiz!",
     "ru": "Свяжитесь с нами, чтобы получить подробную информацию о наших курсах или ответить на ваши вопросы по учебному процессу. Мы всегда готовы помочь вам и помочь вам выбрать правильное направление!",
     "en": "Contact us to get detailed information about our courses or to find answers to your questions about the learning process. We are always ready to help you and assist you in choosing the right direction!"
   },
-
   "home__statistics-title": {
     "uz": "Nima uchun aynan Algoritmda o'qish kerak ?",
     "ru": "Почему нужно учиться именно в Алгоритме?",
@@ -233,7 +214,6 @@
     "ru": "Постоянные соревнования",
     "en": "Regular competitions"
   },
-
   "doimiy_musobaqalar_desc": {
     "uz": "Dasturlash, dizayn sohalari bo‘yicha haftalik sovrinli musobaqalar.",
     "ru": "Еженедельные конкурсы с призами по программированию и дизайну.",
@@ -269,114 +249,284 @@
     "ru": "Учащиеся, успешно завершившие курс, получают сертификат Алгоритма.",
     "en": "Students who successfully complete the course receive an Algorithm certificate."
   },
-  "bepul_consultatsiya":{
-    "uz":"Bepul konsultatsiya",
+  "bepul_consultatsiya": {
+    "uz": "Bepul konsultatsiya",
     "ru": "Бесплатная консультация",
     "en": "Free consultation"
   },
-  "subtitle_consul":{
-    "uz":"Telefon raqamingizni yozib qoldiring, biz sizga qo‘ng‘iroq qilamiz vabirorta ham savolingiz javobsiz qolmasligiga harakat qilamiz",
+  "subtitle_consul": {
+    "uz": "Telefon raqamingizni yozib qoldiring, biz sizga qo‘ng‘iroq qilamiz vabirorta ham savolingiz javobsiz qolmasligiga harakat qilamiz",
     "ru": "Оставьте свой номер телефона, мы вам перезвоним и постараемся ответить на все ваши вопросы",
     "en": "Leave your phone number, we will call you back and try to answer all your questions"
   },
-  "name_placeholder":{
-    "uz":"Ismingiz",
+  "name_placeholder": {
+    "uz": "Ismingiz",
     "ru": "Ваше имя",
     "en": "Your name"
   },
-  "select_question":{
-    "uz":"Kasb tanlang",
+  "select_question": {
+    "uz": "Kasb tanlang",
     "ru": "Выберите профессию",
     "en": "Choose a profession"
   },
-  "web_dasturlash":{
-    "uz":"Web Dasturlash",
+  "web_dasturlash": {
+    "uz": "Web Dasturlash",
     "ru": "Веб-разработка",
     "en": "Web Development"
   },
-  "dizayn":{
-    "uz":"Grafik dizayn",
+  "dizayn": {
+    "uz": "Grafik dizayn",
     "ru": "Графический дизайн",
     "en": "Graphic Design"
   },
-  "kiber":{
-    "uz":"Kiber havfsizlik",
+  "kiber": {
+    "uz": "Kiber havfsizlik",
     "ru": "Кибербезопасность",
     "en": "Cybersecurity"
   },
-  "digital_marketing":{
-    "uz":"Digital Marketing",
+  "digital_marketing": {
+    "uz": "Digital Marketing",
     "ru": "Цифровой маркетинг",
     "en": "Digital Marketing"
   },
-  "qayta":{
-    "uz":"qayta ishlanishiga",
+  "qayta": {
+    "uz": "qayta ishlanishiga",
     "ru": "обработке",
     "en": "processing"
   },
-  "rozi":{
-    "uz":"roziman",
+  "rozi": {
+    "uz": "roziman",
     "ru": "согласен",
     "en": "agree"
   },
-  "monthbirnima":{
-    "uz":" 6 oy tajribaga ega bitiruvchilar odatda o'rtacha shuncha maosh oladi.",
+  "monthbirnima": {
+    "uz": " 6 oy tajribaga ega bitiruvchilar odatda o'rtacha shuncha maosh oladi.",
     "ru": "Выпускники с 6-месячным опытом обычно получают такую среднюю зарплату.",
     "en": "Graduates with 6 months of experience usually earn this average salary."
   },
-  "hackathongaroyhat":{
-    "uz":"Hackatonga ro‘yxatdan o‘ting!",
+  "hackathongaroyhat": {
+    "uz": "Hackatonga ro‘yxatdan o‘ting!",
     "ru": "Зарегистрируйтесь на хакатон!",
     "en": "Register for the hackathon!"
   },
-  "chegirma":{
-    "uz":"Chegirmalar",
+  "chegirma": {
+    "uz": "Chegirmalar",
     "ru": "Скидки",
     "en": "Discounts"
   },
-  "standard":{
-    "uz":"Standart - Haftada 3 kun 2 soat dars",
+  "standard": {
+    "uz": "Standart - Haftada 3 kun 2 soat dars",
     "ru": "Стандарт - 3 дня в неделю по 2 часа",
     "en": "Standard - 3 days a week, 2 hours"
   },
-  "bootcamp":{
-    "uz":"Bootcamp - Haftada 5 kun 3-4 soat",
+  "bootcamp": {
+    "uz": "Bootcamp - Haftada 5 kun 3-4 soat",
     "ru": "Буткемп - 5 дней в неделю по 3-4 часа",
     "en": "Bootcamp - 5 days a week, 3-4 hours "
   },
-  "uquvchilar_fikri":{
-    "uz":"O'quvchilar fikrlari",
+  "uquvchilar_fikri": {
+    "uz": "O'quvchilar fikrlari",
     "ru": "Мнения учеников",
     "en": "Students' opinions"
   },
-  "near__course":{
-    "uz":"Yaqin orada ochiladigan kurslarimizga yoziling",
+  "near__course": {
+    "uz": "Yaqin orada ochiladigan kurslarimizga yoziling",
     "ru": "Запишитесь на наши ближайшие курсы",
     "en": "Sign up for our upcoming courses"
   },
-  "near__description":{
-    "uz":"Har bir kurs boshlanishdan oldin tanishtiruv dars bo‘lib o‘tadi. Undasiz kurs bo‘yicha barcha ma‘lumotlarga ega bo‘lasiz, o‘qituvchi bilan tanishib olasiz va kursga yozilishingiz mumkin.",
-    "ru":"Перед началом каждого курса проводится вводный урок. На нем вы получите всю информацию о курсе, познакомитесь с преподавателем и сможете записаться на курс.",
-    "en":"Before the start of each course, an introductory lesson is held. During it, you will get all the information about the course, meet the instructor, and be able to enroll in the course."
+  "near__description": {
+    "uz": "Har bir kurs boshlanishdan oldin tanishtiruv dars bo‘lib o‘tadi. Undasiz kurs bo‘yicha barcha ma‘lumotlarga ega bo‘lasiz, o‘qituvchi bilan tanishib olasiz va kursga yozilishingiz mumkin.",
+    "ru": "Перед началом каждого курса проводится вводный урок. На нем вы получите всю информацию о курсе, познакомитесь с преподавателем и сможете записаться на курс.",
+    "en": "Before the start of each course, an introductory lesson is held. During it, you will get all the information about the course, meet the instructor, and be able to enroll in the course."
   },
-  "recently":{
-    "uz":"Guruh boshlanadigan sana tanlash",
+  "recently": {
+    "uz": "Guruh boshlanadigan sana tanlash",
     "ru": "Выберите дату начала группы",
     "en": "Choose the group start date"
   },
-  "time__hour":{
-    "uz":"Guruh boshlanadigan vaqt tanlash",
+  "time__hour": {
+    "uz": "Guruh boshlanadigan vaqt tanlash",
     "ru": "Выберите время начала группы",
     "en": "Choose the group start time"
   },
-  "kurs__uchun_title":{
-    "uz":"Ro‘yxatdan o‘tish uchun formani to‘ldiring",
+  "kurs__uchun_title": {
+    "uz": "Ro‘yxatdan o‘tish uchun formani to‘ldiring",
     "ru": "Заполните форму для регистрации",
     "en": "Fill out the form to register"
   },
-  "max_reqs":{
-    "uz":"Ko‘p Beriladigan Savollar!",
+  "max_reqs": {
+    "uz": "Ko‘p Beriladigan Savollar!",
     "ru": "Часто задаваемые вопросы!",
     "en": "Frequently Asked Questions!"
+  },
+  "kurslar__bepulmi": {
+    "uz": "Ko‘p Beriladigan Savollar!",
+    "ru": "Курсы бесплатные?",
+    "en": "Are the courses free?"
+  },
+  "kurslarbepul_answer": {
+    "uz": "Yo‘q, hozir barcha kurslar pullik. Narxlarni har bir kursning sahifasida ko‘rishingiz mumkin.",
+    "ru": "Нет, сейчас все курсы платные. Цены можно посмотреть на странице каждого курса.",
+    "en": "No, currently all courses are paid. You can see the prices on each course's page."
+  },
+  "darslar__istagi": {
+    "uz": "Darslarni istalgan vaqtda ko‘rish mumkinmi?",
+    "ru": "Можно ли смотреть уроки в любое время?",
+    "en": "Can lessons be watched at any time?"
+  },
+  "dars__description": {
+    "uz": "Ha, sotib olganingizdan so‘ng darslarni istalgan vaqtda ko‘rishingiz mumkin.",
+    "ru": "Да, после покупки вы можете смотреть уроки в любое время.",
+    "en": "Yes, after purchasing, you can watch the lessons at any time."
+  },
+  "kurslar__question": {
+    "uz": "Kurslar qancha davom etadi?",
+    "ru": "Сколько длятся курсы?",
+    "en": "How long do the courses last?"
+  },
+  "kurslar__answer": {
+    "uz": "Har bir kursning davomiyligi farq qiladi. Tafsilotlarni kurs sahifasida topishingiz mumkin.",
+    "ru": "Продолжительность каждого курса различается. Подробности можно найти на странице курса.",
+    "en": "The duration of each course varies. You can find details on the course page."
+  },
+  "material__question": {
+    "uz": "Kurs materiallari yangilanib turadimi?",
+    "ru": "Материалы курса обновляются?",
+    "en": "Are course materials updated?"
+  },
+  "material__answer": {
+    "uz": "Ha, kurslar muntazam ravishda yangilanadi va qo‘shimcha materiallar qo‘shiladi.",
+    "ru": "Да, курсы регулярно обновляются, и добавляются дополнительные материалы.",
+    "en": "Yes, courses are regularly updated, and additional materials are added."
+  },
+  "hackathon.back": {
+    "uz": "Orqaga",
+    "ru": "Назад",
+    "en": "Back"
+  },
+  "hackathon.title": {
+    "uz": "Hackathonda qatnashish uchun quyidagi ma’lumotlarni taqdim eting:",
+    "ru": "Для участия в хакатоне предоставьте следующую информацию:",
+    "en": "Provide the following information to participate in the hackathon:"
+  },
+  "hackathon.subtitle": {
+    "uz": "Ro‘yxatdan o‘tish muddati va qabul qilinadigan ishtirokchilar soni cheklangan. Arizani imkon qadar tezroq topshiring!",
+    "ru": "Срок регистрации и количество участников ограничены. Поторопитесь с подачей заявки!",
+    "en": "Registration deadline and number of participants are limited. Submit your application as soon as possible!"
+  },
+  "hackathon.fullname": {
+    "uz": "To‘liq ism",
+    "ru": "Полное имя",
+    "en": "Full name"
+  },
+  "hackathon.phone": {
+    "uz": "Telefon raqami",
+    "ru": "Номер телефона",
+    "en": "Phone number"
+  },
+  "hackathon.email": {
+    "uz": "Email manzil",
+    "ru": "Электронная почта",
+    "en": "Email address"
+  },
+  "hackathon.teamname": {
+    "uz": "Jamoa nomi",
+    "ru": "Название команды",
+    "en": "Team name"
+  },
+  "hackathon.teammembers.title": {
+    "uz": "Jamoa a'zolari",
+    "ru": "Участники команды",
+    "en": "Team members"
+  },
+  "hackathon.teammembers.subtitle": {
+    "uz": "Har bir a’zoning ismi va roli",
+    "ru": "Имя и роль каждого участника",
+    "en": "Each member's name and role"
+  },
+  "hackathon.rules.title": {
+    "uz": "Hackathon qoidalari va shartlari",
+    "ru": "Правила и условия хакатона",
+    "en": "Hackathon rules and conditions"
+  },
+  "hackathon.rules.subtitle": {
+    "uz": "Ishtirokchilar quyidagi qoidalarga rioya qilishlari shart:",
+    "ru": "Участники должны соблюдать следующие правила:",
+    "en": "Participants must adhere to the following rules:"
+  },
+  "hackathon.rules.general": {
+    "uz": "Umumiy Qoidalar",
+    "ru": "Общие правила",
+    "en": "General Rules"
+  },
+  "hackathon.rules.general.text": {
+    "uz": "Hackathon individual yoki jamoaviy shaklda o‘tkaziladi. Har bir jamoa faqat bitta loyiha taqdim etishi mumkin. Ro‘yxatdan o‘tgan ishtirokchilar faqat o‘z jamoalarida qatnashishi kerak.",
+    "ru": "Хакатон проводится индивидуально или в командах. Каждая команда может представить только один проект. Зарегистрированные участники должны участвовать только в своих командах.",
+    "en": "The hackathon is held individually or in teams. Each team can submit only one project. Registered participants must participate only in their own teams."
+  },
+  "hackathon.rules.project": {
+    "uz": "Loyiha Talablari",
+    "ru": "Требования к проекту",
+    "en": "Project Requirements"
+  },
+  "hackathon.rules.project.text": {
+    "uz": "Loyiha hackathon davomida ishlab chiqilishi kerak. Oldindan tayyorlangan kodning cheklangan qismi ishlatilishi mumkin, lekin loyiha asosan hackathon davomida yaratilgan bo‘lishi lozim. Loyihalar ochiq manba yoki huquqiy cheklovlarsiz bo‘lishi kerak.",
+    "ru": "Проект должен быть разработан в течение хакатона. Можно использовать ограниченную часть заранее подготовленного кода, но основная часть должна быть создана во время хакатона. Проекты должны быть с открытым исходным кодом или без юридических ограничений.",
+    "en": "The project must be developed during the hackathon. Limited use of pre-written code is allowed, but the project should mostly be created during the event. Projects must be open-source or free from legal restrictions."
+  },
+  "hackathon.rules.judging": {
+    "uz": "Baholash va Mukofotlar",
+    "ru": "Оценка и награды",
+    "en": "Judging and Awards"
+  },
+  "hackathon.rules.judging.text": {
+    "uz": "G‘oliblar hakamlar hay’ati tomonidan baholash mezonlariga asoslanib aniqlanadi. Baholash kriteriyalari quyidagilar bo‘lishi mumkin: innovatsion yondashuv, texnik sifati, dizayni va taqdimot sifati. Taqdimot jarayonida loyiha to‘liq ishlashi talab etiladi.",
+    "ru": "Победители будут определяться на основе критериев оценки жюри. Критерии оценки могут включать: инновационный подход, техническое качество, дизайн и качество презентации. Во время презентации проект должен быть полностью работоспособным.",
+    "en": "Winners will be determined based on the jury's evaluation criteria. Evaluation may include innovation, technical quality, design, and presentation quality. The project must be fully functional during the presentation."
+  },
+  "hackathon.rules.ethics": {
+    "uz": "Etika va Odob Qoidalari",
+    "ru": "Этические и поведенческие правила",
+    "en": "Ethics and Code of Conduct"
+  },
+  "hackathon.rules.ethics.text": {
+    "uz": "Ishtirokchilar o‘zaro hurmat bilan muomala qilishlari kerak. Plagiat yoki boshqa ishtirokchilarning ishlarini nusxalash qat’iyan man etiladi. Kiberxavfsizlik qoidalariga rioya qilinishi shart.",
+    "ru": "Участники должны относиться друг к другу с уважением. Плагиат или копирование работ других участников строго запрещено. Необходимо соблюдать правила кибербезопасности.",
+    "en": "Participants must treat each other with respect. Plagiarism or copying other participants' work is strictly prohibited. Cybersecurity rules must be followed."
+  },
+  "hackathon.rules.acceptance": {
+    "uz": "Shartlarga Rozilik",
+    "ru": "Принятие условий",
+    "en": "Acceptance of Terms"
+  },
+  "hackathon.rules.acceptance.text": {
+    "uz": "Ro‘yxatdan o‘tish orqali ishtirokchilar barcha qoidalarni qabul qilgan hisoblanadi. Hackathon tashkilotchilari istalgan vaqtda qoidalarni o‘zgartirish huquqiga ega.",
+    "ru": "Регистрируясь, участники соглашаются со всеми правилами. Организаторы хакатона имеют право вносить изменения в правила в любое время.",
+    "en": "By registering, participants agree to all rules. Hackathon organizers reserve the right to change the rules at any time."
+  },
+  "hackathon.rules.note": {
+    "uz": "Eslatma ‼️",
+    "ru": "Примечание ‼️",
+    "en": "Note ‼️"
+  },
+  "hackathon.rules.note.text": {
+    "uz": "Har qanday qoida buzilishi ishtirokchining diskvalifikatsiya qilinishiga sabab bo‘lishi mumkin.",
+    "ru": "Любое нарушение правил может привести к дисквалификации участника.",
+    "en": "Any rule violation may result in participant disqualification."
+  },
+  "hackathon.confirm.terms": {
+    "uz": "Men yuqoridagi shartlarni o‘qidim va ularga to‘liq rozilik bildiraman.",
+    "ru": "Я прочитал(а) вышеуказанные условия и полностью с ними согласен(на).",
+    "en": "I have read and fully agree to the above terms."
+  },
+  "hackathon.confirm.info": {
+    "uz": "Ro‘yxatdan o‘tishda taqdim etgan barcha ma’lumotlarim aniq va to‘g‘ri ekanligini tasdiqlayman.",
+    "ru": "Я подтверждаю, что вся информация, предоставленная при регистрации, является точной и правильной.",
+    "en": "I confirm that all information provided during registration is accurate and correct."
+  },
+  "hackathon.submit": {
+    "uz": "Yuborish",
+    "ru": "Отправить",
+    "en": "Submit"
   }
 }

@@ -25,7 +25,7 @@
                 <img src="@/assets/Images/info-circle.svg" alt="info" />
               </span>
               <router-link to="/hackathon">
-                <button class="register-btn">{{t("event__attend-btn")}}</button>
+                <button class="register-btn">{{$t("event__attend-btn")}}</button>
               </router-link>
             </div>
           </div>

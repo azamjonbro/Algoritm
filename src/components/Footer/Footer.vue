@@ -8,30 +8,30 @@
           <ul class="links-group">
             <li>
               <router-link to="/" active-class="active-link"
-                >Bosh sahifa</router-link
+                >{{$t("nav__home")}}</router-link
               >
             </li> 
             <li>
               <router-link to="/courses" active-class="active-link"
-                >Kurslar</router-link
+                >{{$t("nav__courses")}}</router-link
               >
             </li>
             <li>
               <router-link to="/events" active-class="active-link"
-                >Eventlar</router-link
+                >{{$t("nav__events")}}</router-link
               >
             </li>
             <li>
               <router-link to="/contact" active-class="active-link"
-                >Aloqa markazi</router-link
+                >{{$t("nav__contact")}}</router-link
               >
             </li>
           </ul>
           <ul class="links-group">
-            <li><router-link to="/about">Biz haqimizda</router-link></li>
-            <li><router-link to="/news">Yangiliklar</router-link></li>
-            <li><router-link to="/certificates">Sertifikatlar</router-link></li>
-            <li><router-link to="/faq">FAQ</router-link></li>
+            <li><router-link to="/about">{{$t("nav__about")}}</router-link></li>
+            <li><router-link to="/news">{{$t("nav__news")}}</router-link></li>
+            <li><router-link to="/certificates">{{$t("nav__certificates")}}</router-link></li>
+            <li><router-link to="/faq">{{$t("nav__faqs")}}</router-link></li>
           </ul>
           <p>©Algoritm 2024 | Privacy Policy | Certified Policy | Legal</p>
         </div>

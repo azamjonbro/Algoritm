@@ -2,16 +2,16 @@
   <div class="Certificate">
     <div class="certificate-topbar">
       <h2 v-if="!certificateChecked || certificateFound">
-        {{ t("certificates") }}
+        {{ $t("certificates") }}
       </h2>
       <h2 v-else class="not-found-title">
-        {{ t("certificates__notFound") }} :(
+        {{ $t("certificates__notFound") }} :(
       </h2>
       <p v-if="!certificateChecked || certificateFound">
-        {{ t("certificate__number") }}
+        {{ $t("certificate__number") }}
       </p>
       <p v-else class="not-found-text">
-        {{ t("certificate__error") }}
+        {{ $t("certificate__error") }}
       </p>
 
       <div class="certificate-search-wrapper">
@@ -28,7 +28,7 @@
             class="chack-btn"
             :class="{ 'error-btn': certificateChecked && !certificateFound }"
           >
-            {{ t("certificate__check") }}
+            {{ $t("certificate__check") }}
             <Icons name="mashetgaiconqoying" />
           </button>
         </div>
@@ -37,7 +37,7 @@
           v-if="certificateFound && certificateChecked"
           class="sertificate-download"
         >
-          <p>{{ t("certificate__download") }}</p>
+          <p>{{ $t("certificate__download") }}</p>
           <img src="@/assets/Images/receive-square.svg" alt="" />
         </button>
       </div>

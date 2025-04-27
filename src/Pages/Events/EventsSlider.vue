@@ -11,8 +11,8 @@
     >
       <swiper-slide v-for="(Swiperdata, index) in Swiperdatas">
         <div class="Events-carusel-card">
-          <h1 class="uppercase-text">{{ t("event__title") }}</h1>
-          <p>{{ t("event__des") }}</p>
+          <h1 class="uppercase-text">{{ $t("event__title") }}</h1>
+          <p>{{ $t("event__des") }}</p>
           <button>{{ Swiperdata.btn }}</button>
         </div>
       </swiper-slide>
