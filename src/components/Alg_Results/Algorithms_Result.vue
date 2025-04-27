@@ -55,10 +55,10 @@
         <div class="marquee_main_wrapper">
           <div class="marque_wrapper">
             <div class="Algorithms_result_Latest_News_marque">
-              <button><span>Hackatonga ro‘yxatdan o‘ting!</span></button>
+              <button><span>{{$t("hackathongaroyhat")}}</span></button>
               <button>
                 <img src="@/assets/Images/home_img/Subtract (1).svg" alt="" />
-                <span>Chegirmalar</span>
+                <span>{{$t('chegirma')}}</span>
               </button>
             </div>
           </div>
@@ -66,7 +66,6 @@
       </div>
     </div>
     <div class="Get_in_touch">
-      <!-- <CustomSelect /> -->
       <ContactForm />
     </div>
   </div>

@@ -318,5 +318,15 @@
     "uz":" 6 oy tajribaga ega bitiruvchilar odatda o'rtacha shuncha maosh oladi.",
     "ru": "Выпускники с 6-месячным опытом обычно получают такую среднюю зарплату.",
     "en": "Graduates with 6 months of experience usually earn this average salary."
+  },
+  "hackathongaroyhat":{
+    "uz":"Hackatonga ro‘yxatdan o‘ting!",
+    "ru": "Зарегистрируйтесь на хакатон!",
+    "en": "Register for the hackathon!"
+  },
+  "chegirma":{
+    "uz":"Chegirmalar",
+    "ru": "Скидки",
+    "en": "Discounts"
   }
 }
