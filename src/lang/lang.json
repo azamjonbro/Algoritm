@@ -299,6 +299,11 @@
     "ru": "Графический дизайн",
     "en": "Graphic Design"
   },
+  "kiber":{
+    "uz":"Kiber havfsizlik",
+    "ru": "Кибербезопасность",
+    "en": "Cybersecurity"
+  },
   "digital_marketing":{
     "uz":"Digital Marketing",
     "ru": "Цифровой маркетинг",
@@ -328,5 +333,45 @@
     "uz":"Chegirmalar",
     "ru": "Скидки",
     "en": "Discounts"
+  },
+  "standard":{
+    "uz":"Standart - Haftada 3 kun 2 soat dars",
+    "ru": "Стандарт - 3 дня в неделю по 2 часа",
+    "en": "Standard - 3 days a week, 2 hours"
+  },
+  "bootcamp":{
+    "uz":"Bootcamp - Haftada 5 kun 3-4 soat",
+    "ru": "Буткемп - 5 дней в неделю по 3-4 часа",
+    "en": "Bootcamp - 5 days a week, 3-4 hours "
+  },
+  "uquvchilar_fikri":{
+    "uz":"O'quvchilar fikrlari",
+    "ru": "Мнения учеников",
+    "en": "Students' opinions"
+  },
+  "near__course":{
+    "uz":"Yaqin orada ochiladigan kurslarimizga yoziling",
+    "ru": "Запишитесь на наши ближайшие курсы",
+    "en": "Sign up for our upcoming courses"
+  },
+  "near__description":{
+    "uz":"Har bir kurs boshlanishdan oldin tanishtiruv dars bo‘lib o‘tadi. Undasiz kurs bo‘yicha barcha ma‘lumotlarga ega bo‘lasiz, o‘qituvchi bilan tanishib olasiz va kursga yozilishingiz mumkin.",
+    "ru":"Перед началом каждого курса проводится вводный урок. На нем вы получите всю информацию о курсе, познакомитесь с преподавателем и сможете записаться на курс.",
+    "en":"Before the start of each course, an introductory lesson is held. During it, you will get all the information about the course, meet the instructor, and be able to enroll in the course."
+  },
+  "recently":{
+    "uz":"Guruh boshlanadigan sana tanlash",
+    "ru": "Выберите дату начала группы",
+    "en": "Choose the group start date"
+  },
+  "time__hour":{
+    "uz":"Guruh boshlanadigan vaqt tanlash",
+    "ru": "Выберите время начала группы",
+    "en": "Choose the group start time"
+  },
+  "kurs__uchun_title":{
+    "uz":"Ro‘yxatdan o‘tish uchun formani to‘ldiring",
+    "ru": "Заполните форму для регистрации",
+    "en": "Fill out the form to register"
   }
 }

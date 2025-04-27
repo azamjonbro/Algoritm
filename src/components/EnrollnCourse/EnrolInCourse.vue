@@ -3,26 +3,22 @@
     <div class="Enrol-nav">
       <span class="barside"> </span>
       <div>
-        <h2>Yaqin orada ochiladigan kurslarimizga yoziling</h2>
-        <p>
-          Har bir kurs boshlanishdan oldin tanishtiruv dars bo‘lib o‘tadi. Unda
-          siz kurs bo‘yicha barcha ma‘lumotlarga ega bo‘lasiz, o‘qituvchi bilan
-          tanishib olasiz va kursga yozilishingiz mumkin.
-        </p>
+        <h2>{{$t("near__course")}}</h2>
+        <p>{{$t("near__description")}}</p>
       </div>
     </div>
 
     <div class="Enrol-In-Wrapper">
       <div class="Courses-time">
         <select v-model="selectedCourse">
-          <option value="">Qanday kasb egallamoqchisiz?</option>
+          <option value="">{{$t("form__goal")}}</option>
           <option v-for="course in courses" :key="course">
-            {{ course }}
+            {{ $t(course) }}
           </option>
         </select>
 
         <div class="date-selection">
-          <h3>Guruh boshlanadigan sana tanlash</h3>
+          <h3>{{$t("recently")}}</h3>
           <div class="date-options">
             <button
               v-for="date in dates"
@@ -36,7 +32,7 @@
         </div>
 
         <div class="time-selection">
-          <h3>Guruh boshlanadigan vaqt tanlash</h3>
+          <h3>{{$t('time__hour')}}</h3>
           <div class="time-options">
             <button
               v-for="time in times"
@@ -57,12 +53,12 @@
       </div>
 
       <div class="Enrol-in-form">
-        <h2>Ro‘yxatdan o‘tish uchun formani to‘ldiring</h2>
+        <h2>{{$t("kurs__uchun_title")}}</h2>
         <input type="text" />
         <input
           type="text"
           v-model="form.name"
-          placeholder="Ismingiz"
+          :placeholder="$t('form__name')"
           class="input name-input"
           @input="filterName"
           maxlength="10"
@@ -82,14 +78,14 @@
             :disabled="!isFormValid"
             @click="sendToTelegram"
           >
-            Yuborish
+            {{$t("send__message")}}
           </button>
         </div>
         <div class="consent-wrapper">
           <input type="checkbox" v-model="form.consent" />
           <label for="consent">
-            Shaxsiy ma'lumotlarni <a href="#">qayta ishlanishiga</a> roziman
-          </label>
+        {{ $t("personal__info") }} <a href="#">{{ $t('qayta') }}</a> {{ $t('rozi') }}
+      </label>
         </div>
       </div>
     </div>
@@ -105,7 +101,7 @@ export default {
 
   data() {
     return {
-      courses: ["Web dasturlash", "Kiber xavfsizlik", "Grafik dizayn"],
+      courses: ["web_dasturlash", "kiber", "dizayn"],
       selectedCourse: "",
       dates: [
         "29.02.2025",

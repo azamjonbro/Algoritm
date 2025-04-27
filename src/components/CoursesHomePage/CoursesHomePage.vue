@@ -2,11 +2,11 @@
   <div class="coursesHomePage">
     <div class="courseNav">
       <span class="bar"></span>
-      <h2>Kurslar</h2>
-      <button>Standart - Haftada 3 kun 2 soat dars</button>
-      <button>Bootcamp - Haftada 5 kun 3-4 soat dars</button>
+      <h2>{{$t("nav__courses")}}</h2>
+      <button>{{$t('standard')}}</button>
+      <button>{{$t('bootcamp')}}</button>
       <select name="" id="">
-        <option value="">Dasturlash</option>
+        <option value="">{{$t('web_dasturlash')}}</option>
         <option value="">Grafik Dizayn</option>
         <option value="">It Kids</option>
       </select>
