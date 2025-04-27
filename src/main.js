@@ -11,7 +11,6 @@ const app = createApp(App);
 app.use(router);
 app.use(Toast);
 
-// Global $t funksiyani qo'shamiz
 app.config.globalProperties.$t = (key) => i18n.t(key);
 
 app.mount("#app");

@@ -2,7 +2,7 @@
   <div class="Algorithms_result_wrapper">
     <div class="Algorithms_result">
       <div class="Statistic_In_Number">
-        <h2><span>Algoritm</span> natijasi raqamlarda</h2>
+        <h2>{{$t('results__title')}}</h2>
         <div class="Statistic_In_Number_items_wrapper">
           <div class="Statistic_In_Number_item">
             <img
@@ -11,9 +11,8 @@
             />
             <div class="Statistic_In_Number_itemText">
               <h2>1300+</h2>
-              <p>
-                Shu kungacha bitirgan <br />
-                o‘quvchilar
+              <p style="width:80%">
+               {{$t('results__graduates')}}
               </p>
             </div>
           </div>
@@ -27,8 +26,7 @@
             <div class="Statistic_In_Number_itemText">
               <h2>400 dona</h2>
               <p>
-                Shu kungacha o‘quvchilarning <br />
-                ishga joylashishi
+                {{$t('results__hired')}}
               </p>
             </div>
           </div>
@@ -39,8 +37,7 @@
         <div class="info">
           <span class="bar"></span>
           <p>
-            6 oy tajribaga ega bitiruvchilar odatda <br />
-            o'rtacha shuncha maosh oladi.
+           {{$t('monthbirnima')}}
           </p>
         </div>
         <div class="salary-details">

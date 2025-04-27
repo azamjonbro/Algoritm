@@ -285,9 +285,9 @@
     "en": "Your name"
   },
   "select_question":{
-    "uz":"Qanday kasb egallamoqchisiz?",
-    "ru": "Какую профессию хотите освоить?",
-    "en": "Which profession are you aiming for?"
+    "uz":"Kasb tanlang",
+    "ru": "Выберите профессию",
+    "en": "Choose a profession"
   },
   "web_dasturlash":{
     "uz":"Web Dasturlash",
@@ -313,5 +313,10 @@
     "uz":"roziman",
     "ru": "согласен",
     "en": "agree"
+  },
+  "monthbirnima":{
+    "uz":" 6 oy tajribaga ega bitiruvchilar odatda o'rtacha shuncha maosh oladi.",
+    "ru": "Выпускники с 6-месячным опытом обычно получают такую среднюю зарплату.",
+    "en": "Graduates with 6 months of experience usually earn this average salary."
   }
 }
