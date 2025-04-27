@@ -2,7 +2,7 @@
   <div class="FAQ-wrapper">
     <div class="FAQ-nav">
       <span class="bar"></span>
-      <h2>Ko‘p Beriladigan Savollar!</h2>
+      <h2>{{$t("max_reqs")}}</h2>
     </div>
     <div class="faq-accordion-wrapper">
       <div class="accordion-container">

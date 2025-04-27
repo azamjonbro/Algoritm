@@ -39,7 +39,7 @@ import Algorithm_Result from "@/components/Alg_Results/Algorithms_Result.vue";
 import CourseHomePage from "@/components/CoursesHomePage/CoursesHomePage.vue";
 import StudentThought from "@/components/StudentsThought/StudentThought.vue";
 import EnrolInCourse from "@/components/EnrollnCourse/EnrolInCourse.vue";
-// import Faqhomepage from "@/components/Faq/Faqhomepage.vue";
+import Faqhomepage from "@/components/Faq/Faqhomepage.vue";
 // import OurDestination from "@/components/OurDestination/OurDestination.vue";
 
 
@@ -50,7 +50,7 @@ export default {
     CourseHomePage,
     StudentThought,
     EnrolInCourse,
-    // Faqhomepage,
+    Faqhomepage,
     // OurDestination,
   },
   data() {

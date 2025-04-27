@@ -373,5 +373,10 @@
     "uz":"Ro‘yxatdan o‘tish uchun formani to‘ldiring",
     "ru": "Заполните форму для регистрации",
     "en": "Fill out the form to register"
+  },
+  "max_reqs":{
+    "uz":"Ko‘p Beriladigan Savollar!",
+    "ru": "Часто задаваемые вопросы!",
+    "en": "Frequently Asked Questions!"
   }
 }
