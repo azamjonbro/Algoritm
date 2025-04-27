@@ -12,42 +12,53 @@
       <ul>
         <li>
           <router-link to="/" exact-active-class="active-link"
-            >{{t("nav__home")}}</router-link
+            >{{$t("nav__home")}}</router-link
           >
         </li>
         <li>
           <router-link to="/courses" active-class="active-link"
-            >{{t("nav__courses")}}</router-link
+            >{{$t("nav__courses")}}</router-link
           >
         </li>
         <li>
           <router-link to="/events" active-class="active-link"
-            >{{t("nav__events")}}</router-link
+            >{{$t("nav__events")}}</router-link
           >
         </li>
         <li>
           <router-link to="/about" active-class="active-link"
-            >{{t("nav__about")}}</router-link
+            >{{$t("nav__about")}}</router-link
           >
         </li>
         <li>
           <router-link to="/news" active-class="active-link"
-            >{{t("nav__news")}}</router-link
+            >{{$t("nav__news")}}</router-link
           >
         </li>
         <li>
           <router-link to="/certificate" active-class="active-link"
-            >{{t("nav__certificates")}}</router-link
+            >{{$t("nav__certificates")}}</router-link
           >
         </li>
         <li>
           <router-link to="/contact" active-class="active-link"
-            >{{t("nav__contact")}}</router-link
+            >{{$t("nav__contact")}}</router-link
           >
         </li>
       </ul>
-      <span class="language">
-        <img src="@/assets/Images/Language icon (1).svg" alt="" />
+      <span class="language relative" >
+        <img src="@/assets/Images/Language icon (1).svg" style="cursor:pointer;" @click="mouseEnterLang" alt="" />
+      <div class="postion languages" v-show="showLang">
+          <div class="uz" @click="langChange('uz')">
+            <img src="../../assets/Images/🇺🇿.png" alt="Rasm" >
+          </div>
+          <div class="ru" @click="langChange('ru')">
+            <img src="../../assets//Images/🇷🇺.png" alt="lang">
+          </div>
+          <div class="en" @click="langChange('en')">
+            <img src="../../assets/Images/🇬🇧.png" alt="Lang">
+          </div>
+      </div>
       </span>
 
     </nav>
@@ -55,7 +66,8 @@
 </template>
 
 <script>
-import {t} from '@/Utils/i18n.js'
+import i18n from '@/Utils/i18n.js'
+
 export default {
   name: "Header",
   components: {
@@ -63,8 +75,21 @@ export default {
   },
   data() {
     return {
-      t
+      showLang:false,
+      defaultLang:"uz"
     }
+  },
+  methods:{
+    mouseEnterLang(){
+      this.showLang=!this.showLang
+    },
+    langChange(item){
+      console.log(item);
+      localStorage.setItem('lang',JSON.stringify(item))
+      i18n.setLocale(item);
+      this.$router.go();
+    }
+
   }
 };
 </script>

@@ -70,7 +70,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
-import { t } from "@/Utils/i18n";
 
 export default {
   components: {
@@ -84,7 +83,6 @@ export default {
 
   data() {
     return {
-      t,
       events: [
         {
           title1: "React JS ",

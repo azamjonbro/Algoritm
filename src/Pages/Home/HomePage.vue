@@ -6,7 +6,7 @@
     <div class="features">
       <div class="features-Nav">
         <span class="bar"></span>
-        <h2>{{ t("home__statistics-title") }}</h2>
+        <h2>{{ $t("home__statistics-title") }}</h2>
       </div>
       <div class="feature-grid">
         <div
@@ -17,8 +17,8 @@
           @click="selectedFeature = index"
         >
           <div class="features-texts">
-            <h3>{{ t(`${feature.title}`) }}</h3>
-            <p>{{ t(`${feature.description }`)}}</p>
+            <h3>{{ $t(`${feature.title}`) }}</h3>
+            <p>{{ $t(`${feature.description }`)}}</p>
           </div>
           <div class="icon">
             <img :src="feature.image" alt="featureimage" />
@@ -36,26 +36,25 @@
 <script>
 import Carousel from "@/components/carousel/carousel.vue";
 import Algorithm_Result from "@/components/Alg_Results/Algorithms_Result.vue";
-import CourseHomePage from "@/components/CoursesHomePage/CoursesHomePage.vue";
-import StudentThought from "@/components/StudentsThought/StudentThought.vue";
-import EnrolInCourse from "@/components/EnrollnCourse/EnrolInCourse.vue";
-import Faqhomepage from "@/components/Faq/Faqhomepage.vue";
-import OurDestination from "@/components/OurDestination/OurDestination.vue";
-import {t} from '@/Utils/i18n.js'
+// import CourseHomePage from "@/components/CoursesHomePage/CoursesHomePage.vue";
+// import StudentThought from "@/components/StudentsThought/StudentThought.vue";
+// import EnrolInCourse from "@/components/EnrollnCourse/EnrolInCourse.vue";
+// import Faqhomepage from "@/components/Faq/Faqhomepage.vue";
+// import OurDestination from "@/components/OurDestination/OurDestination.vue";
+
 
 export default {
   components: {
     Carousel,
     Algorithm_Result,
-    CourseHomePage,
-    StudentThought,
-    EnrolInCourse,
-    Faqhomepage,
-    OurDestination,
+    // CourseHomePage,
+    // StudentThought,
+    // EnrolInCourse,
+    // Faqhomepage,
+    // OurDestination,
   },
   data() {
     return {
-      t,
       features: [
         {
           title: "doimiy_musobaqalar",

@@ -53,14 +53,12 @@
   </div>
 </template>
 <script>
-import { t } from "@/Utils/i18n.js";
 import Icons from "@/components/Template/Icons.vue";
 
 export default {
   components: { Icons },
   data() {
     return {
-      t,
       certificateId: "",
       certificateFound: false,
       certificateChecked: false,

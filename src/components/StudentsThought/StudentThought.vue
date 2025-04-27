@@ -2,7 +2,7 @@
   <div class="testimonial-section">
     <div class="testimonial-nav">
       <span class="bar"> </span>
-      <h2>O'quvchilarning fikrlari</h2>
+      <h2>{{t("uquvchilar_fikri")}}</h2>
     </div>
 
     <swiper

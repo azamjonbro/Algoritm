@@ -36,13 +36,10 @@
 </template>
 
 <script>
-import { t } from "@/Utils/i18n";
-import langData from "@/lang/lang.json";
 
 export default {
   data() {
     return {
-      t,
       features: [
         {
           title: "Amaliyotga yo‘naltirilgan darslar",

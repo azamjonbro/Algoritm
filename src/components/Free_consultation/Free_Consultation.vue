@@ -1,7 +1,7 @@
 <template>
   <div class="consultation-form">
     <div>
-      <h2 class="title">Bepul konsultatsiya</h2>
+      <h2 class="title">{{ $t("bepul_consultatsiya") }}</h2>
       <p class="subtitle">
         Telefon raqamingizni yozib qoldiring, biz sizga qo‘ng‘iroq qilamiz va
         birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
@@ -44,7 +44,7 @@
     <div class="consent-wrapper">
       <input type="checkbox" v-model="form.consent" />
       <label for="consent">
-        {{ t("personal__info") }} <a href="#">qayta ishlanishiga</a> roziman
+        {{ $t("personal__info") }} <a href="#">qayta ishlanishiga</a> roziman
       </label>
     </div>
   </div>
@@ -54,12 +54,10 @@
 import { mask } from "vue-the-mask";
 import { showSuccess } from "@/Utils/Toast";
 import { showError } from "@/Utils/Toast";
-import { t } from "@/Utils/i18n";
 export default {
   directives: { mask },
   data() {
     return {
-      t,
       form: {
         name: "",
         phone: "",

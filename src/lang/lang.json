@@ -3,37 +3,37 @@
     "uz": "Bosh sahifa",
     "ru": "Главная",
     "en": "Home"
-  },
-  "nav__courses": {
-    "uz": "Kurslar",
-    "ru": "Курсы",
-    "en": "Courses"
-  },
-  "nav__events": {
-    "uz": "Eventlar",
-    "ru": "События",
-    "en": "Events"
-  },
-  "nav__about": {
-    "uz": "Biz haqimizda",
-    "ru": "О нас",
-    "en": "About us"
-  },
-  "nav__news": {
-    "uz": "Yangiliklar",
-    "ru": "Новости",
-    "en": "News"
-  },
-  "nav__certificates": {
-    "uz": "Sertifikatlar",
-    "ru": "Сертификаты",
-    "en": "Certificates"
-  },
-  "nav__contact": {
-    "uz": "Aloqa markazi",
-    "ru": "Контакты",
-    "en": "Contact"
-  },
+    },
+    "nav__courses": {
+      "uz": "Kurslar",
+      "ru": "Курсы",
+      "en": "Courses"
+    },
+    "nav__events": {
+      "uz": "Eventlar",
+      "ru": "События",
+      "en": "Events"
+    },
+    "nav__about": {
+      "uz": "Biz haqimizda",
+      "ru": "О нас",
+      "en": "About us"
+    },
+    "nav__news": {
+      "uz": "Yangiliklar",
+      "ru": "Новости",
+      "en": "News"
+    },
+    "nav__certificates": {
+      "uz": "Sertifikatlar",
+      "ru": "Сертификаты",
+      "en": "Certificates"
+    },
+    "nav__contact": {
+      "uz": "Aloqa markazi",
+      "ru": "Контакты",
+      "en": "Contact"
+    },
   "hero__title": {
     "uz": "Ustozidan o'zib ketgan shogird",
     "ru": "Ученик, превзошедший учителя",

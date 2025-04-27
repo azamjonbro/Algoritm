@@ -1,9 +1,9 @@
 <template>
   <div class="ContactPage">
     <div class="Contact_top">
-      <h2>{{ t("contact__title") }} <span>*</span></h2>
+      <h2>{{ $t("contact__title") }} <span>*</span></h2>
       <p>
-        {{ t("contact__description") }}
+        {{ $t("contact__description") }}
       </p>
       <Icons name="contactBaunce" class="baunceicon" @click="scrollToForm" />
     </div>
@@ -50,7 +50,6 @@ import Maps from "@/components/Maps/MapComponent.vue";
 import { showSuccess } from "@/Utils/Toast";
 import { showError } from "@/Utils/Toast";
 import { mask } from "vue-the-mask";
-import { t } from "@/Utils/i18n.js";
 
 export default {
   components: {
@@ -60,7 +59,6 @@ export default {
   directives: { mask },
   data() {
     return {
-      t,
       form: {
         name: "",
         phone: "",

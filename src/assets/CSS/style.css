@@ -293,3 +293,41 @@ option {
 .unique-month:hover {
   background-color: var(--grey-dark);
 }
+.language{
+  position: relative;
+}
+.languages{
+  width: 190px;
+  height: 43px;
+  background: #fff;
+  position:absolute;
+  left: -115px;
+  bottom: -50px;
+  border-radius: 10px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: squidTop 600ms ease-in-out ;
+}
+.languages>div{
+  width: 50px;
+  height: 33px;
+  background: #F6F6F6;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@keyframes squidTop{
+  0%{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

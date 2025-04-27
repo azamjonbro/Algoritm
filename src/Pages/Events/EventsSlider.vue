@@ -26,7 +26,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
-import { t } from "@/Utils/i18n";
 export default {
   components: {
     Swiper,
@@ -37,7 +36,6 @@ export default {
   },
   data() {
     return {
-      t,
       Swiperdatas: [
         {
           title: "Kod yozib charchadingizmi? Biz ham! 😆",

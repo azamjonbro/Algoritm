@@ -7,7 +7,6 @@
 <script>
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-
 import customIconImage from "@/assets/Images/Map pin.svg";
 export default {
   name: "MapComponent",
