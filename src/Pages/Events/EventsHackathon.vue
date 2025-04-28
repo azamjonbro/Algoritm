@@ -100,8 +100,6 @@ export default {
         return;
       }
       this.isLoading = true;
-
-      // Simulate a delay (e.g., sending data to the server)
       setTimeout(() => {
         this.isLoading = false;
         showSuccess("Ma'lumot yuborildi!");

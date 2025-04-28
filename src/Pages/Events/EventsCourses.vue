@@ -464,7 +464,7 @@ export default {
 .events-swiper::after {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   right: 0;
   width: 100px;
@@ -569,7 +569,7 @@ div.swiper-wrapper {
   /* margin-top: 10px; */
   border-radius: 5px;
   position: absolute;
-  left: 11%;
+  left: 100px;
 }
 
 .close-btn:hover {
@@ -583,6 +583,7 @@ div.swiper-wrapper {
   justify-content: center;
   background: rgba(25, 25, 25, 1);
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .modal-title-wrapper {

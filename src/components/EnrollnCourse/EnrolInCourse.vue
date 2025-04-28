@@ -44,12 +44,6 @@
             </button>
           </div>
         </div>
-        <!-- <div class="Sellected-CourseTime">
-          <h3>Tanlangan ma'lumotlar</h3>
-          <p><strong>Kurs:</strong> {{ selectedCourse || "Tanlanmagan" }}</p>
-          <p><strong>Sana:</strong> {{ selectedDate || "Tanlanmagan" }}</p>
-          <p><strong>Vaqt:</strong> {{ selectedTime || "Tanlanmagan" }}</p>
-        </div> -->
       </div>
 
       <div class="Enrol-in-form">
@@ -76,6 +70,7 @@
           <button
             class="submit-btn"
             :disabled="!isFormValid"
+            :class="{ 'active-enroll': isFormValid }"
             @click="sendToTelegram"
           >
             {{$t("send__message")}}
@@ -103,13 +98,7 @@ export default {
     return {
       courses: ["web_dasturlash", "kiber", "dizayn"],
       selectedCourse: "",
-      dates: [
-        "29.02.2025",
-        "28.02.2025",
-        "01.03.2025",
-        "21.02.2025",
-        "27.02.2025",
-      ],
+      dates: ["29.02.2025", "28.02.2025", "01.03.2025", "21.02.2025", "27.02.2025"],
       selectedDate: "",
       times: ["09:00", "12:00", "15:00"],
       selectedTime: "",
@@ -123,22 +112,56 @@ export default {
 
   computed: {
     isFormValid() {
-      return this.form.name && this.form.phone && this.form.consent;
+      return (
+        this.form.name.trim().length >= 3 && // Name kamida 3 ta harf
+        /^\+998 \d{2} \d{3} \d{2} \d{2}$/.test(this.form.phone) && // Telefon raqam tekshiruvi
+        this.form.consent // Rozilik belgilangan
+      );
     },
   },
 
+  mounted() {
+    this.checkFormValidity();
+  },
+
+  watch: {
+    form: {
+      handler: "checkFormValidity",
+      deep: true,
+    },
+    selectedCourse: "checkFormValidity",
+    selectedDate: "checkFormValidity",
+    selectedTime: "checkFormValidity",
+  },
+
   methods: {
+    checkFormValidity() {
+      const btn = document.querySelector(".submit-btn");
+      if (btn) {
+        if (this.isFormValid) {
+          btn.classList.add("active-enroll");
+        } else {
+          btn.classList.remove("active-enroll");
+        }
+      }
+    },
+
     async sendToTelegram() {
+      if (!this.isFormValid) {
+        alert("Iltimos, barcha maydonlarni to'g'ri to'ldiring!");
+        return;
+      }
+
       const botToken = "7927115509:AAHCT7c7elCP-CqBJGB8WnlYxcQf4fXoPhk";
       const chatId = "1091223879";
 
       const message = `📝 Yangi so'rov:
 
-    👤 Ism: ${this.form.name}
-    📞 Telefon: ${this.form.phone}
-    📚 Kurs: ${this.selectedCourse || "Tanlanmagan"}
-    📅 Sana: ${this.selectedDate || "Tanlanmagan"}
-    ⏰ Vaqt: ${this.selectedTime || "Tanlanmagan"}`;
+👤 Ism: ${this.form.name}
+📞 Telefon: ${this.form.phone}
+📚 Kurs: ${this.selectedCourse || "Tanlanmagan"}
+📅 Sana: ${this.selectedDate || "Tanlanmagan"}
+⏰ Vaqt: ${this.selectedTime || "Tanlanmagan"}`;
 
       try {
         const response = await fetch(
@@ -176,6 +199,10 @@ export default {
 
     resetForm() {
       this.form = { name: "", phone: "", consent: false };
+      this.selectedCourse = "";
+      this.selectedDate = "";
+      this.selectedTime = "";
+      this.checkFormValidity();
     },
   },
 };
@@ -221,6 +248,11 @@ export default {
   height: auto;
 
   /* border: 1px solid whitesmoke; */
+}
+
+.active-enroll {
+  background: #ffd700 !important;
+  color: #000 !important;
 }
 .Courses-time .date-selection,
 .time-selection {
@@ -377,5 +409,32 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media (max-width:1180px){
+  .Courses-time select{
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: left !important;
+    overflow-wrap: break-word !important;
+  }
+  .Enrol-in-form{
+    height: auto;
+  }
+  .Enrol-in-form>h2{
+      font-size: 24px;
+  }
+  .Phone_Number{
+    display: flex;
+    flex-direction: column;
+  }
+  .Enrol-in-form .input{
+    height: 48px;
+  }
+  .Enrol-in-form .submit-btn{
+    padding: 12px 54px;
+    font-size: 16px;
+  }
 }
 </style>

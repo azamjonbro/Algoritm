@@ -12,7 +12,7 @@
       <input
         type="text"
         class="input_name"
-        placeholder="To'liq ism"
+        :placeholder="$t('hackathon.fullname')"
         @input="filterName"
         maxlength="16"
         v-model="form.name"
@@ -20,7 +20,7 @@
       <input
         type="tel"
         class="input_tell"
-        placeholder="Telefon raqami"
+        :placeholder="$t('hackathon.phone')"
         v-model="form.phone"
         v-mask="'+998 ## ### ## ##'"
       />
@@ -29,7 +29,7 @@
         :disabled="!isFormValid"
         @click="sendToTelegram"
       >
-        Yuborish
+      {{ $t("send__message") }}
       </button>
     </div>
     <div class="contact_map">
