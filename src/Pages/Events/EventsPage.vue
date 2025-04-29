@@ -25,6 +25,6 @@ export default {
   /* background-color: #0b0b0b; */
   position: relative;
   margin-bottom: 30px;
-  z-index: 100;
+  z-index: 99;
 }
 </style>

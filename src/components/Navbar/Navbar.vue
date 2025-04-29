@@ -1,6 +1,8 @@
 <template>
   <header>
     <nav>
+      <div class="logobox d-flex gap24">
+        <Icons name="newmenuIcon" class="mobile-bar" @click="activeModal"/>
       <router-link to="/">
         <img
           class="navbar-logo-img"
@@ -8,13 +10,15 @@
           alt="logo"
         />
       </router-link>
+      </div>
 
-      <ul>
+      <ul :class="showModal?'active-mobile':''" @click="activeModal">
         <li>
           <router-link to="/" exact-active-class="active-link"
             >{{$t("nav__home")}}</router-link
           >
         </li>
+        
         <li>
           <router-link to="/courses" active-class="active-link"
             >{{$t("nav__courses")}}</router-link
@@ -67,28 +71,44 @@
 
 <script>
 import i18n from '@/Utils/i18n.js'
-
+import Icons from '../Template/Icons.vue';
 export default {
   name: "Header",
   components: {
-    Icons: () => import('@/components/Template/Icons.vue')
+    Icons
   },
   data() {
     return {
       showLang:false,
-      defaultLang:"uz"
+      defaultLang:"uz",
+      showModal:false
     }
   },
   methods:{
-    mouseEnterLang(){
-      this.showLang=!this.showLang
+    mouseEnterLang() {
+      this.showLang = !this.showLang;
     },
-    langChange(item){
+    langChange(item) {
       console.log(item);
-      localStorage.setItem('lang',JSON.stringify(item))
+      localStorage.setItem("lang", JSON.stringify(item));
       i18n.setLocale(item);
       this.$router.go();
-    }
+    },
+    activeModal() {
+      this.showModal = !this.showModal;
+    },
+    clickOutside(event) {
+      const modalMenu = this.$el.querySelector("ul");
+      const langBox = this.$el.querySelector(".language");
+
+      if (modalMenu && !modalMenu.contains(event.target) && !event.target.classList.contains("mobile-bar")) {
+        this.showModal = false;
+      }
+
+      if (langBox && !langBox.contains(event.target)) {
+        this.showLang = false;
+      }
+    },
 
   }
 };
@@ -96,8 +116,7 @@ export default {
 
 <style >
 header {
-  max-width: 1440px;
-  width: 1270px;
+  width: 100%;
   position: sticky;
   top: -1px;
   margin-left: -10px;
@@ -105,7 +124,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 5px;
-  z-index: 4;
+  z-index: 100;
   background-attachment: auto;
   backdrop-filter: blur(25px);
   background-color:black;
@@ -178,5 +197,31 @@ ul li a.active-link,
 ul li a.router-link-exact-active {
   color: #fff !important;
   background-color: #0d0d0d !important;
+}
+.logobox .mobile-bar{
+  display: none  !important;
+}
+@media (max-width:1240px){
+  .header{
+    position: relative;
+  }
+  nav ul{
+    position: absolute;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 36px;
+    border-radius: 10px;
+    background: #0d0d0d;
+    top: 90px;
+    display: none;
+    z-index: 10010;
+  }
+  .logobox .mobile-bar{
+    display: flex  !important;
+  }
+  .active-mobile{
+    display: flex;
+  }
 }
 </style>
