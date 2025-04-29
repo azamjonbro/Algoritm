@@ -201,6 +201,11 @@ ul li a.router-link-exact-active {
 .logobox .mobile-bar{
   display: none  !important;
 }
+@media (max-width:1440px){
+  nav  ul a {
+    font-size: 14px;
+  }
+}
 @media (max-width:1240px){
   .header{
     position: relative;

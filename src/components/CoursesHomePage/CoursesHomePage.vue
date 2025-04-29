@@ -201,4 +201,11 @@ export default {
   border-radius: 8px;
   cursor: pointer;
 }
+
+@media (max-width:1440px){
+  .courseNav h2{
+    width: 49%;
+    text-align: start;
+  }
+}
 </style>

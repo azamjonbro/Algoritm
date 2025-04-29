@@ -393,6 +393,9 @@ export default {
     text-align: center;
     padding: 12px;
   }
+  .consultation-form{
+    max-height: 500px !important;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -407,11 +410,16 @@ export default {
 
   .Statistic_In_Number {
     padding: 30px;
+    height: auto;
   }
 
   .Statistic_In_Number_items_wrapper {
     flex-wrap: wrap;
     gap: 30px;
+  }
+  .Statistic_In_Number_item>img{
+    width: 120px;
+    height: 130px;
   }
 
   .Statistic_about_salary {
@@ -426,6 +434,7 @@ export default {
     flex-direction: column;
     gap: 10px;
   }
+
 
   .Algorithms_result_Latest_News {
     flex-direction: column;
@@ -452,6 +461,15 @@ export default {
     align-items: center;
     text-align: center;
     gap: 10px;
+  }
+  .Statistic_In_Number_items_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Statistic_In_Number_itemText>p{
+    width: 100% !important;
   }
 
   .Statistic_In_Number_item img,
