@@ -208,4 +208,11 @@ export default {
     text-align: start;
   }
 }
+@media (max-width:768px){
+  .courseNav{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+  }
+}
 </style>

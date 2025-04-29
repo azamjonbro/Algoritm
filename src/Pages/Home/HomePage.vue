@@ -117,7 +117,6 @@ export default {
 
 .feature-card {
   max-width: 630px;
-  max-height: 170px;
   background: rgba(13, 13, 13, 1);
   padding: 32px 35px;
   border-radius: 20px;
@@ -157,5 +156,17 @@ export default {
   font-family: Manrope;
   font-size: 16px;
   color: rgb(191, 191, 191);
+}
+
+@media (max-width:768px){
+  .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+  .feature-card{
+    max-height: auto !important;
+  }
 }
 </style>
