@@ -189,4 +189,45 @@ export default {
     box-shadow: 0px 0px 100px 150px rgba(154, 132, 6, 0.6);
   }
 }
+@media (max-width: 768px) {
+  .About > h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .About > h2 > span {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .features-nav h2 {
+    font-size: 25px;
+  }
+  .About > p {
+    font-size: 20px;
+    line-height: 100%;
+    padding: 20px;
+  }
+  .about_card {
+    max-width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+  .about_icon {
+    width: 50px;
+    height: 50px;
+  }
+  .about_card h3 {
+    font-size: 20px;
+  }
+  .inner_gradient {
+    width: 400px;
+    height: 400px;
+    top: 60%;
+  }
+  .About_gradient {
+    height: 500px;
+  }
+  .About > h2 {
+    margin-top: 30px;
+  }
+}
 </style>

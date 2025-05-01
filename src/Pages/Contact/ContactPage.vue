@@ -21,8 +21,9 @@
         type="tel"
         class="input_tell"
         :placeholder="$t('hackathon.phone')"
-        v-model="form.phone"
         v-mask="'+998 ## ### ## ##'"
+        v-model="form.phone"
+        value="+998"
       />
       <button
         class="contact_send_btn"
@@ -127,6 +128,9 @@ export default {
   height: auto;
   background-color: #000000;
   padding: 70px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .Contact_top h2 {
   font-size: 69px;
@@ -153,7 +157,6 @@ export default {
 
 .contact_form_wrapper {
   width: 80%;
-  height: 54px;
   margin-top: 35px;
   /* background: #222020; */
   display: flex;
@@ -172,7 +175,7 @@ export default {
 }
 .contact_form_wrapper .input_name {
   height: 54px;
-  width: 390px;
+  width: 100%;
   background-color: rgba(13, 13, 13, 1);
   color: rgba(255, 255, 255, 0.7);
   border: 0.5px solid black;
@@ -184,7 +187,7 @@ export default {
 }
 .contact_form_wrapper .input_tell {
   height: 54px;
-  width: 292px;
+  width: 100%;
   background-color: rgba(13, 13, 13, 1);
   color: rgba(255, 255, 255, 0.7);
   border: 0.5px solid black;

@@ -16,27 +16,16 @@
 
       <div class="certificate-search-wrapper">
         <div class="certificate-btns-groups">
-          <input
-            v-model="certificateId"
-            type="text"
-            placeholder="ID-AT021"
-            class="seach-field"
-            :class="{ 'error-input': certificateChecked && !certificateFound }"
-          />
-          <button
-            @click="checkCertificate"
-            class="chack-btn"
-            :class="{ 'error-btn': certificateChecked && !certificateFound }"
-          >
+          <input v-model="certificateId" type="text" placeholder="ID-AT021" class="seach-field"
+            :class="{ 'error-input': certificateChecked && !certificateFound }" />
+          <button @click="checkCertificate" class="chack-btn"
+            :class="{ 'error-btn': certificateChecked && !certificateFound }">
             {{ $t("certificate__check") }}
             <Icons name="mashetgaiconqoying" />
           </button>
         </div>
 
-        <button
-          v-if="certificateFound && certificateChecked"
-          class="sertificate-download"
-        >
+        <button v-if="certificateFound && certificateChecked" class="sertificate-download">
           <p>{{ $t("certificate__download") }}</p>
           <img src="@/assets/Images/receive-square.svg" alt="" />
         </button>
@@ -83,6 +72,7 @@ export default {
   background-color: #000000;
   padding-top: 60px;
 }
+
 .certificate-topbar {
   width: 100%;
   height: 420px;
@@ -90,6 +80,7 @@ export default {
   border-radius: 16px;
   padding: 45px;
 }
+
 .certificate-topbar h2 {
   font-size: 60px;
   color: rgba(255, 255, 255, 1);
@@ -99,20 +90,22 @@ export default {
   font-weight: 500;
   max-width: 1000px;
 }
+
 .certificate-topbar p {
   font-size: 23px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 100%;
-  margin-top: 10px;
   max-width: 900px;
   font-family: Inter, sans-serif;
   font-weight: 300;
 }
+
 .certificate-search-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
+
 .certificate-search-wrapper .seach-field {
   background-color: #191919;
   width: 242px;
@@ -125,11 +118,13 @@ export default {
   font-size: 20px;
   padding-left: 26px;
 }
+
 .certificate-btns-groups {
   display: flex;
   align-items: center;
   gap: 21px;
 }
+
 .certificate-search-wrapper .chack-btn {
   padding: 17px 29.5px;
   color: rgba(0, 0, 0, 1);
@@ -142,6 +137,7 @@ export default {
   background-color: rgba(248, 218, 10, 1);
   font-size: 20px;
 }
+
 .sertificate-download {
   display: flex;
   align-items: center;
@@ -152,9 +148,11 @@ export default {
   font-weight: 500;
   margin-right: 20px;
 }
+
 .sertificate-container {
   margin-top: 40px;
 }
+
 .not-found {
   width: 1255px;
   height: 886px;
@@ -183,13 +181,119 @@ export default {
   border-color: red !important;
   color: red !important;
 }
-.chack-btn svg > path {
+
+.chack-btn svg>path {
   /* fill: #000000; */
   color: #000000;
   /* stroke: #000000; */
 }
+
 .error-btn {
   background-color: #252525 !important;
   /* color: rgba(255, 255, 255, 0.2) !important ; */
+}
+
+@media (max-width: 1440px) {
+  .certificate-topbar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .certificate-topbar h2 {
+    font-size: 50px;
+    line-height: 55px;
+    padding-right: 0;
+  }
+
+  .sertificate-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sertificate-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .certificate-topbar h2 {
+    font-size: 40px;
+    line-height: 45px;
+    padding-right: 0;
+  }
+
+  .certificate-topbar p {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-topbar {
+    height: auto;
+  }
+
+  .certificate-topbar h2 {
+    font-size: 40px;
+    line-height: 45px;
+    padding-right: 0;
+  }
+
+  .certificate-topbar p {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+
+  .certificate-btns-groups {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .certificate-search-wrapper .chack-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .certificate-search-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .certificate-search-wrapper .seach-field {
+    width: 100%;
+  }
+
+  .sertificate-download {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #191919;
+  }
+}
+
+@media (max-width: 520px) {
+  .certificate-topbar h2 {
+    font-size: 30px;
+    line-height: 35px;
+    padding-right: 0;
+  }
+
+  .certificate-topbar p {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 100%;
+  }
 }
 </style>
