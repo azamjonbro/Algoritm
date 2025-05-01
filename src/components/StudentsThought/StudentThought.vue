@@ -14,7 +14,7 @@
       :breakpoints="{
     1024: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
     },
     768: {
       slidesPerView: 2,
@@ -56,6 +56,8 @@
   :loop="true"
   :slides-per-group="1"
   :loop-fill-group-with-blank="true"
+  :autoplay="{ delay: 3000, disableOnInteraction: false }"
+  :pagination="{ clickable: true }"
   :breakpoints="{
     1024: {
       slidesPerView: 3,
