@@ -17,7 +17,7 @@
           slidesPerGroup: 1,
         },
         480: {
-          slidesPerView: 1,
+          slidesPerView: 1.3,
           slidesPerGroup: 1,
         },
         0: {

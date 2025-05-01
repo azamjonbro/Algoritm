@@ -100,4 +100,20 @@ export default {
   font-weight: 500;
   align-self: flex-end;
 }
+@media (max-width: 768px) {
+  .Events-carusel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+  .Events-carusel-card h1 {
+    font-size: 36px;
+    max-width: 100%;
+  }
+  .Events-carusel-card p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
 </style>
