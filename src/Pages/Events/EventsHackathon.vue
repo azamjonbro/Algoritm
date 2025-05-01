@@ -334,7 +334,6 @@ export default {
 .submit-btn {
   max-width: 187px;
   height: 60px;
-
   background-color: rgba(13, 13, 13, 1);
   color: rgba(255, 255, 255, 0.5);
   border: none;
