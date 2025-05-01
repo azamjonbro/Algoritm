@@ -9,8 +9,23 @@
       :modules="[Navigation, Autoplay]"
       :slides-per-view="3.5"
       :space-between="25"
-      :autoplay="true"
+      :autoplay="{ delay: 3000, disableOnInteraction: false }"
       :loop="true"
+      :breakpoints="{
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    480: {
+      slidesPerView: 1.3,
+      slidesPerGroup: 1,
+    }
+  }"
+
       navigation
       class="testimonial-carousel"
     >
@@ -35,12 +50,27 @@
       </swiper-slide>
     </swiper>
     <swiper
-      :modules="[Navigation, Autoplay]"
-      :slides-per-view="2.2"
-      :space-between="25"
-      :loop="true"
-      :slides-per-group="1"
-      navigation
+    :modules="[Navigation, Autoplay]"
+  :slides-per-view="1"
+  :space-between="25"
+  :loop="true"
+  :slides-per-group="1"
+  :loop-fill-group-with-blank="true"
+  :breakpoints="{
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    },
+    480: {
+      slidesPerView: 1.3,
+      slidesPerGroup: 1,
+    }
+  }"
+  navigation
       class="testimonial-carousel2"
     >
       <swiper-slide
@@ -330,4 +360,96 @@ export default {
 }
 
 /* Tugmalar joylashuvini tuzatish */
+@media (max-width:1440px) {
+  .swiper-button-prev {
+    left: 85%;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translateY(-10px);
+    
+  }
+  .swiper-button-next {
+    right: 0 !important;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 1240px) {
+  .testimonial-card2 {
+    max-width: 300px;
+  }
+  .testimonial-carousel2{
+    height: 520px;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial-carousel{
+    height: 500px;
+  }
+  .testimonial-card {
+    min-width: 300px;
+    height: 400px;
+  }
+  .testimonial-card2 {
+    max-width: 300px;
+  }
+  .swiper-button-prev {
+    width: 30px;
+    left: 82%;
+    bottom: -30px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .swiper-button-next {
+    right: 0 !important;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-width: 300px;
+    height: 400px;
+  }
+  .testimonial-card2 {
+    max-width: 300px;
+  }
+  .swiper-button-prev {
+    width: 30px;
+    left: 78%;
+    margin-left: -30px;
+    bottom: -30px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .swiper-button-next {
+    right: 0 !important;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
 </style>

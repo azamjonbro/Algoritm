@@ -1,9 +1,30 @@
 <template>
   <div class="Events-container">
     <swiper
-      :modules="[Navigation, Pagination]"
-      :slides-per-view="3.5"
-      :space-between="20"
+      :modules="[Navigation, Autoplay]"
+      :slides-per-view="3"
+      :space-between="25"
+      :loop="true"
+      :slides-per-group="1"
+      :loop-fill-group-with-blank="true"
+      :breakpoints="{
+        1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        480: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        0: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+        },
+      }"
       navigation
       class="events-swiper"
     >
@@ -25,7 +46,7 @@
                 <img src="@/assets/Images/info-circle.svg" alt="info" />
               </span>
               <router-link to="/hackathon">
-                <button class="register-btn">{{$t("event__attend-btn")}}</button>
+                <button class="register-btn">{{ $t("event__attend-btn") }}</button>
               </router-link>
             </div>
           </div>
@@ -66,10 +87,10 @@
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Autoplay } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
 
 export default {
   components: {
@@ -78,7 +99,7 @@ export default {
   },
 
   setup() {
-    return { Navigation, Pagination };
+    return { Navigation,Autoplay };
   },
 
   data() {
@@ -101,10 +122,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -150,10 +168,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -199,10 +214,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -248,10 +260,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -297,10 +306,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -347,10 +353,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -396,10 +399,7 @@ export default {
             },
             {
               section: "Tez Stack Tanlang",
-              points: [
-                "Next.js, Vite, Tailwind CSS.",
-                "Zustand yoki Redux Toolkit.",
-              ],
+              points: ["Next.js, Vite, Tailwind CSS.", "Zustand yoki Redux Toolkit."],
             },
             {
               section: "Kod Sifati",
@@ -615,5 +615,29 @@ div.swiper-wrapper {
 }
 .modals-text ul {
   list-style: square;
+}
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+  .modal-title-wrapper h2 {
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .modal-content {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+  .modal-title-wrapper h2 {
+    font-size: 24px;
+    line-height: 30px;
+    max-width: 100%;
+  }
 }
 </style>

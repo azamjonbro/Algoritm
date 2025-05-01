@@ -15,19 +15,41 @@
     <div class="Hackathon-forms">
       <div class="form-grid">
         <div class="forms-wrapper">
-          <input v-model="form.fullName" type="text" :placeholder="$t('hackathon.fullname')" class="input-field yellow-focus" />
-          <input v-model="form.phone" type="tel" :placeholder="$t('hackathon.phone')" class="input-field" />
+          <input
+            v-model="form.fullName"
+            type="text"
+            :placeholder="$t('hackathon.fullname')"
+            class="input-field yellow-focus"
+          />
+          <input
+            v-model="form.phone"
+            type="tel"
+            :placeholder="$t('hackathon.phone')"
+            class="input-field"
+          />
         </div>
         <div class="forms-wrapper">
-          <input v-model="form.email" type="email" :placeholder="$t('hackathon.email')" class="input-field blue-focus" />
-          <input v-model="form.teamName" type="text" :placeholder="$t('hackathon.teamname')" class="input-field" />
+          <input
+            v-model="form.email"
+            type="email"
+            :placeholder="$t('hackathon.email')"
+            class="input-field blue-focus"
+          />
+          <input
+            v-model="form.teamName"
+            type="text"
+            :placeholder="$t('hackathon.teamname')"
+            class="input-field"
+          />
         </div>
 
         <div class="team-section">
           <h3>{{ $t("hackathon.teammembers.title") }}</h3>
           <p>{{ $t("hackathon.teammembers.subtitle") }}</p>
           <div class="team-members">
-            <span v-for="(member, index) in teamMembers" :key="index" class="badge">{{ member }}</span>
+            <span v-for="(member, index) in teamMembers" :key="index" class="badge">{{
+              member
+            }}</span>
           </div>
           <Icons name="user_add" />
         </div>
@@ -72,12 +94,12 @@
 </template>
 
 <script>
-import { showErrorSend,showSuccess } from '@/Utils/Toast';
-import Icons from '@/components/Template/Icons.vue'
+import { showErrorSend, showSuccess } from "@/Utils/Toast";
+import Icons from "@/components/Template/Icons.vue";
 
 export default {
-  components:{
-    Icons 
+  components: {
+    Icons,
   },
   data() {
     return {
@@ -107,51 +129,50 @@ export default {
     },
   },
 };
-
 </script>
 
 <style scoped>
-.Hackathon{
-    width: 100%;
-    height: auto;
+.Hackathon {
+  width: 100%;
+  height: auto;
 }
-.Hackathon-title-wrapper{
-    margin-top: 90px;
-    display: flex;
-    align-items: start;
-    gap: 133px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.Hackathon-title-wrapper {
+  margin-top: 90px;
+  display: flex;
+  align-items: start;
+  gap: 133px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.Hackathon-titles{
-    display: flex;
-    align-items: start;
-    gap: 25px;
+.Hackathon-titles {
+  display: flex;
+  align-items: start;
+  gap: 25px;
 }
-.Hackathon-title-wrapper span{
-    padding: 10px;
-    display: flex;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: #191919;
+.Hackathon-title-wrapper span {
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #191919;
 }
-.Hackathon-title-wrapper p{
-    color: rgba(255, 255, 255, 1);
-    font-size: 20px;
-    font-family: Nohemi;
-    font-weight: 300;
-    line-height: 26px;
-    max-width: 500px;
-    margin-right: 0;
+.Hackathon-title-wrapper p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  font-family: Nohemi;
+  font-weight: 300;
+  line-height: 26px;
+  max-width: 500px;
+  margin-right: 0;
 }
-.Hackathon-title-wrapper h2{
-    color: rgba(255, 255, 255, 1);
-    font-size: 36px;
-    font-family: "Nohemi";
-    font-weight: 500;
-    max-width: 500px;
-    line-height: 40px;
+.Hackathon-title-wrapper h2 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 36px;
+  font-family: "Nohemi";
+  font-weight: 500;
+  max-width: 500px;
+  line-height: 40px;
 }
 
 .form-grid {
@@ -163,31 +184,28 @@ export default {
   padding-left: 66px;
   margin-top: 35px;
 }
-.forms-wrapper{
-    width: 400px;
-   
+.forms-wrapper {
+  width: 400px;
 }
 .input-field {
-    height: 54px;
+  height: 54px;
   width: 100%;
   background-color: rgba(13, 13, 13, 1);
   color: rgba(255, 255, 255, 0.7);
   border: 0.5px solid black;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
   font-size: 20px;
   font-family: Manrope;
-  border-radius:10px ;
+  border-radius: 10px;
   padding-left: 23px;
 
   &:focus {
-    border-color: #ffcc00; 
+    border-color: #ffcc00;
   }
 }
 
-
-
 .team-section {
-    width: 340px;
+  width: 340px;
   grid-column: span 2;
   background-color: rgba(13, 13, 13, 1);
   padding: 16px;
@@ -195,23 +213,23 @@ export default {
   color: white;
   position: relative;
 }
-.team-section img{
-    position: absolute;
-    top: 30px;
-    right: 33px;
+.team-section img {
+  position: absolute;
+  top: 30px;
+  right: 33px;
 }
-.team-members{
-    margin-top: 10px;
+.team-members {
+  margin-top: 10px;
 }
-.team-section h3{
-    font-size: 20px;
-    color: rgba(255, 255, 255, 1);
+.team-section h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
 }
-.team-section p{
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 2px;
-    font-family: Manrope;
+.team-section p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2px;
+  font-family: Manrope;
 }
 
 .badge {
@@ -224,55 +242,55 @@ export default {
   display: inline-block;
   margin-right: 6px;
 }
-.hackathon-texts-wrapper{
-    padding-left: 66px;
-    margin-top: 35px;
+.hackathon-texts-wrapper {
+  padding-left: 66px;
+  margin-top: 35px;
 }
-.hackathon-rules-title{
-    display: flex;
-    gap: 35px;
+.hackathon-rules-title {
+  display: flex;
+  gap: 35px;
 }
-.hackathon-rules-title h2{
-    font-size: 22px;
-    color: rgba(255, 255, 255, 1);
-    font-family: Manrope;
-    font-weight: 500;
-    max-width: 208px;
+.hackathon-rules-title h2 {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Manrope;
+  font-weight: 500;
+  max-width: 208px;
 }
-.hackathon-rules-title p{
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.5);
-    font-family: Manrope;
-    font-weight: 300;
-    max-width: 348px;
+.hackathon-rules-title p {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Manrope;
+  font-weight: 300;
+  max-width: 348px;
 }
-.hackathon-rules-wrapper{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 25px;
-    margin-top: 25px;
+.hackathon-rules-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  margin-top: 25px;
 }
-.rules-card{
-    width: 350px;
-    height: auto;
+.rules-card {
+  width: 350px;
+  height: auto;
 }
-.rules-card h2{
-    color: rgba(255, 255, 255, 1);
-    font-size: 17px;
-    font-family: Manrope;
-    font-weight: 400;
+.rules-card h2 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 17px;
+  font-family: Manrope;
+  font-weight: 400;
 }
-.rules-card p{
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    font-family: Manrope;
-    font-weight: 200;
-    margin-top: 10px;
+.rules-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-family: Manrope;
+  font-weight: 200;
+  margin-top: 10px;
 }
 .container-submits {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   background-color: black;
   padding: 20px;
   color: white;
@@ -299,9 +317,9 @@ justify-content: space-between;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  appearance: none; 
+  appearance: none;
   background-color: rgba(13, 13, 13, 1);
-  border-radius: 4px; 
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,8 +332,8 @@ justify-content: space-between;
 }
 
 .submit-btn {
-    max-width: 187px;
-    height: 60px;
+  max-width: 187px;
+  height: 60px;
 
   background-color: rgba(13, 13, 13, 1);
   color: rgba(255, 255, 255, 0.5);
@@ -325,20 +343,19 @@ justify-content: space-between;
   cursor: pointer;
   transition: opacity 0.3s ease;
   position: relative;
-    padding: 0;
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
+  padding: 0;
 }
-.send-btns{
-    width: 20%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+.send-btns {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
+.submit-btn:hover {
+      background-color: #ffcc00 !important;
+      color: rgba(13, 13, 13, 1);
+      transition: all 0.3s ease;
+    }
 
 .spinner {
   width: 40px;
@@ -350,7 +367,80 @@ justify-content: space-between;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1240px) {
+  .Hackathon-title-wrapper {
+    flex-direction: column;
+    gap: 0px;
+    padding-bottom: 0px;
+  }
+  .Hackathon-title-wrapper span {
+    margin-bottom: 20px;
+  }
+  .Hackathon-title-wrapper h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .Hackathon-title-wrapper p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .form-grid {
+    padding-left: 0px;
+  }
+  .forms-wrapper {
+    width: 100%;
+  }
+  .team-section {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container-submits {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkbox-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .send-btns {
+    width: 100%;
+    justify-content: center;
+  }
+  .hackathon-rules-title{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .submit-btn {
+    &[data-v-22a32f70] {
+      width: 100% !important;
+      height: 60px;
+      background-color: rgba(13, 13, 13, 1);
+      color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 8px;
+      font-size: 29px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      position: relative;
+      padding: 0;
+    }
+    
+  }
+  .submit-btn:hover {
+      background-color: #ffcc00 !important;
+      color: rgba(13, 13, 13, 1);
+      transition: all 0.3s ease;
+    }
+  .hackathon-texts-wrapper{
+    padding-left: 12px;
+  }
 }
 </style>
