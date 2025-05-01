@@ -13,7 +13,7 @@ class I18n {
         } else {
             this.locale = this.defaultLocale;
         }
-        localStorage.setItem('lang', JSON.stringify(this.locale)); // set ham stringify
+        localStorage.setItem('lang', JSON.stringify(this.locale));
     }
 
     t(key) {
@@ -48,7 +48,6 @@ class I18n {
     }
 }
 
-// localStorage'dan olishda parse qilish kerak
 const storedLang = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : 'en';
 
 const i18n = new I18n(storedLang);

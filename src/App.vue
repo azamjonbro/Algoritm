@@ -47,5 +47,13 @@
 	height: auto;
 	padding: 33px 93px;
   }
+
+  @media (max-width: 768px) {
+  .main {
+    padding: 0 20px;  
+    margin: 0 auto;
+
+  }
+  }
   </style>
   

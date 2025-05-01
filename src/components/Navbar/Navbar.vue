@@ -119,11 +119,10 @@ header {
   width: 100%;
   position: sticky;
   top: -1px;
-  margin-left: -10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 5px;
+  padding: 10px 0px;
   z-index: 100;
   background-attachment: auto;
   backdrop-filter: blur(25px);
@@ -131,7 +130,6 @@ header {
 }
 header::after{
   content: "";
-  width:1270px;
   height:40px;
   position: absolute;
   top: 55px;

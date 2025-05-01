@@ -98,7 +98,7 @@ export default {
 
 .accordion-item {
   border-radius: 10px;
-  max-width: 614px;
+  width: 100%;
   background: rgba(13, 13, 13, 1);
   margin-top: 10px;
   overflow: hidden;
@@ -107,7 +107,7 @@ export default {
 
 .accordion-header {
   display: flex;
-  min-width: 650px;
+  width: 100%;
   height: 64px;
   justify-content: space-between;
   align-items: center;
@@ -125,7 +125,6 @@ export default {
   width: 26px;
   height: 26px;
   transition: transform 0.3s ease-in-out;
-  margin-right: 40px;
 }
 .accordion-header h2 {
   font-size: 20px;
@@ -146,8 +145,7 @@ export default {
 }
 
 .accordion-content {
-  min-width: 650px;
-
+  min-width: 100%;
   height: 81px;
   padding: 20px;
   background: rgba(13, 13, 13, 1);

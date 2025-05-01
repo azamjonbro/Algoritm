@@ -214,5 +214,50 @@ export default {
     justify-content: left;
     gap: 10px;
   }
+  .coursesWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+  .course-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: #383838e1;
+  }
+  .course-image{
+  min-width: 100%;
+  }
+  .courseNav button:nth-of-type(1) {
+  font-size: 16px;
+}
+.courseNav button:nth-of-type(2) {
+  font-size: 16px;
+}
+}
+@media (max-width: 500px) {
+  .courseNav h2 {
+    font-size: 24px;
+  }
+  .courseNav button:nth-of-type(1) {
+    font-size: 14px;
+  }
+  .courseNav button:nth-of-type(2) {
+    font-size: 14px;
+  }
+  .course-card{
+    width: 100%;
+    max-width: 100%;
+  }
+  .course-info{
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+  .course-info h3{
+    font-size: 24px;
+  }
+
 }
 </style>

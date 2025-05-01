@@ -437,4 +437,19 @@ export default {
     font-size: 16px;
   }
 }
+@media (max-width:768px) {
+  .Enrol-In-Wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Courses-time {
+    width: 100%;
+  }
+  .Enrol-in-form {
+    width: 100%;
+  }
+  .Enrol-nav h2 {
+    font-size: 24px;
+  }
+}
 </style>
