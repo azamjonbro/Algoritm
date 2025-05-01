@@ -3,7 +3,7 @@
     <swiper
       :modules="modules"
       :pagination="{ clickable: true }"
-      :autoplay="{ delay: 3000, disableOnInteraction: false }"
+      :autoplay="{ delay: 100000000, disableOnInteraction: false }"
       :loop="true"
       class="mySwiper"
     >
@@ -14,10 +14,11 @@
             <p>{{ slide.description1 }}</p>
             <p>{{ slide.description2 }}</p>
           </div>
-          <div class="Home_Carousel_img_wrapper">
-            <img :src="slide.img" alt="" />
-            <img :src="slide.bgImg" class="bg_img" alt="" />
-            <span>Bekzod</span>
+          <div class="Home_Carousel_img_wrapper" >
+            <img src="./Mask group.png" alt="">
+            <span>Bekzod</span> 
+            <!-- <img :src="slide.img" alt="" />
+            <img :src="slide.bgImg" class="bg_img" alt="" /> -->
           </div>
         </div>
       </swiper-slide>
@@ -208,5 +209,114 @@ export default {
   padding-left: 50px;
   margin-bottom: 40px;
   /* transform: translateX(10%) translateY(-70%); */
+}
+@media (max-width: 1440px) {
+  .Home_Carousel{
+    position: relative;
+  }
+    .Home_Carousel_img_wrapper img:nth-child(1) {
+    position: absolute !important;
+    bottom:  40px !important;
+    left: -60vw !important;
+    width: 100vw !important;
+    height: 40vh !important;
+    z-index: 2 !important;
+
+  }
+}
+@media (max-width: 1240px){
+  .Home_Carousel_text_wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  .Home_Carousel_img_wrapper {
+    width: 100%;
+    height: 250px;
+  }
+  .Home_Carousel_img_wrapper span {
+    right:-1px;
+    bottom: -30px;
+    font-size: 20px;
+    width: auto;
+  }
+  .Home_Carousel_text_wrapper h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(1) {
+    width: 100%;
+    font-size: 15px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(2) {
+    width: 100%;
+    font-size: 15px;
+  }
+  .Home_Carousel_img_wrapper img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+  }
+  .Home_Carousel_img_wrapper .bg_img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .Home_Carousel {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 0px 0px 30px 0px;
+  }
+  .mySwiper {
+    height: auto;
+  }
+  .swiper-pagination {
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .Home_Carousel_text_wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  .Home_Carousel_img_wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .Home_Carousel_text_wrapper h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(1) {
+    width: 100%;
+    font-size: 15px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(2) {
+    width: 100%;
+    font-size: 15px;
+  }
+  .Home_Carousel_img_wrapper img:nth-child(1) {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .Home_Carousel_text_wrapper h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(1) {
+    width: 100%;
+    font-size: 13px;
+  }
+  .Home_Carousel_text_wrapper p:nth-of-type(2) {
+    width: 100%;
+    font-size: 13px;
+  }
+  .Home_Carousel_img_wrapper span {
+    font-size: 24px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+  }
 }
 </style>
