@@ -1,7 +1,7 @@
 <template>
   <div class="News">
     <div class="news-page-top">
-      <h2 class="color-white">Yangiliklar</h2>
+      <h2 class="color-white">{{$t('nav__news')}}</h2>
       <customSelect placeholder="Eng so'ngi" />
     </div>
     <div class="news-swiperpage">
@@ -31,7 +31,55 @@
           slidesPerGroup: 1,
         },
       }"
-      navigation
+	  class="newSwip"
+	  >
+        <swiper-slide v-for="(item, index) in Swiperdatas" :key="index">
+          <div class="swiper-card">
+            <div class="imgbox">
+              <img :src="item.image" alt="" />
+              <p>{{ item.category }}</p>
+            </div>
+            <div class="contentbox">
+              <h2>{{ item.title }}</h2>
+
+              <div class="bottom">
+                <p>{{ timeAgo(item?.createdAt) }}</p>
+				<div class="right">
+					<p class="sendkey"><Icons name="SendKey" /></p>
+					<p class="like" @click="handleLike(item.id)"><Icons :name="item.liked?'liked':'loves'"/>{{ item.likes }}</p>
+					<p class="show"><Icons name="show"/> Ko'rish</p>
+				</div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper>
+	  <swiper 
+	  
+	  :modules="[Navigation, Autoplay]"
+      :slides-per-view="3"
+      :space-between="25"
+      :loop="true"
+      :slides-per-group="1"
+      :loop-fill-group-with-blank="true"
+      :breakpoints="{
+        1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        480: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+        },
+        0: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+        },
+      }"
 	  class="newSwip"
 	  >
         <swiper-slide v-for="(item, index) in Swiperdatas" :key="index">
@@ -181,16 +229,17 @@ export default {
 .news-swiperpage {
   width: 100%;
   height: 100%;
-  margin-top: 30px;
 }
 .mySwiper {
   width: 100%;
   height: 100%;
+  margin-top: 30px;
 }
 .newSwip {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 60px;
 }
 .swiper-card {
   width: 100%;
@@ -240,6 +289,21 @@ export default {
 	justify-content: space-between;
 	
 }
+.swiper-button-prev {
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 2;
+  top: 97%;
+  left: 94.5%;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #1f1c1c;
+
+  color: #fff;
+}
+
 .contentbox>.bottom>.right{
 	display: flex;
 	align-items: center;
