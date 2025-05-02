@@ -5,7 +5,35 @@
       <customSelect placeholder="Eng so'ngi" />
     </div>
     <div class="news-swiperpage">
-      <swiper :pagination="true" :autoplay="true" class="newSwip">
+      <swiper 
+	  
+	  :modules="[Navigation, Autoplay]"
+      :slides-per-view="3"
+      :space-between="25"
+      :loop="true"
+      :slides-per-group="1"
+      :loop-fill-group-with-blank="true"
+      :breakpoints="{
+        1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        480: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+        },
+        0: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+        },
+      }"
+      navigation
+	  class="newSwip"
+	  >
         <swiper-slide v-for="(item, index) in Swiperdatas" :key="index">
           <div class="swiper-card">
             <div class="imgbox">
@@ -18,8 +46,8 @@
               <div class="bottom">
                 <p>{{ timeAgo(item?.createdAt) }}</p>
 				<div class="right">
-					<Icons name="SendKey"/>
-					<p class="like"><Icons name="loves"/>{{ item.likes }}</p>
+					<p class="sendkey"><Icons name="SendKey" /></p>
+					<p class="like" @click="handleLike(item.id)"><Icons :name="item.liked?'liked':'loves'"/>{{ item.likes }}</p>
 					<p class="show"><Icons name="show"/> Ko'rish</p>
 				</div>
               </div>
@@ -33,15 +61,23 @@
 <script>
 import customSelect from "@/components/Template/customSelect.vue";
 import Icons from "@/components/Template/Icons.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Autoplay } from 'swiper/modules';
 export default {
   components: {
+	Swiper,
+	SwiperSlide,
     customSelect,
 	Icons
+  },
+  setup() {
+	return { Swiper, SwiperSlide,Navigation, Autoplay };
   },
   data() {
     return {
       Swiperdatas: [
         {
+			id: 1,
           image: "https://picsum.photos/id/120/200/300",
           title: "Kod yozib charchadingizmi? Biz ham! 😆",
           des: "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
@@ -51,13 +87,36 @@ export default {
           likes: 0,
           category: "news",
         },
-        {
+        {	
+			id: 2,
           image: "https://picsum.photos/id/120/200/300",
           title: "Kod yozib charchadingizmi? Biz ham! 😆",
           des: "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
           btn: "o'qish",
           liked: false,
           createdAt: "2023-11-01",
+          likes: 0,
+          category: "news",
+        },
+		{
+			id: 3,
+          image: "https://picsum.photos/id/120/200/300",
+          title: "Kod yozib charchadingizmi? Biz ham! 😆",
+          des: "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
+          btn: "o'qish",
+          liked: false,
+          createdAt: "2025-03-01",
+          likes: 0,
+          category: "news",
+        },
+		{
+			id: 4,
+          image: "https://picsum.photos/id/120/200/300",
+          title: "Kod yozib charchadingizmi? Biz ham! 😆",
+          des: "Shuning uchun quyidagi maslahatlar aynan siz uchun! :)",
+          btn: "o'qish",
+          liked: false,
+          createdAt: "2025-03-01",
           likes: 0,
           category: "news",
         },
@@ -84,6 +143,13 @@ export default {
       if (minutes > 0) return `${minutes} daqiqa oldin`;
       return "hozir";
     },
+	handleLike(id) {
+	  const item = this.Swiperdatas.find((item) => item.id === id);
+	  if (item) {
+		item.liked = !item.liked;
+		item.likes += item.liked ? 1 : -1;
+	  }
+	},
   },
 };
 </script>
@@ -146,11 +212,54 @@ export default {
   border-radius: 50px;
   font-size: 16px;
 }
+.swiper-card{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;	
+}
+.contentbox {
+  display: flex;
+  flex-direction: column;
+	  justify-content: center;	
+  gap: 10px;
+
+}
+.contentbox p{
+	display: flex;
+	align-items: center;
+	color:rgba(255, 255, 255, 0.4)
+}
 .swiper-card .imgbox img {
   width: 100%;
   height: 320px;
   border-radius: 10px;
   border-radius: 10px;
+}
+.contentbox>.bottom{
+	display: flex;
+	justify-content: space-between;
+	
+}
+.contentbox>.bottom>.right{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.contentbox>.bottom>.right>p{
+	color: #fff;
+	font-size: 16px;
+	display: flex;	
+	align-items: center;
+	gap: 5px;
+	background: rgba(255, 255, 255, 0.05);
+	padding: 8px 12px;
+	border-radius: 10px;
+}
+.contentbox>.right>.sendkey{
+	background: rgba(255, 255, 255, 0.05);
+	padding: 8px 12px;
+	border-radius: 10px;
+	color: aqua;
 }
 @media (max-width: 768px) {
   .news-page-top {
