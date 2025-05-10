@@ -249,6 +249,7 @@ export default {
   .course-card{
     width: 100%;
     max-width: 100%;
+    padding: 20px;
   }
   .course-info{
     width: 100%;

@@ -80,10 +80,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #1da1f2; */
 }
-
-/* Page Links */
 
 
 .links-group:nth-child(1) {
@@ -97,7 +94,6 @@ footer {
 }
 .links-group:nth-child(2) {
   display: flex;
-  /* gap: 10px; */
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
@@ -118,13 +114,11 @@ footer {
   color: white;
 }
 
-/* Social Media Icons */
 .footer-social-links {
   width: 40%;
   display: flex;
   height: 200px;
   justify-content: flex-end;
-  /* background-color: antiquewhite; */
   gap: 15px;
 }
 
@@ -147,12 +141,12 @@ footer {
   font-family: sans-serif;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding:20px;
   }
 
   .footer-page-links,
@@ -163,6 +157,9 @@ footer {
 
   .footer-social-links {
     margin-top: 20px;
+  }
+  .links-group:nth-last-child(2){
+    gap: 10px;
   }
 }
 </style>

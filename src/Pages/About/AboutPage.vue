@@ -229,5 +229,20 @@ export default {
   .About > h2 {
     margin-top: 30px;
   }
+  @media (max-width:768px){
+    .feature-card{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 
+      20px;
+
+    }
+    .features-Nav h2{
+      font-size: 28px;
+    }
+    .features-texts h3 {
+      font-size: 24px;
+    }
+  }
 }
 </style>

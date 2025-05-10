@@ -62,6 +62,7 @@
             type="tel"
             v-model="form.phone"
             placeholder="+998"
+            value="+998"
             v-mask="'+998 ## ### ## ##'"
             class="input phone-input"
           />
