@@ -134,6 +134,7 @@
     border: 1px solid #d2d9df;
     border-radius: 8px;
     font-size: 21px;
+    color: #000;
   }
   
   .select-items {

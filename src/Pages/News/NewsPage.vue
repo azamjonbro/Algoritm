@@ -23,11 +23,11 @@
           slidesPerGroup: 1,
         },
         480: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.1,
           slidesPerGroup: 1,
         },
         0: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.1,
           slidesPerGroup: 1,
         },
       }"
@@ -72,11 +72,11 @@
           slidesPerGroup: 1,
         },
         480: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.1,
           slidesPerGroup: 1,
         },
         0: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.1,
           slidesPerGroup: 1,
         },
       }"
@@ -205,9 +205,9 @@ export default {
 <style>
 .News {
   width: 100%;
-  height: 100vh;
   background-color: #000000;
   margin-top: 69px;
+  padding-bottom: 40px;
   color: #fff;
 }
 .news-page-top {
@@ -333,6 +333,19 @@ export default {
   }
   .color-white {
     font-size: 40px;
+  }
+};
+@media (max-width: 500px) {
+  .contentbox>h2{
+    font-size: 18px;
+  }
+  .contentbox>.bottom{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+  .swiper-card{
+    padding: 12px;
   }
 }
 </style>

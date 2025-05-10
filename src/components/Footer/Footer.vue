@@ -36,8 +36,6 @@
           <p>©Algoritm 2024 | Privacy Policy | Certified Policy | Legal</p>
         </div>
       </div>
-
-      <!-- Right Section: Social Media Links -->
       <div class="footer-social-links">
         <a href="https://facebook.com" target="_blank"
           ><i class="fab fa-facebook-f"></i
