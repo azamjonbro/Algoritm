@@ -37,26 +37,23 @@
         </div>
       </div>
       <div class="footer-social-links">
-        <a href="https://facebook.com" target="_blank"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="https://twitter.com" target="_blank"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="https://instagram.com" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://linkedin.com" target="_blank"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
+        <a href="https://t.me/algoritm_edu" target="_blank"><Icons class="icons-width" name="telegramicon"/></a>
+        <a href="https://twitter.com" target="_blank"><Icons class="icons-width" name="twittericon"/></a>
+        <a href="https://instagram.com" target="_blank"><Icons class="icons-width" name="instagramicon"/></a>
+        <a href="https://linkedin.com" target="_blank"><Icons class="icons-width" name="linkedinicon"/></a>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
+import Icons from '../Template/Icons.vue';
+
 export default {
   name: "FooterComponent",
+  components:{
+    Icons
+  }
 };
 </script>
 
@@ -78,6 +75,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.icons-width{
+  width: 28px;
 }
 
 

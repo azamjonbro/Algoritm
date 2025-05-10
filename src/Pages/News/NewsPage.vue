@@ -13,6 +13,7 @@
       :loop="true"
       :slides-per-group="1"
       :loop-fill-group-with-blank="true"
+      :autoplay="3000"
       :breakpoints="{
         1024: {
           slidesPerView: 3,
